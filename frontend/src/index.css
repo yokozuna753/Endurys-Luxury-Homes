@@ -73,3 +73,7 @@ button:focus-visible {
 /* html, body, #root{
   margin: 0px;
 } */
+
+@theme{
+  --breakpoint-md: 790px;
+}
