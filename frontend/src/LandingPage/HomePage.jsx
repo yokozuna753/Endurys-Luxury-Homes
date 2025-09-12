@@ -33,7 +33,7 @@ const HomePage = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 text-center opacity-66  hover:bg-blue-300 rounded-3xl  text-white px-4 max-w-4xl mx-auto">
+        <div className="relative z-10 text-center backdrop-blur-md p-3 rounded-3xl  text-white px-4 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl text-black lg:text-7xl font-light mb-6 leading-tight">
             CRAFTING SOUTH FLORIDA'S
             <br />

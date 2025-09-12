@@ -12,11 +12,31 @@ const Slideshow = () => {
   const slowSpeed = normalSpeed / 3;
 
   const slides = [
-    { title: "Description", subtitle: "Stream millions of songs" },
-    { title: "Description", subtitle: "Original stories from the most creative minds" },
-    { title: "Description", subtitle: "Play over 200 games with no ads" },
-    { title: "Description", subtitle: "Workouts for every fitness level" },
-    { title: "Description", subtitle: "Premium magazines and newspapers" },
+  {
+    image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fd1y0acf6fr5315.cloudfront.net%2Fwp-content%2Fuploads%2Fsites%2F80%2F2022%2F08%2F30173852%2Falair-interior-design-trends-2000x1325.png&f=1&nofb=1&ipt=4e07d6a46846dfc0b716be0ead9208b9e8343947f537aab2faf19f9cb58d4482",
+    title: "Oceanfront Villa",
+    subtitle: "Luxury living by the beach",
+  },
+  {
+    image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fd1y0acf6fr5315.cloudfront.net%2Fwp-content%2Fuploads%2Fsites%2F80%2F2022%2F08%2F30173852%2Falair-interior-design-trends-2000x1325.png&f=1&nofb=1&ipt=4e07d6a46846dfc0b716be0ead9208b9e8343947f537aab2faf19f9cb58d4482",
+    title: "Modern Mansion",
+    subtitle: "Architectural excellence",
+  },
+  {
+    image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fd1y0acf6fr5315.cloudfront.net%2Fwp-content%2Fuploads%2Fsites%2F80%2F2022%2F08%2F30173852%2Falair-interior-design-trends-2000x1325.png&f=1&nofb=1&ipt=4e07d6a46846dfc0b716be0ead9208b9e8343947f537aab2faf19f9cb58d4482",
+    title: "Interior Elegance",
+    subtitle: "Transformative renovations",
+  },
+  {
+    image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fd1y0acf6fr5315.cloudfront.net%2Fwp-content%2Fuploads%2Fsites%2F80%2F2022%2F08%2F30173852%2Falair-interior-design-trends-2000x1325.png&f=1&nofb=1&ipt=4e07d6a46846dfc0b716be0ead9208b9e8343947f537aab2faf19f9cb58d4482",
+    title: "Tropical Garden Estate",
+    subtitle: "Where nature meets design",
+  },
+  {
+    image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fd1y0acf6fr5315.cloudfront.net%2Fwp-content%2Fuploads%2Fsites%2F80%2F2022%2F08%2F30173852%2Falair-interior-design-trends-2000x1325.png&f=1&nofb=1&ipt=4e07d6a46846dfc0b716be0ead9208b9e8343947f537aab2faf19f9cb58d4482",
+    title: "Resort-Style Pool",
+    subtitle: "Relax in luxury",
+  },
   ];
 
   const animate = (time) => {
@@ -47,7 +67,7 @@ const Slideshow = () => {
   }, []);
 
   return (
-    <div
+<div
       className="overflow-hidden relative w-full h-[220px] my-10"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -56,18 +76,19 @@ const Slideshow = () => {
         {[...slides, ...slides].map((slide, index) => (
           <div
             key={index}
-            className="flex-shrink-0 w-[250px] h-[200px] mr-5 rounded-xl overflow-hidden relative 
-                       bg-gradient-to-br from-indigo-400 to-purple-500 odd:from-pink-400 odd:to-red-400"
+            className="flex-shrink-0 w-[250px] h-[200px] mr-5 rounded-xl overflow-hidden relative"
           >
+            {/* Property image */}
+            <img
+              src={slide.image}
+              alt={slide.title}
+              className="w-full h-full object-cover"
+            />
+            {/* Overlay for text */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-5 flex flex-col justify-end">
-              <h3 className="text-lg font-semibold">{slide.title}</h3>
-              <p className="text-sm opacity-80">{slide.subtitle}</p>
+              <h3 className="text-lg font-semibold text-white">{slide.title}</h3>
+              <p className="text-sm opacity-80 text-white">{slide.subtitle}</p>
             </div>
-            {/* <div className="absolute inset-0 bg-black/30 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center">
-              <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center">
-                <div className="ml-1 w-0 h-0 border-l-[15px] border-t-[10px] border-b-[10px] border-transparent border-l-black" />
-              </div>
-            </div> */}
           </div>
         ))}
       </div>
