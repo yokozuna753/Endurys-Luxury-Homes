@@ -50,7 +50,7 @@ const About = () => {
               <h2 className="text-center text-4xl lg:text-left md:text-5xl font-light mb-6 text-gray-900">
                 LEGACY BUILT
                 <br />
-                <span className="font-bold">SINCE 1954</span>
+                <span className="font-bold">SINCE 2006</span>
               </h2>
             </div>
 

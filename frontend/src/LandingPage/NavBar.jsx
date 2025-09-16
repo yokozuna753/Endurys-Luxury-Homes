@@ -30,19 +30,19 @@ const NavBar = () => {
               href="#about"
               className="text-gray-700 hover:text-gray-900 font-medium"
             >
-              ABOUT
+              PROPERTIES
             </a>
             <a
               href="#projects"
               className="text-gray-700 hover:text-gray-900 font-medium"
             >
-              PROJECTS
+              SERVICES
             </a>
             <a
               href="#services"
               className="text-gray-700 hover:text-gray-900 font-medium"
             >
-              SERVICES
+              OUR WORK
             </a>
             <a
               href="#contact"

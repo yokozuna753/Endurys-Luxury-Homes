@@ -13,7 +13,7 @@ const ContactForm = () => {
             vision and learn how we can bring it to life.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 gap-8 mb-12">
             <div>
               <input
                 type="text"
@@ -28,6 +28,13 @@ const ContactForm = () => {
                 className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:border-gray-900 transition-colors"
               />
             </div>
+            <div>
+              <input
+                type="address"
+                placeholder="Property Address"
+                className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:border-gray-900 transition-colors"
+              />
+            </div>
           </div>
 
           <div className="mb-8">
@@ -38,7 +45,7 @@ const ContactForm = () => {
             ></textarea>
           </div>
 
-          <button className="bg-gray-900 text-white px-12 py-4 font-medium hover:bg-gray-800 transition-colors duration-300">
+          <button className="bg-gray-900 text-white px-12 py-4 hover:cursor-pointer font-medium hover:bg-gray-800 transition-colors duration-300">
             SEND MESSAGE
           </button>
         </div>
