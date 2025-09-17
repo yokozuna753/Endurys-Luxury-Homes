@@ -1,4 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
+import img1 from "../../assets/images/one.jpg"
+import img2 from "../../assets/images/two.jpg"
+import img3 from "../../assets/images/three.jpg"
+import img4 from "../../assets/images/four.jpg"
+import img5 from "../../assets/images/five.jpg"
+import img6 from "../../assets/images/six.jpg"
 
 const Slideshow = () => {
   const trackRef = useRef(null);
@@ -13,28 +19,33 @@ const Slideshow = () => {
 
   const slides = [
   {
-    image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fd1y0acf6fr5315.cloudfront.net%2Fwp-content%2Fuploads%2Fsites%2F80%2F2022%2F08%2F30173852%2Falair-interior-design-trends-2000x1325.png&f=1&nofb=1&ipt=4e07d6a46846dfc0b716be0ead9208b9e8343947f537aab2faf19f9cb58d4482",
+    image: img1,
     title: "Oceanfront Villa",
     subtitle: "Luxury living by the beach",
   },
   {
-    image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fd1y0acf6fr5315.cloudfront.net%2Fwp-content%2Fuploads%2Fsites%2F80%2F2022%2F08%2F30173852%2Falair-interior-design-trends-2000x1325.png&f=1&nofb=1&ipt=4e07d6a46846dfc0b716be0ead9208b9e8343947f537aab2faf19f9cb58d4482",
+    image: img2,
     title: "Modern Mansion",
     subtitle: "Architectural excellence",
   },
   {
-    image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fd1y0acf6fr5315.cloudfront.net%2Fwp-content%2Fuploads%2Fsites%2F80%2F2022%2F08%2F30173852%2Falair-interior-design-trends-2000x1325.png&f=1&nofb=1&ipt=4e07d6a46846dfc0b716be0ead9208b9e8343947f537aab2faf19f9cb58d4482",
+    image: img3,
     title: "Interior Elegance",
     subtitle: "Transformative renovations",
   },
   {
-    image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fd1y0acf6fr5315.cloudfront.net%2Fwp-content%2Fuploads%2Fsites%2F80%2F2022%2F08%2F30173852%2Falair-interior-design-trends-2000x1325.png&f=1&nofb=1&ipt=4e07d6a46846dfc0b716be0ead9208b9e8343947f537aab2faf19f9cb58d4482",
+    image: img4,
     title: "Tropical Garden Estate",
     subtitle: "Where nature meets design",
   },
   {
-    image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fd1y0acf6fr5315.cloudfront.net%2Fwp-content%2Fuploads%2Fsites%2F80%2F2022%2F08%2F30173852%2Falair-interior-design-trends-2000x1325.png&f=1&nofb=1&ipt=4e07d6a46846dfc0b716be0ead9208b9e8343947f537aab2faf19f9cb58d4482",
+    image: img5,
     title: "Resort-Style Pool",
+    subtitle: "Relax in luxury",
+  },
+  {
+    image: img6,
+    title: "HOTEL",
     subtitle: "Relax in luxury",
   },
   ];

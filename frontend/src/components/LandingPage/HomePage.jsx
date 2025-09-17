@@ -40,7 +40,7 @@ const HomePage = () => {
             <span className="font-bold text-black">FINEST HOMES</span>
           </h1>
           <p className="text-lg md:text-xl mb-8 font-light max-w-2xl mx-auto">
-            For over seven decades, defining luxury living through
+            For over 20 years, defining luxury living through
             architecturally significant custom homes and transformative
             renovations.
           </p>
