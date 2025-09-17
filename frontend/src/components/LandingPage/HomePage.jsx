@@ -15,7 +15,7 @@ const HomePage = () => {
     <div className="min-h-screen bg-white">
       {/* Navigation */}
 
-      <NavBar />
+      {/* <NavBar /> */}
 
       {/* Hero Section */}
       <section
