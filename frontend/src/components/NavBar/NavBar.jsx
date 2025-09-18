@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom"; // assuming you're using react-router-dom
+import logo from "../../assets/images/logo.webp"
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,8 +15,8 @@ const NavBar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0 text-2xl font-bold text-gray-800">
-            Endurys Luxury Homes
+          <div className="flex-shrink-0 text-9xl w-25">
+            <img src={logo}/>
           </div>
 
           {/* Desktop Menu */}

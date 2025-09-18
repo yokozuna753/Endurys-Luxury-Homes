@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import NavBar from "./NavBar";
+import NavBar from "../NavBar/NavBar";
 import About from "./About";
 import Slideshow from "./Slideshow";
 import Projects from "./Projects";
@@ -7,8 +7,6 @@ import Projects from "./Projects";
 import Services from "./Services";
 import ContactForm from "./ContactForm";
 import Footer from "./Footer";
-
-
 
 const HomePage = () => {
   return (
@@ -40,9 +38,8 @@ const HomePage = () => {
             <span className="font-bold text-black">FINEST HOMES</span>
           </h1>
           <p className="text-lg md:text-xl mb-8 font-light max-w-2xl mx-auto">
-            For over 20 years, defining luxury living through
-            architecturally significant custom homes and transformative
-            renovations.
+            For over 20 years, defining luxury living through architecturally
+            significant custom homes and transformative renovations.
           </p>
           <button className="bg-white text-gray-900 px-8 py-3 font-medium hover:bg-gray-100 hover:opacity-100 hover:cursor-pointer dark:hover:text-black transition-colors duration-300">
             EXPLORE OUR WORK
@@ -67,7 +64,7 @@ const HomePage = () => {
 
       {/* Footer */}
       <Footer />
-      </div>
+    </div>
   );
 };
 

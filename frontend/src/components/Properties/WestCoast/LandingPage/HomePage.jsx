@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import NavBar from "./NavBar";
 import About from "./About";
-import Slideshow from "./Slideshow";
 import Projects from "./Projects";
 
 import Services from "./Services";
@@ -52,9 +51,6 @@ const WestCoast = () => {
 
       {/* About Section */}
       <About />
-
-      {/* Slideshow */}
-      <Slideshow />
 
       {/* Featured Projects */}
       <Projects />
