@@ -1,6 +1,6 @@
 import nightShot from "../../../assets/Miami-Dade/9669-images/night-shot.webp";
 import nightBackShot from "../../../assets/Miami-Dade/9765-images/night-backshot.webp";
-import mainFront from "../../../assets/Miami-Dade/8820-images/main-front.webp";
+import mainFront from "../../../assets/Miami-Dade/11035-images/main.webp";
 
 const Properties = () => {
   return (
