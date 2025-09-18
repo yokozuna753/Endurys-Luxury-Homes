@@ -5,25 +5,18 @@ const Footer = () => {
   return (
     <>
       <footer className="bg-black py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12">
+        <div className="flex flex-col items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="gap-12">
             <div>
-              <div className="absolute top-684 right-309 w-50 bg-transparent font-light mb-8">
-                <img src={logo} style={{ clipPath: "inset(1px 0 0 0)" }} />
+              <div className="w-70 bg-transparent font-light mb-8">
+                <img src={logo}  style={{ clipPath: "inset(1px 0 0 0)" }} />
               </div>
 
-              <div className="pt-45 space-y-2 text-gray-400 mb-8">
+              <div className=" space-y-2 text-gray-400 mb-8">
                 <div>Endurys Espinosa</div>
                 <div>CEO</div>
                 <div>305.783.7710</div>
                 <div>7766 NW 46 ST DORAL, FL, 33166</div>
-              </div>
-            </div>
-
-            <div className="flex justify-end">
-              <div className="flex space-x-4">
-                <Facebook className="h-6 w-6 text-gray-400 hover:text-white" />
-                <Instagram className="h-6 w-6 text-gray-400 hover:text-white" />
               </div>
             </div>
           </div>

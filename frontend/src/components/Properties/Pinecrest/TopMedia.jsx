@@ -1,25 +1,27 @@
-
+import vid6290house from "../../../assets/Pinecrest/video/6290-pinecrest.mp4";
 
 const TopMedia = () => {
-
   return (
     <>
-      {/* Hero Section with Aerial Background */}
-      <section
-        className="relative h-screen bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyMCIgaGVpZ2h0PSIxMDgwIiB2aWV3Qm94PSIwIDAgMTkyMCAxMDgwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMTkyMCIgaGVpZ2h0PSIxMDgwIiBmaWxsPSIjMkY0RjRGIi8+CjxjaXJjbGUgY3g9IjQwMCIgY3k9IjMwMCIgcj0iODAiIGZpbGw9IiMzRjVGM0YiLz4KPGNpcmNsZSBjeD0iODAwIiBjeT0iNjAwIiByPSIxMDAiIGZpbGw9IiMzRjVGM0YiLz4KPGNpcmNsZSBjeD0iMTIwMCIgY3k9IjQwMCIgcj0iNjAiIGZpbGw9IiMzRjVGM0YiLz4KPC9zdmc+')`,
-        }}
-      >
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-6xl md:text-8xl font-light text-white mb-4 tracking-wider">
-              AVAILABLE PROPERTIES
-            </h1>
-          </div>
-        </div>
+      {/* Hero Section with Video Background */}
+      <section className="relative h-screen overflow-hidden">
+        {/* Background video */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+          disablePictureInPicture
+        >
+          <source src={vid6290house} type="video/mp4" />
+        </video>
 
-        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2">
+        {/* Centered text */}
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
+          <h1 className="text-6xl md:text-8xl font-light text-white mb-4 tracking-wider">
+            AVAILABLE PROPERTIES
+          </h1>
           <h2 className="text-5xl md:text-6xl font-light text-white tracking-wider">
             PINECREST
           </h2>
