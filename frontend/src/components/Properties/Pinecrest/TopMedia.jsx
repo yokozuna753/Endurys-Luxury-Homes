@@ -1,4 +1,4 @@
-import vid6290house from "../../../assets/Pinecrest/video/6290-pinecrest.mp4";
+import vid6290house from "../../../assets/Miami-Dade/video/6290-pinecrest.mp4";
 
 const TopMedia = () => {
   return (

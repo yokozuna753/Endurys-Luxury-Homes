@@ -1,4 +1,6 @@
-import React from "react";
+import nightShot from "../../../assets/Miami-Dade/9669-images/night-shot.webp";
+import nightBackShot from "../../../assets/Miami-Dade/9765-images/night-backshot.webp";
+import mainFront from "../../../assets/Miami-Dade/8820-images/main-front.webp";
 
 const Properties = () => {
   return (
@@ -15,30 +17,36 @@ const Properties = () => {
             {/* Property 1 */}
             <div className="group">
               <div className="relative overflow-hidden mb-4">
-                <div className="h-80 bg-gradient-to-br from-green-800 via-green-600 to-green-700 rounded-sm"></div>
+                <div className="h-70 bg-gradient-to-br from-green-800 via-green-600 to-green-700 rounded-sm">
+                  <img src={nightShot} className="w-full h-full object-cover" alt="" />
+                </div>
               </div>
               <h3 className="text-xl font-light text-white text-center tracking-wide">
-                11500 SW 60 AVE
+                9669 SW 96 ST
               </h3>
             </div>
 
             {/* Property 2 */}
-            <div className="group">
+            <div className="group hover:cursor-pointer">
               <div className="relative overflow-hidden mb-4">
-                <div className="h-80 bg-gradient-to-br from-amber-800 via-amber-600 to-amber-700 rounded-sm"></div>
+                <div className="h-70 bg-gradient-to-br from-amber-800 via-amber-600 to-amber-700 rounded-sm">
+                  <img src={mainFront} className="w-full h-full object-cover"/>
+                </div>
               </div>
               <h3 className="text-xl font-light text-white text-center tracking-wide">
-                6100 W SUBURBAN DRIVE
+                11035 SW 93 ST
               </h3>
             </div>
 
             {/* Property 3 */}
             <div className="group">
               <div className="relative overflow-hidden mb-4">
-                <div className="h-80 bg-gradient-to-br from-blue-800 via-blue-600 to-blue-700 rounded-sm"></div>
+                <div className="h-70 bg-gradient-to-br from-blue-800 via-blue-600 to-blue-700 rounded-sm">
+                  <img src={nightBackShot} className="w-full h-full object-cover"/>
+                </div>
               </div>
               <h3 className="text-xl font-light text-white text-center tracking-wide">
-                6800 SW 106 ST
+                9765 SW 110 ST
               </h3>
             </div>
           </div>

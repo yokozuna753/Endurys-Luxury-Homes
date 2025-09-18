@@ -1,6 +1,6 @@
-import nightShot from "../../../assets/Pinecrest/9669-images/night-shot.webp";
-import nightBackShot from "../../../assets/Pinecrest/9765-images/night-backshot.webp";
-import mainFront from "../../../assets/Pinecrest/8820-images/main-front.webp";
+import nightShot from "../../../assets/Miami-Dade/9669-images/night-shot.webp";
+import nightBackShot from "../../../assets/Miami-Dade/9765-images/night-backshot.webp";
+import mainFront from "../../../assets/Miami-Dade/8820-images/main-front.webp";
 
 const Properties = () => {
   return (
@@ -22,7 +22,7 @@ const Properties = () => {
                 </div>
               </div>
               <h3 className="text-xl font-light text-white text-center tracking-wide">
-                9669 SW 96 ST
+                10801 SW 67 AVE
               </h3>
             </div>
 
@@ -34,7 +34,7 @@ const Properties = () => {
                 </div>
               </div>
               <h3 className="text-xl font-light text-white text-center tracking-wide">
-                8820 SW 182 TER
+                6700 SW 115 ST
               </h3>
             </div>
 
@@ -46,7 +46,7 @@ const Properties = () => {
                 </div>
               </div>
               <h3 className="text-xl font-light text-white text-center tracking-wide">
-                9765 SW 110 ST
+                6290 SW 130 TER
               </h3>
             </div>
           </div>
