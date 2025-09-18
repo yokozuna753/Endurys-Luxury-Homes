@@ -12,11 +12,11 @@ const NavBar = () => {
 
   return (
     <nav className="bg-white shadow-md fixed w-full z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+      <div className="max-w-7xl mx-auto p-0 sm:px-6 ">
+        <div className="flex justify-between m-0 items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0 text-9xl w-25">
-            <img src={logo}/>
+            <a href="/"> <img src={logo} /> </a>
           </div>
 
           {/* Desktop Menu */}
@@ -48,7 +48,7 @@ const NavBar = () => {
                 </NavLink>
                 <NavLink
                   to="/properties/westcoast"
-                  className="block px-4 py-2 hover:cursor-pointer hover:bg-gray-100 text-black"
+                  className="block px-4 py-2 hover:cursor-pointer hover:bg-gray-100 text-black dark:hover:text-black"
                 >
                   WEST COAST
                 </NavLink>
