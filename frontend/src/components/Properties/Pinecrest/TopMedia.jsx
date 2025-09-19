@@ -1,4 +1,4 @@
-import vid6290house from "../../../assets/Miami-Dade/video/6290-pinecrest.mp4";
+import vid10801house from "../../../assets/Pinecrest/video/10801-pinecrest.mp4";
 
 const TopMedia = () => {
   return (
@@ -14,13 +14,13 @@ const TopMedia = () => {
           playsInline
           disablePictureInPicture
         >
-          <source src={vid6290house} type="video/mp4" />
+          <source src={vid10801house} type="video/mp4" />
         </video>
 
         {/* Centered text */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
           <h1 className="text-6xl md:text-8xl font-light text-white mb-4 tracking-wider">
-            AVAILABLE PROPERTIES
+            OUR PROPERTIES
           </h1>
           <h2 className="text-5xl md:text-6xl font-light text-white tracking-wider">
             PINECREST

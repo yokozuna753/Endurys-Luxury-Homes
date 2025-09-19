@@ -1,6 +1,6 @@
-import nightShot from "../../../assets/Miami-Dade/9669-images/night-shot.webp";
-import nightBackShot from "../../../assets/Miami-Dade/9765-images/night-backshot.webp";
-import mainFront from "../../../assets/Miami-Dade/11035-images/main.webp";
+import main10801 from "../../../assets/Pinecrest/10801-images/main.webp";
+import main6700 from "../../../assets/Pinecrest/6700-images/main-front.webp";
+import main6290 from "../../../assets/Pinecrest/6290-images/main-side.webp";
 
 const Properties = () => {
   return (
@@ -18,7 +18,7 @@ const Properties = () => {
             <div className="group">
               <div className="relative overflow-hidden mb-4">
                 <div className="h-70 bg-gradient-to-br from-green-800 via-green-600 to-green-700 rounded-sm">
-                  <img src={nightShot} className="w-full h-full object-cover" alt="" />
+                  <img src={main10801} className="w-full h-full object-cover" alt="" />
                 </div>
               </div>
               <h3 className="text-xl font-light text-white text-center tracking-wide">
@@ -30,11 +30,12 @@ const Properties = () => {
             <div className="group hover:cursor-pointer">
               <div className="relative overflow-hidden mb-4">
                 <div className="h-70 bg-gradient-to-br from-amber-800 via-amber-600 to-amber-700 rounded-sm">
-                  <img src={mainFront} className="w-full h-full object-cover"/>
+                  <img src={main6290} className="w-full h-full object-cover"/>
                 </div>
               </div>
               <h3 className="text-xl font-light text-white text-center tracking-wide">
-                6700 SW 115 ST
+                6290 SW 130 TER
+
               </h3>
             </div>
 
@@ -42,11 +43,11 @@ const Properties = () => {
             <div className="group">
               <div className="relative overflow-hidden mb-4">
                 <div className="h-70 bg-gradient-to-br from-blue-800 via-blue-600 to-blue-700 rounded-sm">
-                  <img src={nightBackShot} className="w-full h-full object-cover"/>
+                  <img src={main6700} className="w-full h-full object-cover"/>
                 </div>
               </div>
               <h3 className="text-xl font-light text-white text-center tracking-wide">
-                6290 SW 130 TER
+                6700 SW 115 ST
               </h3>
             </div>
           </div>

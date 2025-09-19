@@ -1,4 +1,4 @@
-import vid6290house from "../../../assets/Miami-Dade/video/6290-pinecrest.mp4";
+import vid6290house from "../../../assets/Miami-Dade/video/6290-miami-dade.mp4";
 
 const TopMedia = () => {
   return (
@@ -20,7 +20,7 @@ const TopMedia = () => {
         {/* Centered text */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
           <h1 className="text-6xl md:text-8xl font-light text-white mb-4 tracking-wider">
-            AVAILABLE PROPERTIES
+            OUR PROPERTIES
           </h1>
           <h2 className="text-5xl md:text-6xl font-light text-white tracking-wider">
             MIAMI-DADE COUNTY
