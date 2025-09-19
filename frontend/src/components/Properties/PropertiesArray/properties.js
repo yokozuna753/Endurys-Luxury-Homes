@@ -48,7 +48,7 @@ export const propertiesObj = {
       id: 1,
       address: "9669 SW 96 ST",
       location: "MIAMI-DADE",
-      images: {
+      images: [
         main9669,
         bathroom9669,
         bathtub9669,
@@ -59,13 +59,13 @@ export const propertiesObj = {
         livingRoom9669,
         nightShot9669,
         court9669,
-      },
+      ],
     },
     {
       id: 2,
       address: "9765 SW 110 ST",
       location: "MIAMI-DADE",
-      images: {
+      images: [
         main9765,
         aerial9765,
         bathroom9765,
@@ -75,19 +75,19 @@ export const propertiesObj = {
         nightBackshot9765,
         nightTables9765,
         room9765,
-      },
+      ],
     },
     {
       id: 3,
       address: "11035 SW 93 ST",
       location: "MIAMI-DADE",
-      images: {
+      images: [
         main11035,
         famRoom11035,
         kitchen11035,
         kitchenTwo11035,
         livingRooom11035,
-      },
+      ],
     },
   ],
 
@@ -96,32 +96,26 @@ export const propertiesObj = {
       id: 4,
       address: "6290 SW 130 TER",
       location: "PINECREST",
-      images: {
+      images: [
         main6290,
         bathroom6290,
         kitchen6290,
         livingRoom6290,
         kitchenTwo6290,
         pool6290,
-      },
+      ],
     },
     {
       id: 5,
       address: "6700 SW 115 ST",
       location: "PINECREST",
-      images: {
-        main6700,
-        backPool6700,
-      },
+      images: [main6700, backPool6700],
     },
     {
       id: 6,
       address: "10801 SW 67 AVE",
       location: "PINECREST",
-      images: {
-        main10801,
-        backPool10801,
-      },
+      images: [main10801, backPool10801],
     },
   ],
 };
