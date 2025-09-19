@@ -63,7 +63,7 @@ export const propertiesObj = {
     },
     {
       id: 2,
-      address: "9669 SW 96 ST",
+      address: "9765 SW 110 ST",
       location: "MIAMI-DADE",
       images: {
         main9765,
@@ -79,7 +79,7 @@ export const propertiesObj = {
     },
     {
       id: 3,
-      address: "9669 SW 96 ST",
+      address: "11035 SW 93 ST",
       location: "MIAMI-DADE",
       images: {
         main11035,
@@ -94,7 +94,7 @@ export const propertiesObj = {
   pinecrest: [
     {
       id: 4,
-      address: "9669 SW 96 ST",
+      address: "6290 SW 130 TER",
       location: "PINECREST",
       images: {
         main6290,
@@ -107,7 +107,7 @@ export const propertiesObj = {
     },
     {
       id: 5,
-      address: "9669 SW 96 ST",
+      address: "6700 SW 115 ST",
       location: "PINECREST",
       images: {
         main6700,
@@ -116,7 +116,7 @@ export const propertiesObj = {
     },
     {
       id: 6,
-      address: "9669 SW 96 ST",
+      address: "10801 SW 67 AVE",
       location: "PINECREST",
       images: {
         main10801,
