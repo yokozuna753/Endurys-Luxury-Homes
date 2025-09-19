@@ -41,7 +41,7 @@ const Properties = () => {
     <div className="group hover:cursor-pointer">
     <div className="relative overflow-hidden mb-4">
     <div className="h-70 bg-gradient-to-br from-amber-800 via-amber-600 to-amber-700 rounded-sm">
-    <Link to={{pathname: `/properties/miami-dade/miamiDade/2`}} className="hover:cursor-pointer">
+    <Link to={{pathname: `/properties/miami-dade/miamiDade/3`}} className="hover:cursor-pointer">
     {" "}
     <img
     src={mainFront}
@@ -50,7 +50,7 @@ const Properties = () => {
     </Link>
     </div>
     </div>
-    <Link to={{pathname: `/properties/miami-dade/miamiDade/2`}} className="hover:cursor-pointer">
+    <Link to={{pathname: `/properties/miami-dade/miamiDade/3`}} className="hover:cursor-pointer">
     <h3 className="text-xl font-light text-white text-center tracking-wide">
     11035 SW 93 ST
     </h3>
@@ -62,7 +62,7 @@ const Properties = () => {
     <div className="relative overflow-hidden mb-4">
     <div className="h-70 bg-gradient-to-br from-blue-800 via-blue-600 to-blue-700 rounded-sm">
     {" "}
-    <Link to={{pathname: `/properties/miami-dade/miamiDade/3`}} className="hover:cursor-pointer">
+    <Link to={{pathname: `/properties/miami-dade/miamiDade/2`}} className="hover:cursor-pointer">
     <img
     src={nightBackShot}
     className="w-full h-full object-cover"
@@ -70,7 +70,7 @@ const Properties = () => {
     </Link>
     </div>
     </div>
-    <Link to={{pathname: `/properties/miami-dade/miamiDade/3`}} className="hover:cursor-pointer">
+    <Link to={{pathname: `/properties/miami-dade/miamiDade/2`}} className="hover:cursor-pointer">
     <h3 className="text-xl font-light text-white text-center tracking-wide">
     9765 SW 110 ST
     </h3>
