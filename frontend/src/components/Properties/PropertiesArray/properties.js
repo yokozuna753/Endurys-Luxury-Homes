@@ -42,6 +42,8 @@ import {
   main10801,
 } from "../../../assets/Pinecrest/10801-images";
 
+//* Properties Below
+
 export const propertiesObj = {
   miamiDade: [
     {
@@ -60,6 +62,11 @@ export const propertiesObj = {
         nightShot9669,
         court9669,
       ],
+      description: `Luxury residence located at 17133 Ericarose Court, in Boca Raton's prestigious St. Andrews Country Club. Designed by Hollub Group, it features 6 bedrooms, 8.2 bathrooms, an office, a gym, and a media room. The gourmet kitchen and dual-bath master suite are strikingly elegant. It offers over 11.954 square feet of construction on a 0.37-acre lot. Resort-like exterior with a pool, spa, summer kitchen, and lake views. Includes an elevator, a 3-car garage, and high-end finishes throughout.`,
+      sellPrice: "$1,000,000",
+      beds: 6,
+      baths: 4,
+      livingArea: "11,952",
     },
     {
       id: 2,
@@ -76,6 +83,11 @@ export const propertiesObj = {
         nightTables9765,
         room9765,
       ],
+      description: `Luxury residence located at 17133 Ericarose Court, in Boca Raton's prestigious St. Andrews Country Club. Designed by Hollub Group, it features 6 bedrooms, 8.2 bathrooms, an office, a gym, and a media room. The gourmet kitchen and dual-bath master suite are strikingly elegant. It offers over 11.954 square feet of construction on a 0.37-acre lot. Resort-like exterior with a pool, spa, summer kitchen, and lake views. Includes an elevator, a 3-car garage, and high-end finishes throughout.`,
+      sellPrice: "$1,000,000",
+      beds: 6,
+      baths: 4,
+      livingArea: "11,952",
     },
     {
       id: 3,
@@ -88,6 +100,11 @@ export const propertiesObj = {
         kitchenTwo11035,
         livingRooom11035,
       ],
+      description: `Luxury residence located at 17133 Ericarose Court, in Boca Raton's prestigious St. Andrews Country Club. Designed by Hollub Group, it features 6 bedrooms, 8.2 bathrooms, an office, a gym, and a media room. The gourmet kitchen and dual-bath master suite are strikingly elegant. It offers over 11.954 square feet of construction on a 0.37-acre lot. Resort-like exterior with a pool, spa, summer kitchen, and lake views. Includes an elevator, a 3-car garage, and high-end finishes throughout.`,
+      sellPrice: "$1,000,000",
+      beds: 6,
+      baths: 4,
+      livingArea: "11,952",
     },
   ],
 
@@ -104,18 +121,33 @@ export const propertiesObj = {
         kitchenTwo6290,
         pool6290,
       ],
+      description: `Luxury residence located at 17133 Ericarose Court, in Boca Raton's prestigious St. Andrews Country Club. Designed by Hollub Group, it features 6 bedrooms, 8.2 bathrooms, an office, a gym, and a media room. The gourmet kitchen and dual-bath master suite are strikingly elegant. It offers over 11.954 square feet of construction on a 0.37-acre lot. Resort-like exterior with a pool, spa, summer kitchen, and lake views. Includes an elevator, a 3-car garage, and high-end finishes throughout.`,
+      sellPrice: "$1,000,000",
+      beds: 6,
+      baths: 4,
+      livingArea: "11,952",
     },
     {
       id: 5,
       address: "6700 SW 115 ST",
       location: "PINECREST",
       images: [main6700, backPool6700],
+      description: `Luxury residence located at 17133 Ericarose Court, in Boca Raton's prestigious St. Andrews Country Club. Designed by Hollub Group, it features 6 bedrooms, 8.2 bathrooms, an office, a gym, and a media room. The gourmet kitchen and dual-bath master suite are strikingly elegant. It offers over 11.954 square feet of construction on a 0.37-acre lot. Resort-like exterior with a pool, spa, summer kitchen, and lake views. Includes an elevator, a 3-car garage, and high-end finishes throughout.`,
+      sellPrice: "$1,000,000",
+      beds: 6,
+      baths: 4,
+      livingArea: "11,952",
     },
     {
       id: 6,
       address: "10801 SW 67 AVE",
       location: "PINECREST",
       images: [main10801, backPool10801],
+      description: `Luxury residence located at 17133 Ericarose Court, in Boca Raton's prestigious St. Andrews Country Club. Designed by Hollub Group, it features 6 bedrooms, 8.2 bathrooms, an office, a gym, and a media room. The gourmet kitchen and dual-bath master suite are strikingly elegant. It offers over 11.954 square feet of construction on a 0.37-acre lot. Resort-like exterior with a pool, spa, summer kitchen, and lake views. Includes an elevator, a 3-car garage, and high-end finishes throughout.`,
+      sellPrice: "$1,000,000",
+      beds: 6,
+      baths: 4,
+      livingArea: "11,952",
     },
   ],
 };

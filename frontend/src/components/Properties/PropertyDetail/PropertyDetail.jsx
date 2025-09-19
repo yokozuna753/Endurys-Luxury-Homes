@@ -2,6 +2,7 @@ import { Navigate, useParams } from "react-router-dom";
 import { propertiesObj } from "../PropertiesArray/properties";
 import TopMedia from "./TopMedia";
 import Description from "./Description";
+import Amenities from "./Amenities";
 
 export default function PropertyDetail() {
   let { area, id } = useParams();
@@ -27,12 +28,13 @@ export default function PropertyDetail() {
       <section className="bg-black">
         <div className="mx-auto">
           {/* Hero Section */}
-            <TopMedia />
-
+          <TopMedia />
 
           {/* Property details section */}
+          <Description property={property} />
 
-        <Description property={property} />
+          {/* Property details section */}
+          <Amenities property={property} />
         </div>
       </section>
     </>

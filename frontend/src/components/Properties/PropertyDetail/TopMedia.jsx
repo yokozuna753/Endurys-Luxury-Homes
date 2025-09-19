@@ -23,9 +23,9 @@ export default function TopMedia() {
 
   return (
     <>
-      <section>
+
           {/* Hero Section */}
-          <section className="relative w-full h-[90vh] flex items-center justify-center mb-12 ">
+          <section className="relative w-full h-[90vh] flex items-center justify-center ">
             <div className="relative w-full h-full border-20 border-gray-700  overflow-hidden shadow">
               {/* Background image */}
               <img
@@ -51,7 +51,7 @@ export default function TopMedia() {
               </div>
             </div>
           </section>
-      </section>
+
     </>
   );
 }
