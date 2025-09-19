@@ -1,9 +1,10 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import Layout from "./Layout";
 import HomePage from "../components/LandingPage/HomePage";
 import MiamiDade from "../components/Properties/MiamidadeCounty/MiamiDade";
 import Pinecrest from "../components/Properties/Pinecrest/Pinecrest";
 import WestCoast from "../components/Properties/WestCoast/WestCoast";
+import PropertyDetail from "../components/Properties/PropertyDetail/PropertyDetail";
 
 export const router = createBrowserRouter([
   {
@@ -13,7 +14,11 @@ export const router = createBrowserRouter([
         path: "/",
         element: <HomePage />,
       },
-
+      
+      {
+        path: "/properties/miami-dade/:area/:id",
+        element: <PropertyDetail />,
+      },
       {
         path: "/properties/miami-dade",
         element: <MiamiDade />,
@@ -23,9 +28,21 @@ export const router = createBrowserRouter([
         element: <Pinecrest />,
       },
       {
+        path: "/properties/pinecrest/:area/:id",
+        element: <PropertyDetail />,
+      },
+      {
         path: "/properties/westcoast",
         element: <WestCoast />,
       },
+      {
+        path: "/properties/westcoast/:area/:id",
+        element: <PropertyDetail />,
+      },
     ],
+  },
+  {
+    path: "*",
+    element: <Navigate to="/" />
   },
 ]);

@@ -11,7 +11,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-md fixed w-full z-50">
+    <nav className="bg-black shadow-md fixed w-full z-50">
       <div className="max-w-7xl mx-auto p-0 sm:px-6 ">
         <div className="flex justify-between m-0 items-center h-16">
           {/* Logo */}
@@ -21,14 +21,14 @@ const NavBar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6 items-center">
-            <NavLink to="/" className="text-gray-800 ">
+            <NavLink to="/" className="text-white ">
               HOME
             </NavLink>
 
 
             <div className="relative group">
               {/* This button triggers the hover */}
-              <button className="text-black hover:cursor-pointer">
+              <button className="text-white hover:cursor-pointer">
                 PROPERTIES
               </button>
 
@@ -59,7 +59,7 @@ const NavBar = () => {
 
             <div className="relative group">
               {/* This button triggers the hover */}
-              <button className="text-gray-800 hover:cursor-pointer ">
+              <button className="text-white hover:cursor-pointer ">
                 SERVICES
               </button>
 
@@ -76,7 +76,7 @@ const NavBar = () => {
 
             <div className="relative group">
               {/* This button triggers the hover */}
-              <button className="text-gray-800  hover:cursor-pointer">
+              <button className="text-white  hover:cursor-pointer">
                 OUR WORK
               </button>
 
@@ -93,7 +93,7 @@ const NavBar = () => {
 
             <NavLink
               to="/contact"
-              className="text-gray-800 hover:cursor-pointer "
+              className="text-white hover:cursor-pointer "
             >
               CONTACT
             </NavLink>
