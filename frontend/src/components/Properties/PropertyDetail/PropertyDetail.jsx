@@ -3,6 +3,7 @@ import { propertiesObj } from "../PropertiesArray/properties";
 import TopMedia from "./TopMedia";
 import Description from "./Description";
 import Amenities from "./Amenities";
+import Pictures from "./Pictures";
 
 export default function PropertyDetail() {
   let { area, id } = useParams();
@@ -13,10 +14,6 @@ export default function PropertyDetail() {
   const property = isValidArea
     ? propertiesObj[area]?.find((prop) => prop.id == id) //
     : null;
-
-  console.log(`is the area valid? => ${isValidArea}`);
-  console.log(`was the property found? => ${property}`);
-  console.log(`is the ID a number? => ${typeof id}`);
 
   //   ✅ If invalid, route to your NotFound ("*") page
   if (!isValidArea || !property) {
@@ -30,11 +27,14 @@ export default function PropertyDetail() {
           {/* Hero Section */}
           <TopMedia />
 
-          {/* Property details section */}
+          {/* Description section */}
           <Description property={property} />
 
-          {/* Property details section */}
+          {/* Amenities section */}
           <Amenities property={property} />
+
+          {/* Pictures Section */}
+          <Pictures property={property} />
         </div>
       </section>
     </>

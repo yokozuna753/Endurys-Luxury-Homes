@@ -12,10 +12,6 @@ export default function TopMedia() {
     ? propertiesObj[area]?.find((prop) => prop.id == id) //
     : null;
 
-  console.log(`is the area valid? => ${isValidArea}`);
-  console.log(`was the property found? => ${property}`);
-  console.log(`is the ID a number? => ${typeof id}`);
-
   //   ✅ If invalid, route to your NotFound ("*") page
   if (!isValidArea || !property) {
     return <Navigate to="/" replace />;

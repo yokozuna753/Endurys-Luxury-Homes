@@ -57,7 +57,7 @@ export default function Description({ property }) {
               </div>
             </div>
             <div className="mt-8"> {/* Description */}
-                <p className="text-center">
+                <p className="text-center text-white">
                     {property.description}
                 </p>
             </div>
