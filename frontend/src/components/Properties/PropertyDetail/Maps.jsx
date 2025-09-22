@@ -10,7 +10,7 @@ export default function Maps({ property }) {
   const googleMapsURL = apiKey
     ? `https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${propertyAddress}`
     : "";
-    
+    //
 
   return (
     <section className="pt-10 mt-12">
