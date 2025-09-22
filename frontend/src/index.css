@@ -2,6 +2,14 @@
 
 @theme {
   --breakpoint-md: 790px;
+  --breakpoint-xxxxxxs: 308px;
+  --breakpoint-xxxxxs: 385px;
+  --breakpoint-xxxxs: 440px;
+  --breakpoint-xxxs: 500px;
+  --breakpoint-xxs: 600px;
+  --breakpoint-xs: 680px;
+  --breakpoint-s: 755px;
+  --breakpoint-md-l: 990px;
 }
 
 /* Apple-style smooth animations */
