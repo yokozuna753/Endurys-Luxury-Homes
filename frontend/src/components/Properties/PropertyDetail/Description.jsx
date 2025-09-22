@@ -22,7 +22,7 @@ export default function Description({ property }) {
                   {property.sellPrice}{" "}
                 </div>
                 <div className="text-sm tracking-widest text-gray-300 uppercase">
-                  Sold
+                  {property.status}
                 </div>
               </div>
 

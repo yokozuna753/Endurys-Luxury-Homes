@@ -12,10 +12,13 @@ export default function TopMedia() {
     ? propertiesObj[area]?.find((prop) => prop.id == id) //
     : null;
 
-  //   ✅ If invalid, route to your NotFound ("*") page
-  if (!isValidArea || !property) {
-    return <Navigate to="/" replace />;
-  }
+    
+    //   ✅ If invalid, route to your NotFound ("*") page
+    if (!isValidArea || !property) {
+      return <Navigate to="/" replace />;
+    }
+    
+    const propertyAddress = property.address.split(',')[0].trim();
 
   return (
     <>
@@ -36,10 +39,10 @@ export default function TopMedia() {
               {/* Centered text block */}
               <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center text-white px-4">
                 <div className="uppercase tracking-widest text-xs border bg-black/70 px-3 py-1 mb-4">
-                  Sold
+                  {property.status}
                 </div>
                 <h1 className="text-4xl md:text-6xl font-semibold tracking-wider mb-2">
-                  {property.address}
+                  {propertyAddress}
                 </h1>
                 <h2 className="text-lg md:text-2xl tracking-wider mb-6">
                   {property.location}

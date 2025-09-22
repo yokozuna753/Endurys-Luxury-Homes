@@ -4,6 +4,9 @@ import TopMedia from "./TopMedia";
 import Description from "./Description";
 import Amenities from "./Amenities";
 import Pictures from "./Pictures";
+import Maps from "./Maps";
+import Footer from "./Footer";
+import ContactForm from "../../ContactForm/ContactForm";
 
 export default function PropertyDetail() {
   let { area, id } = useParams();
@@ -35,6 +38,14 @@ export default function PropertyDetail() {
 
           {/* Pictures Section */}
           <Pictures property={property} />
+
+          {/* Maps section */}
+          <Maps property={property} />
+
+          <ContactForm />
+
+          {/* Footer section */}
+          <Footer />
         </div>
       </section>
     </>
