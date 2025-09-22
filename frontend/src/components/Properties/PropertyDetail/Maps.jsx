@@ -6,7 +6,7 @@ import { CheckIcon } from "@heroicons/react/24/solid";
 export default function Maps({ property }) {
   const propertyAddress = encodeURIComponent(property?.address?.trim()); // safer than encodeURI
 
-//   test
+
 
   console.log(`Property address ====> ${propertyAddress}`);
 
