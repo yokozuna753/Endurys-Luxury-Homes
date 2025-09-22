@@ -6,13 +6,10 @@ import { CheckIcon } from "@heroicons/react/24/solid";
 export default function Maps({ property }) {
   const propertyAddress = encodeURIComponent(property?.address?.trim()); // safer than encodeURI
 
-
-
-  console.log(`Property address ====> ${propertyAddress}`);
-
-  const googleMapsURL = `https://www.google.com/maps/embed/v1/place?key=${
-    import.meta.env.VITE_GOOGLE_MAPS_API_KEY.trim()
-  }&q=${propertyAddress}`;
+  const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY?.trim();
+  const googleMapsURL = apiKey
+    ? `https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${propertyAddress}`
+    : "";
 
   return (
     <section className="pt-10 mt-12">
