@@ -1,24 +1,26 @@
-import TopMedia from './TopMedia';
-import Properties from './Properties';
-import ExclusiveListings from './ExclusiveListings';
-import Footer from '../../Footer/Footer';
+import TopMedia from "./TopMedia";
+import Properties from "./Properties";
+import ExclusiveListings from "./ExclusiveListings";
+import Footer from "../../Footer/Footer";
+import ContactForm from "../../ContactForm/ContactForm";
 
 export default function Pinecrest() {
-
   return (
     <div className="min-h-screen bg-white text-black">
-
       {/* Hero Section with Aerial Background */}
-        <TopMedia />
+      <TopMedia />
 
       {/* Properties Section */}
-        <Properties />
+      <Properties />
 
       {/* Exclusive Listings Section */}
-        <ExclusiveListings />
+      <ExclusiveListings />
+
+      {/* Contact Form */}
+      <ContactForm />
 
       {/* Footer */}
-        <Footer/>
+      <Footer />
     </div>
   );
 }

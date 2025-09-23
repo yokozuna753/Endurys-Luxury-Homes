@@ -6,6 +6,7 @@ import Pinecrest from "../components/Properties/Pinecrest/Pinecrest";
 import WestCoast from "../components/Properties/WestCoast/WestCoast";
 import PropertyDetail from "../components/Properties/PropertyDetail/PropertyDetail";
 import ContactPage from "../components/ContactPage/ContactPage";
+import CustomHomes from "../components/CustomHomes/CustomHomes";
 
 export const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ export const router = createBrowserRouter([
       {
         path: "/properties/westcoast/:area/:id",
         element: <PropertyDetail />,
+      },
+      {
+        path: "/services/custom-homes",
+        element: <CustomHomes />
       },
       {
         path: "/contact",

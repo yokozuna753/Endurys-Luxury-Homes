@@ -26,10 +26,10 @@ export default function ContactForm() {
 
     try {
       await emailjs.send(
-        "service_apm2ieh", // replace with your EmailJS service ID
-        "template_u42om8l", // replace with your EmailJS template ID
+        "service_tsvcmvw", // EmailJS service ID
+        "template_407jfow", // replace with your EmailJS template ID
         formData,
-        "aHbG81A4XROTizXwE" // replace with your EmailJS public key
+        "xlGCx8MegeXMolX_K" // replace with your EmailJS public key
       );
       setSubmitted(true);
     } catch (error) {
@@ -42,7 +42,7 @@ export default function ContactForm() {
 
   if (submitted) {
     return (
-      <section className="py-16 bg-black text-white mt-18 text-center">
+      <section className="py-16 bg-black text-white text-center">
         <h2 className="text-2xl">✅ Thank you!</h2>
         <p className="mt-4">We’ll be in touch with you soon.</p>
       </section>
@@ -50,7 +50,7 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="pt-16 bg-black text-white mt-20">
+    <section className="pt-16 bg-black text-white ">
       <div className="flex flex-col justify-center items-center max-w-4xl mx-auto px-4">
         <h2 className="text-4xl font-light mb-10">Contact Us</h2>
 

@@ -66,7 +66,7 @@ const NavBar = () => {
               {/* This dropdown stays visible while hovering parent OR the dropdown itself */}
               <div className="absolute left-0 mt-2 w-48 bg-white border rounded shadow-lg z-50 invisible group-hover:visible opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-1000 ease-out">
                 <NavLink
-                  to="/properties/luxury"
+                  to="/services/custom-homes"
                   className="block px-4 py-2 hover:cursor-pointer hover:bg-gray-100 dark:hover:text-black"
                 >
                   CUSTOM HOMES
@@ -157,16 +157,16 @@ const NavBar = () => {
             {openDropdown === "properties" && (
               <div className="ml-4 mt-2 space-y-2 hover:cursor-pointer hover:text-blue-600">
                 <NavLink
-                  to="/properties/luxury"
+                  to="/properties/miami-dade"
                   className="block text-sm text-gray-600 hover:cursor-pointer hover:text-blue-600"
                 >
-                  Luxury
+                  MIAMI-DADE COUNTY
                 </NavLink>
                 <NavLink
-                  to="/properties/affordable"
+                  to="/properties/pinecrest"
                   className="block text-sm text-gray-600 hover:cursor-pointer hover:text-blue-600"
                 >
-                  Affordable
+                  PINECREST, FL
                 </NavLink>
               </div>
             )}

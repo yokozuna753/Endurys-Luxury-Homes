@@ -35,10 +35,10 @@ export default function ContactPage() {
 
     try {
       await emailjs.send(
-        "service_apm2ieh", // your EmailJS service ID
-        "template_u42om8l", // your EmailJS template ID
+        "service_tsvcmvw", // EmailJS service ID
+        "template_407jfow", // replace with your EmailJS template ID
         formData,
-        "aHbG81A4XROTizXwE" // your EmailJS public key
+        "xlGCx8MegeXMolX_K" // replace with your EmailJS public key
       );
       setSubmitted(true);
     } catch (error) {

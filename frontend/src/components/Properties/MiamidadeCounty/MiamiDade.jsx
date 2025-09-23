@@ -2,6 +2,7 @@ import TopMedia from './TopMedia';
 import Properties from './Properties';
 import ExclusiveListings from './ExclusiveListings';
 import Footer from '../../Footer/Footer';
+import ContactForm from '../../ContactForm/ContactForm';
 
 export default function MiamiDade() {
 
@@ -16,6 +17,9 @@ export default function MiamiDade() {
 
       {/* Exclusive Listings Section */}
         <ExclusiveListings />
+
+      {/* Contact Form */}
+      <ContactForm />
 
       {/* Footer */}
         <Footer/>
