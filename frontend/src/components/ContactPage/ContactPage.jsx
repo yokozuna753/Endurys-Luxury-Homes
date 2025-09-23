@@ -8,7 +8,10 @@ export default function ContactPage() {
     last_name: "",
     user_email: "",
     phone: "",
-    address: "",
+    street: "",
+    city: "",
+    state: "",
+    zip: "",
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
@@ -81,7 +84,7 @@ export default function ContactPage() {
         </div>
 
         {/* RIGHT COLUMN (EMAILJS FORM) */}
-        <form onSubmit={handleSubmit} className="space-y-12">
+        <form onSubmit={handleSubmit} className="space-y-4">
           {/* First / Last Name */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <input
@@ -104,8 +107,8 @@ export default function ContactPage() {
             />
           </div>
 
-          {/* Email / Phone / Address */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Email / Phone */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <input
               type="email"
               name="user_email"
@@ -124,11 +127,45 @@ export default function ContactPage() {
               required
               className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3"
             />
+          </div>
+
+          {/* Address Split */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <input
               type="text"
-              name="address"
-              placeholder="Address *"
-              value={formData.address}
+              name="street"
+              placeholder="Street Address *"
+              value={formData.street}
+              onChange={handleChange}
+              required
+              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3"
+            />
+            <input
+              type="text"
+              name="city"
+              placeholder="City *"
+              value={formData.city}
+              onChange={handleChange}
+              required
+              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3"
+            />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <input
+              type="text"
+              name="state"
+              placeholder="State *"
+              value={formData.state}
+              onChange={handleChange}
+              required
+              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3"
+            />
+            <input
+              type="text"
+              name="zip"
+              placeholder="ZIP Code *"
+              value={formData.zip}
               onChange={handleChange}
               required
               className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3"
@@ -148,12 +185,7 @@ export default function ContactPage() {
 
           {/* Disclaimer */}
           <div className="flex items-start space-x-3 text-sm text-gray-400">
-            <input
-              type="checkbox"
-              defaultChecked
-              required
-              className="mt-1 h-4 w-4"
-            />
+            <input type="checkbox" defaultChecked required className="mt-1 h-4 w-4" />
             <p>
               I agree to be contacted via call, email, and text for real estate
               services. To opt out, reply "stop". See our{" "}
