@@ -1,7 +1,7 @@
 import TopMedia from './TopMedia';
 import Properties from './Properties';
 import ExclusiveListings from './ExclusiveListings';
-import Footer from './Footer';
+import Footer from '../../Footer/Footer';
 
 export default function MiamiDade() {
 

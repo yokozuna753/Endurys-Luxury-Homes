@@ -25,7 +25,7 @@ const Properties = () => {
                   >
                     <img
                       src={main10801}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                       alt=""
                     />
                   </Link>
@@ -51,7 +51,7 @@ const Properties = () => {
                   >
                     <img
                       src={main6290}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                     />
                   </Link>
                 </div>
@@ -71,7 +71,7 @@ const Properties = () => {
               <div className="relative overflow-hidden mb-4">
                 <div className="h-70 bg-gradient-to-br from-blue-800 via-blue-600 to-blue-700 rounded-sm">
                   <Link to={{pathname: `/properties/pinecrest/pinecrest/5`}} className="hover:cursor-pointer">
-                  <img src={main6700} className="w-full h-full object-cover" />
+                  <img src={main6700} className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
                   </Link>
                 </div>
               </div>

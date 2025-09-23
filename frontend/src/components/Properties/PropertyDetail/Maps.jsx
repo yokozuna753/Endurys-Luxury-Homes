@@ -7,7 +7,9 @@ export default function Maps({ property }) {
   const propertyAddress = encodeURIComponent(property?.address?.trim()); // safer than encodeURI
 
   const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY?.trim();
-  console.log("API KEY ====>      ", apiKey);
+
+  // console.log("API KEY ====>      ", apiKey);
+
   const googleMapsURL = apiKey
     ? `https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${propertyAddress}`
     : "";

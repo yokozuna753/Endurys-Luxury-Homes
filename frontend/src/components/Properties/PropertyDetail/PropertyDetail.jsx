@@ -5,7 +5,7 @@ import Description from "./Description";
 import Amenities from "./Amenities";
 import Pictures from "./Pictures";
 import Maps from "./Maps";
-import Footer from "./Footer";
+import Footer from "../../Footer/Footer";
 import ContactForm from "../../ContactForm/ContactForm";
 
 export default function PropertyDetail() {

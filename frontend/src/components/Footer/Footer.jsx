@@ -1,9 +1,10 @@
-import logo from "../../assets/images/logo.webp";
+import { Menu, X, Phone, Mail, MapPin, Star, ArrowRight, Home, Users, Award, Calendar, Heart, ChevronLeft, ChevronRight, Facebook, Instagram } from 'lucide-react';
+import logo from "../../assets/images/logo.webp"
 
 const Footer = () => {
   return (
     <>
-      <footer className="bg-black py-16">
+      <footer className="bg-black py-10">
         <div className="flex flex-col items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="gap-12">
             <div>
