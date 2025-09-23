@@ -1,30 +1,26 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import Footer from "../Footer/Footer";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
+    first_name: "",
+    last_name: "",
+    user_email: "",
     phone: "",
+    address: "",
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-    const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY?.trim();
-
+  const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY?.trim();
 
   const googleMapsURL = apiKey
-    ? `https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${encodeURIComponent("7766 NW 46 ST, Doral, FL, 33166")}`
+    ? `https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${encodeURIComponent(
+        "7766 NW 46 ST, Doral, FL, 33166"
+      )}`
     : "";
-
-  const encode = (data) =>
-    Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -35,13 +31,15 @@ export default function ContactPage() {
     setLoading(true);
 
     try {
-      await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...formData }),
-      });
+      await emailjs.send(
+        "service_apm2ieh", // your EmailJS service ID
+        "template_u42om8l", // your EmailJS template ID
+        formData,
+        "aHbG81A4XROTizXwE" // your EmailJS public key
+      );
       setSubmitted(true);
     } catch (error) {
+      console.error("EmailJS error:", error);
       alert("Something went wrong, please try again.");
     } finally {
       setLoading(false);
@@ -70,9 +68,7 @@ export default function ContactPage() {
             <p>📍 7766 NW 46 ST, Doral, Florida, 33166</p>
           </div>
 
-          {/* MAP PLACEHOLDER */}
           <div className="w-full h-80 bg-gray-800 rounded-lg overflow-hidden">
-            {/* Replace this with Google Maps API integration */}
             <iframe
               className="w-full h-80"
               src={googleMapsURL}
@@ -84,45 +80,37 @@ export default function ContactPage() {
           </div>
         </div>
 
-        {/* RIGHT COLUMN (FORM) */}
-        <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          onSubmit={handleSubmit}
-          className="space-y-12"
-        >
-          <input type="hidden" name="form-name" value="contact" />
-
+        {/* RIGHT COLUMN (EMAILJS FORM) */}
+        <form onSubmit={handleSubmit} className="space-y-12">
           {/* First / Last Name */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <input
               type="text"
-              name="firstName"
+              name="first_name"
               placeholder="First Name *"
-              value={formData.firstName}
+              value={formData.first_name}
               onChange={handleChange}
               required
               className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3"
             />
             <input
               type="text"
-              name="lastName"
+              name="last_name"
               placeholder="Last Name *"
-              value={formData.lastName}
+              value={formData.last_name}
               onChange={handleChange}
               required
               className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3"
             />
           </div>
 
-          {/* Email / Phone */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Email / Phone / Address */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <input
               type="email"
-              name="email"
+              name="user_email"
               placeholder="Email *"
-              value={formData.email}
+              value={formData.user_email}
               onChange={handleChange}
               required
               className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3"
@@ -132,6 +120,15 @@ export default function ContactPage() {
               name="phone"
               placeholder="Phone *"
               value={formData.phone}
+              onChange={handleChange}
+              required
+              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3"
+            />
+            <input
+              type="text"
+              name="address"
+              placeholder="Address *"
+              value={formData.address}
               onChange={handleChange}
               required
               className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3"
@@ -148,16 +145,6 @@ export default function ContactPage() {
             required
             className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3"
           ></textarea>
-
-          {/* Best Time */}
-          {/* <div className="flex gap-6 text-gray-400">
-            <label className="flex items-center gap-2">
-              <input type="checkbox" className="h-4 w-4" /> am
-            </label>
-            <label className="flex items-center gap-2">
-              <input type="checkbox" className="h-4 w-4" /> pm
-            </label>
-          </div> */}
 
           {/* Disclaimer */}
           <div className="flex items-start space-x-3 text-sm text-gray-400">
@@ -192,7 +179,7 @@ export default function ContactPage() {
         </form>
       </div>
 
-      <Footer />w
+      <Footer />
     </section>
   );
 }

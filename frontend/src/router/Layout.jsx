@@ -1,5 +1,5 @@
 import NavBar from "../components/NavBar/NavBar";
-import { Outlet } from "react-router-dom";
+import { Outlet, ScrollRestoration } from "react-router-dom";
 import "../index.css"
 
 export default function Layout() {
@@ -8,6 +8,7 @@ export default function Layout() {
       <NavBar />
       <main className="pt-16">
         <Outlet />
+        <ScrollRestoration />
       </main>
     </>
   );

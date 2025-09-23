@@ -79,7 +79,7 @@ const Slideshow = () => {
 
   return (
 <div
-      className="overflow-hidden relative w-full h-[220px] my-10"
+      className="overflow-hidden relative w-full h-[220px] my-20 py-8"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -93,7 +93,7 @@ const Slideshow = () => {
             <img
               src={slide.image}
               alt={slide.title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             />
             {/* Overlay for text */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-5 flex flex-col justify-end">

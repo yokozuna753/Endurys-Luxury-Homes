@@ -1,23 +1,20 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
+    first_name: "",
+    last_name: "",
+    user_email: "",
     phone: "",
+    street: "",
+    city: "",
+    state: "",
+    zip: "",
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
-
-  // Encode helper
-  const encode = (data) =>
-    Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -28,13 +25,15 @@ export default function ContactForm() {
     setLoading(true);
 
     try {
-      await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...formData }),
-      });
+      await emailjs.send(
+        "service_apm2ieh", // replace with your EmailJS service ID
+        "template_u42om8l", // replace with your EmailJS template ID
+        formData,
+        "aHbG81A4XROTizXwE" // replace with your EmailJS public key
+      );
       setSubmitted(true);
     } catch (error) {
+      console.error("EmailJS error:", error);
       alert("Something went wrong, please try again.");
     } finally {
       setLoading(false);
@@ -43,7 +42,7 @@ export default function ContactForm() {
 
   if (submitted) {
     return (
-      <section className="py-16 bg-black text-white mt-12 text-center">
+      <section className="py-16 bg-black text-white mt-18 text-center">
         <h2 className="text-2xl">✅ Thank you!</h2>
         <p className="mt-4">We’ll be in touch with you soon.</p>
       </section>
@@ -51,36 +50,27 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="py-16 bg-black text-white mt-12">
+    <section className="pt-16 bg-black text-white mt-20">
       <div className="flex flex-col justify-center items-center max-w-4xl mx-auto px-4">
         <h2 className="text-4xl font-light mb-10">Contact Us</h2>
 
-        <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          onSubmit={handleSubmit}
-          className="space-y-6"
-        >
-          {/* Required hidden input */}
-          <input type="hidden" name="form-name" value="contact" />
-
+        <form onSubmit={handleSubmit} className="space-y-6">
           {/* First/Last Name */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <input
               type="text"
-              name="firstName"
+              name="first_name"
               placeholder="First Name *"
-              value={formData.firstName}
+              value={formData.first_name}
               onChange={handleChange}
               required
               className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <input
               type="text"
-              name="lastName"
+              name="last_name"
               placeholder="Last Name *"
-              value={formData.lastName}
+              value={formData.last_name}
               onChange={handleChange}
               required
               className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -91,9 +81,9 @@ export default function ContactForm() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <input
               type="email"
-              name="email"
+              name="user_email"
               placeholder="Email *"
-              value={formData.email}
+              value={formData.user_email}
               onChange={handleChange}
               required
               className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -109,7 +99,49 @@ export default function ContactForm() {
             />
           </div>
 
-          {/* Comments */}
+          {/* Address Split */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <input
+              type="text"
+              name="street"
+              placeholder="Street Address *"
+              value={formData.street}
+              onChange={handleChange}
+              required
+              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <input
+              type="text"
+              name="city"
+              placeholder="City *"
+              value={formData.city}
+              onChange={handleChange}
+              required
+              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <input
+              type="text"
+              name="state"
+              placeholder="State *"
+              value={formData.state}
+              onChange={handleChange}
+              required
+              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <input
+              type="text"
+              name="zip"
+              placeholder="ZIP Code *"
+              value={formData.zip}
+              onChange={handleChange}
+              required
+              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          {/* Message */}
           <textarea
             name="message"
             placeholder="Message *"
@@ -120,7 +152,7 @@ export default function ContactForm() {
             className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
           ></textarea>
 
-          {/* Checkbox Disclaimer */}
+          {/* Disclaimer */}
           <div className="flex items-start space-x-3 text-sm text-gray-400">
             <input
               type="checkbox"
@@ -131,27 +163,19 @@ export default function ContactForm() {
             <p>
               I agree to be contacted by Endurys Luxury Homes via call, email,
               and text for Luxury Homes services. To opt out, you can reply
-              'stop' at any time or reply 'help' for assistance. You can also
-              click the unsubscribe link in the emails. Message and data rates
-              may apply. Message frequency may vary.{" "}
-              <a
-                href="/privacy"
-                className="underline text-gray-300 hover:text-white"
-              >
+              'stop' at any time.{" "}
+              <a href="/privacy" className="underline text-gray-300 hover:text-white">
                 Privacy Policy
               </a>{" "}
               and{" "}
-              <a
-                href="/terms"
-                className="underline text-gray-300 hover:text-white"
-              >
+              <a href="/terms" className="underline text-gray-300 hover:text-white">
                 Terms of Service
               </a>
               .
             </p>
           </div>
 
-          {/* Submit Button */}
+          {/* Submit */}
           <button
             type="submit"
             disabled={loading}

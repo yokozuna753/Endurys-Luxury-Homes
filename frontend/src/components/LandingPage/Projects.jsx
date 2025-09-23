@@ -2,13 +2,13 @@ import React from "react";
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-8">
+    <section id="projects" className="py-16 mt-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-light mb-4 text-gray-900">
+          <h2 className="text-4xl md:text-5xl font-light mb-4 text-white">
             FEATURED <span className="font-bold">PROJECTS</span>
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="text-white text-lg max-w-2xl mx-auto">
             Discover our portfolio of exceptional homes across South Florida's
             most prestigious communities.
           </p>
@@ -25,10 +25,10 @@ const Projects = () => {
               />
               <div className="absolute inset-0 group-hover:bg-black/40 transition-colors duration-300"></div>
             </div>
-            <h3 className="text-xl font-medium mb-2 text-gray-900">
+            <h3 className="text-xl font-medium mb-2 text-white">
               PONCE DAVIS ESTATE
             </h3>
-            <p className="text-gray-600">6 bed / 7 bath Modern Farmhouse</p>
+            <p className="text-white">6 bed / 7 bath Modern Farmhouse</p>
           </div>
 
           {/* Project 2 */}
@@ -41,10 +41,10 @@ const Projects = () => {
               />
               <div className="absolute inset-0 group-hover:bg-black/40 transition-colors duration-300"></div>
             </div>
-            <h3 className="text-xl font-medium mb-2 text-gray-900">
+            <h3 className="text-xl font-medium mb-2 text-white">
               CORAL GABLES RESIDENCE
             </h3>
-            <p className="text-gray-600">Custom Contemporary Design</p>
+            <p className="text-white">Custom Contemporary Design</p>
           </div>
 
           {/* Project 3 */}
@@ -57,10 +57,10 @@ const Projects = () => {
               />
               <div className="absolute inset-0 group-hover:bg-black/40 transition-colors duration-300"></div>
             </div>
-            <h3 className="text-xl font-medium mb-2 text-gray-900">
+            <h3 className="text-xl font-medium mb-2 text-white">
               BOCA RATON VILLA
             </h3>
-            <p className="text-gray-600">Luxury Mediterranean Style</p>
+            <p className="text-white">Luxury Mediterranean Style</p>
           </div>
         </div>
 

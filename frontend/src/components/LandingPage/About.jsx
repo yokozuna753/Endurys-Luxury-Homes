@@ -35,7 +35,7 @@ const About = () => {
   const [sectionRef, sectionVisible] = useScrollAnimation(0.2);
 
   return (
-    <section id="about" className="my-25 py-20 bg-black">
+    <section id="about" className="mt-16 py-16 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div 
           ref={sectionRef}
