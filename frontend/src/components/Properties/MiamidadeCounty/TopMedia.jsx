@@ -29,7 +29,7 @@ const TopMedia = () => {
       </section>
 
       {/* Pinecrest Description */}
-      <section className="bg-black py-16">
+      <section className="bg-black mt-16 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-lg text-gray-300 leading-relaxed mb-8">
             Living in Miami-Dade County, FL, is ideal for its peaceful and safe
@@ -40,7 +40,9 @@ const TopMedia = () => {
             hustle and bustle. It also boasts a high quality of life and
             first-class services.
           </p>
-          <button className="border border-white text-white px-8 py-3 text-sm font-medium tracking-wide hover:bg-white hover:text-black transition-colors">
+          <button className="border border-white text-white px-8 py-3 text-sm font-medium tracking-wide hover:bg-white hover:text-black transition-all duration-300 ease-in-out 
+             hover:bg-gray-200 hover:shadow-[0_8px_30px_rgba(255,255,255,0.2)]
+             hover:scale-105 hover:cursor-pointer">
             REQUEST INFORMATION
           </button>
         </div>

@@ -41,7 +41,9 @@ const HomePage = () => {
             For over 20 years, defining luxury living through architecturally
             significant custom homes and transformative renovations.
           </p>
-          <button className="bg-white text-gray-900 px-8 py-3 font-medium hover:bg-gray-100 hover:opacity-100 hover:cursor-pointer dark:hover:text-black transition-colors duration-300">
+          <button className="bg-white text-gray-900 px-8 py-3 font-medium hover:opacity-100 hover:cursor-pointer transition-all duration-300 ease-in-out 
+             hover:bg-gray-200 hover:shadow-[0_8px_30px_rgba(255,255,255,0.2)]
+             hover:scale-105 hover:cursor-pointer">
             EXPLORE OUR WORK
           </button>
         </div>

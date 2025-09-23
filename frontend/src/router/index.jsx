@@ -6,6 +6,7 @@ import Pinecrest from "../components/Properties/Pinecrest/Pinecrest";
 import WestCoast from "../components/Properties/WestCoast/WestCoast";
 import PropertyDetail from "../components/Properties/PropertyDetail/PropertyDetail";
 import ContactPage from "../components/ContactPage/ContactPage";
+import ShowcaseCustomHomes from "../components/ShowcaseCustomHomes/ShowcaseCustomHomes";
 import CustomHomes from "../components/CustomHomes/CustomHomes";
 
 export const router = createBrowserRouter([
@@ -16,7 +17,7 @@ export const router = createBrowserRouter([
         path: "/",
         element: <HomePage />,
       },
-      
+
       {
         path: "/properties/miami-dade/:area/:id",
         element: <PropertyDetail />,
@@ -43,16 +44,20 @@ export const router = createBrowserRouter([
       },
       {
         path: "/services/custom-homes",
-        element: <CustomHomes />
+        element: <CustomHomes />,
+      },
+      {
+        path: "/our-work/showcase-custom-homes",
+        element: <ShowcaseCustomHomes />,
       },
       {
         path: "/contact",
-        element: <ContactPage />
-      }
+        element: <ContactPage />,
+      },
     ],
   },
   {
     path: "*",
-    element: <Navigate to="/" />
+    element: <Navigate to="/" />,
   },
 ]);

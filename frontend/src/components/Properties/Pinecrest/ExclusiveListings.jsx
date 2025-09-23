@@ -80,7 +80,9 @@ const ExclusiveListings = () => {
           </div>
 
           <div className="text-center">
-            <button className="border border-white text-white px-8 py-3 text-sm font-medium tracking-wide hover:bg-white hover:text-black transition-colors">
+            <button className="border border-white text-white px-8 py-3 text-sm font-medium tracking-wide hover:text-black transition-all duration-300 ease-in-out 
+             hover:bg-gray-200 hover:shadow-[0_8px_30px_rgba(255,255,255,0.2)]
+             hover:scale-105 hover:cursor-pointer">
               View All
             </button>
           </div>

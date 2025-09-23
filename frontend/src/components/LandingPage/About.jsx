@@ -80,7 +80,9 @@ const About = () => {
             <div className={`flex justify-center lg:justify-start scroll-animate delay-400 ${
               sectionVisible ? 'animate-fade-in-up' : ''
             }`}>
-              <button className="bg-gray-900 text-white px-8 py-3 font-medium hover:bg-gray-800 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+              <button className="bg-gray-900 text-white px-8 py-3 font-medium hover:bg-gray-800 transition-all duration-300 ease-in-out 
+             hover:bg-gray-200 hover:shadow-[0_8px_30px_rgba(255,255,255,0.2)]
+             hover:scale-105 hover:cursor-pointer">
                 LEARN MORE
               </button>
             </div>

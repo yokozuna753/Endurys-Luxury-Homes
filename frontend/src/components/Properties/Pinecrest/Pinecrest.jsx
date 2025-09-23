@@ -6,7 +6,7 @@ import ContactForm from "../../ContactForm/ContactForm";
 
 export default function Pinecrest() {
   return (
-    <div className="min-h-screen bg-white text-black">
+    <div className="min-h-screen bg-black text-white">
       {/* Hero Section with Aerial Background */}
       <TopMedia />
 

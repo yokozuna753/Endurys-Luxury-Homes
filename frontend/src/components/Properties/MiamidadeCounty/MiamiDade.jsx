@@ -7,7 +7,7 @@ import ContactForm from '../../ContactForm/ContactForm';
 export default function MiamiDade() {
 
   return (
-    <div className="min-h-screen bg-white text-black">
+    <div className="min-h-screen bg-black text-black">
 
       {/* Hero Section with Aerial Background */}
         <TopMedia />
