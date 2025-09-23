@@ -7,14 +7,11 @@ import { main11035 } from "../../assets/Miami-Dade/11035-images";
 import Services from "./Services";
 import ContactForm from "../ContactForm/ContactForm";
 import Footer from "../Footer/Footer";
+import "../../index.css";
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Navigation */}
-
-      {/* <NavBar /> */}
-
+    <div className="min-h-screen bg-black">
       {/* Hero Section */}
       <section
         id="home"
@@ -31,13 +28,16 @@ const HomePage = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 text-center backdrop-blur-md p-3 rounded-3xl  text-white px-4 max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl text-black lg:text-7xl font-light mb-6 leading-tight">
+        <div className="relative z-10 text-center backdrop-blur-md p-3 rounded-3xl px-4 max-w-4xl mx-auto">
+          <h1
+            style={{ color: "#000" }}
+            className="text-4xl md:text-6xl force-black lg:text-7xl font-light mb-6 leading-tight"
+          >
             CRAFTING SOUTH FLORIDA'S
             <br />
-            <span className="font-bold text-black">FINEST HOMES</span>
+            <span className="font-bold force-black">FINEST HOMES</span>
           </h1>
-          <p className="text-lg md:text-xl mb-8 font-light max-w-2xl mx-auto">
+          <p className="text-lg force-black md:text-xl mb-8 font-light max-w-2xl mx-auto">
             For over 20 years, defining luxury living through architecturally
             significant custom homes and transformative renovations.
           </p>

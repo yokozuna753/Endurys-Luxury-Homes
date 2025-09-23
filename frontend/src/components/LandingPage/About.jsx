@@ -35,7 +35,7 @@ const About = () => {
   const [sectionRef, sectionVisible] = useScrollAnimation(0.2);
 
   return (
-    <section id="about" className="my-25 py-20 bg-gray-50">
+    <section id="about" className="my-25 py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div 
           ref={sectionRef}
@@ -47,7 +47,7 @@ const About = () => {
             <div className={`scroll-animate ${
               sectionVisible ? 'animate-fade-in-left' : ''
             }`}>
-              <h2 className="text-center text-4xl lg:text-left md:text-5xl font-light mb-6 text-gray-900">
+              <h2 className="text-center text-4xl lg:text-left md:text-5xl font-light mb-6 text-white">
                 LEGACY BUILT
                 <br />
                 <span className="font-bold">SINCE 2006</span>
@@ -58,7 +58,7 @@ const About = () => {
             <div className={`scroll-animate delay-200 ${
               sectionVisible ? 'animate-fade-in-left' : ''
             }`}>
-              <p className="text-center lg:text-left text-gray-600 text-lg leading-relaxed">
+              <p className="text-center lg:text-left text-white text-lg leading-relaxed">
                 From lot acquisition to turnkey delivery, our fully integrated,
                 concierge-level approach ensures a seamless, personalized
                 experience for discerning clients.
@@ -69,7 +69,7 @@ const About = () => {
             <div className={`scroll-animate delay-300 ${
               sectionVisible ? 'animate-fade-in-left' : ''
             }`}>
-              <p className="text-center lg:text-left text-gray-600 text-lg leading-relaxed">
+              <p className="text-center lg:text-left text-white text-lg leading-relaxed">
                 With a legacy rooted in Pinecrest, Coral Gables, Boca Raton, and
                 beyond, Hollub Group is trusted for exceptional craftsmanship,
                 lasting value, and relationships that endure.

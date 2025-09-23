@@ -5,6 +5,7 @@ import MiamiDade from "../components/Properties/MiamidadeCounty/MiamiDade";
 import Pinecrest from "../components/Properties/Pinecrest/Pinecrest";
 import WestCoast from "../components/Properties/WestCoast/WestCoast";
 import PropertyDetail from "../components/Properties/PropertyDetail/PropertyDetail";
+import ContactPage from "../components/ContactPage/ContactPage";
 
 export const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ export const router = createBrowserRouter([
         path: "/properties/westcoast/:area/:id",
         element: <PropertyDetail />,
       },
+      {
+        path: "/contact",
+        element: <ContactPage />
+      }
     ],
   },
   {

@@ -12,6 +12,11 @@
   --breakpoint-md-l: 990px;
 }
 
+/* Custom override for Dark Reader */
+.force-black {
+  color: #000 !important;
+}
+
 /* Apple-style smooth animations */
 @keyframes fadeInUp {
   0% {
