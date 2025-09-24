@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom"; // assuming you're using react-router-dom
-import logo from "../../assets/images/logo.webp"
+import logo from "../../assets/images/logo.webp";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,7 +16,10 @@ const NavBar = () => {
         <div className="flex justify-between m-0 items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0 text-9xl w-25">
-            <a href="/"> <img src={logo} /> </a>
+            <a href="/">
+              {" "}
+              <img src={logo} />{" "}
+            </a>
           </div>
 
           {/* Desktop Menu */}
@@ -24,7 +27,6 @@ const NavBar = () => {
             <NavLink to="/" className="text-white ">
               HOME
             </NavLink>
-
 
             <div className="relative group">
               {/* This button triggers the hover */}
@@ -55,8 +57,6 @@ const NavBar = () => {
               </div>
             </div>
 
-
-
             <div className="relative group">
               {/* This button triggers the hover */}
               <button className="text-white hover:cursor-pointer ">
@@ -83,7 +83,7 @@ const NavBar = () => {
               {/* This dropdown stays visible while hovering parent OR the dropdown itself */}
               <div className="absolute left-0 mt-2 w-48 bg-white border rounded shadow-lg z-50 invisible group-hover:visible opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-1000 ease-out">
                 <NavLink
-                  to="/properties/luxury"
+                  to="/our-work/showcase-custom-homes"
                   className="block px-4 py-2 hover:cursor-pointer hover:bg-gray-100 dark:hover:text-black"
                 >
                   SHOWCASE & CUSTOM HOMES
@@ -91,10 +91,7 @@ const NavBar = () => {
               </div>
             </div>
 
-            <NavLink
-              to="/contact"
-              className="text-white hover:cursor-pointer "
-            >
+            <NavLink to="/contact" className="text-white hover:cursor-pointer ">
               CONTACT
             </NavLink>
           </div>
@@ -183,16 +180,10 @@ const NavBar = () => {
             {openDropdown === "services" && (
               <div className="ml-4 mt-2 space-y-2">
                 <NavLink
-                  to="/services/buying"
+                  to="/services/custom-homes"
                   className="block text-sm text-gray-600 hover:cursor-pointer hover:text-blue-600"
                 >
-                  Buying
-                </NavLink>
-                <NavLink
-                  to="/services/selling"
-                  className="block text-sm text-gray-600 hover:cursor-pointer hover:text-blue-600"
-                >
-                  Selling
+                  CUSTOM HOMES
                 </NavLink>
               </div>
             )}
@@ -209,16 +200,10 @@ const NavBar = () => {
             {openDropdown === "ourwork" && (
               <div className="ml-4 mt-2 space-y-2">
                 <NavLink
-                  to="/our-work/projects"
+                  to="/our-work/showcase-custom-homes"
                   className="block text-sm text-gray-600 hover:cursor-pointer hover:text-blue-600"
                 >
-                  Projects
-                </NavLink>
-                <NavLink
-                  to="/our-work/testimonials"
-                  className="block text-sm text-gray-600 hover:cursor-pointer hover:text-blue-600"
-                >
-                  Testimonials
+                  SHOWCASE & CUSTOM HOMES
                 </NavLink>
               </div>
             )}

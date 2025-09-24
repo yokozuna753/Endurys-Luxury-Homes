@@ -11,14 +11,10 @@ export default function ShowcaseProperties() {
   const properties = [...propertiesObj.miamiDade, ...propertiesObj.pinecrest];
 
 return (
-    <section className="py-10 bg-black">
+    <section className="py-10 mt-14 bg-black">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Heading */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-light tracking-wide text-white">
-            SHOWCASE PROPERTIES
-          </h2>
-        </div>
+
 
         {/* Property Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
