@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { propertiesObj } from "../PropertiesArray/properties";
+import { exclusiveProperties } from "../PropertiesArray/exclusiveListings";
 import { useNavigate } from "react-router-dom";
 
 const ExclusiveListings = () => {
   const navigate = useNavigate();
 
-  const propertyOne = propertiesObj.miamiDade[0];
-  const propertyTwo = propertiesObj.miamiDade[1];
+  const propertyOne = exclusiveProperties.miamiDade[0];
+  const propertyTwo = exclusiveProperties.miamiDade[1];
 
   const [indexOne, setIndexOne] = useState(0);
   const [indexTwo, setIndexTwo] = useState(0);

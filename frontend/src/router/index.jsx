@@ -9,6 +9,7 @@ import ContactPage from "../components/ContactPage/ContactPage";
 import ShowcaseCustomHomes from "../components/ShowcaseCustomHomes/ShowcaseCustomHomes";
 import CustomHomes from "../components/CustomHomes/CustomHomes";
 import ExclusiveAll from "../components/Properties/ExclusiveProperties/ExclusiveAll/ExclusiveAll";
+import ExclusiveProperty from "../components/Properties/ExclusiveProperties/ExclusiveProperty/PropertyDetail";
 
 export const router = createBrowserRouter([
   {
@@ -56,7 +57,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/properties/:county/exclusive-listings/:id",
-        element: "",
+        element: <ExclusiveProperty />,
       },
       {
         path: "/contact",
