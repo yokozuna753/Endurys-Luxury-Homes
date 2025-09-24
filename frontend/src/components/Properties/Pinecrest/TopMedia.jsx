@@ -1,6 +1,10 @@
 import vid10801house from "../../../assets/Pinecrest/video/10801-pinecrest.mp4";
+import { useNavigate } from "react-router-dom";
 
 const TopMedia = () => {
+
+  const navigate = useNavigate();
+
   return (
     <>
       {/* Hero Section with Video Background */}
@@ -40,9 +44,13 @@ const TopMedia = () => {
             hustle and bustle. It also boasts a high quality of life and
             first-class services.
           </p>
-          <button className="border border-white text-white px-8 py-3 text-sm font-medium tracking-wide hover:text-black transition-all duration-300 ease-in-out 
+          <button
+          onClick={()=> navigate("/contact")}
+            className="border border-white text-white px-8 py-3 text-sm font-medium tracking-wide hover:text-black transition-all duration-300 ease-in-out 
              hover:bg-gray-200 hover:shadow-[0_8px_30px_rgba(255,255,255,0.2)]
-             hover:scale-105 hover:cursor-pointer">
+             hover:scale-105 hover:cursor-pointer"
+
+          >
             REQUEST INFORMATION
           </button>
         </div>
