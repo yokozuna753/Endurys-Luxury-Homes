@@ -1,7 +1,7 @@
 import {
   main8223Estero,
   beachAccess8223Estero,
-  doc8223Estero,
+  dock8223Estero,
   lot8223Estero,
   pool8223Estero,
 } from "../../../assets/Lee/8223-Estero-Blvd-Images/index";
@@ -30,7 +30,27 @@ export const exclusiveProperties = {
       images: [
         main8223Estero,
         beachAccess8223Estero,
-        doc8223Estero,
+        dock8223Estero,
+        lot8223Estero,
+        pool8223Estero,
+      ],
+      description: `Luxury residence located at 8223 Estero Blvd, in Fort Myer's prestigious St. Andrews Country Club. Designed by Hollub Group, it features 6 bedrooms, 8.2 bathrooms, an office, a gym, and a media room. The gourmet kitchen and dual-bath master suite are strikingly elegant. It offers over 11.954 square feet of construction on a 0.37-acre lot. Resort-like exterior with a pool, spa, summer kitchen, and lake views. Includes an elevator, a 3-car garage, and high-end finishes throughout.`,
+      sellPrice: "$1,100,000",
+      beds: 2,
+      baths: 3,
+      livingArea: "1,824",
+    },
+  ],
+  miamiDade: [
+    {
+      id: 7,
+      address: "8223 Estero Blvd, Fort Myers Beach, FL, 33931",
+      location: "LEE",
+      status: "EXCLUSIVE",
+      images: [
+        main8223Estero,
+        beachAccess8223Estero,
+        dock8223Estero,
         lot8223Estero,
         pool8223Estero,
       ],

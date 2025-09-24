@@ -8,6 +8,7 @@ import PropertyDetail from "../components/Properties/PropertyDetail/PropertyDeta
 import ContactPage from "../components/ContactPage/ContactPage";
 import ShowcaseCustomHomes from "../components/ShowcaseCustomHomes/ShowcaseCustomHomes";
 import CustomHomes from "../components/CustomHomes/CustomHomes";
+import ExclusiveAll from "../components/Properties/ExclusiveProperties/ExclusiveAll/ExclusiveAll";
 
 export const router = createBrowserRouter([
   {
@@ -17,7 +18,6 @@ export const router = createBrowserRouter([
         path: "/",
         element: <HomePage />,
       },
-
       {
         path: "/properties/miami-dade/:area/:id",
         element: <PropertyDetail />,
@@ -49,6 +49,14 @@ export const router = createBrowserRouter([
       {
         path: "/our-work/showcase-custom-homes",
         element: <ShowcaseCustomHomes />,
+      },
+      {
+        path: "/properties/:county/exclusive-listings/all",
+        element: <ExclusiveAll /> ,
+      },
+      {
+        path: "/properties/:county/exclusive-listings/:id",
+        element: "",
       },
       {
         path: "/contact",

@@ -15,20 +15,46 @@ const ExclusiveListings = () => {
   const changeImage = (setter, setLoading, length, index, dir) => {
     setLoading(true);
     setTimeout(() => {
-      setter(dir === "next" ? (index + 1) % length : (index - 1 + length) % length);
+      setter(
+        dir === "next" ? (index + 1) % length : (index - 1 + length) % length
+      );
       setLoading(false);
     }, 300); // 300ms delay
   };
 
   const prevImageOne = () =>
-    changeImage(setIndexOne, setLoadingOne, propertyOne.images.length, indexOne, "prev");
+    changeImage(
+      setIndexOne,
+      setLoadingOne,
+      propertyOne.images.length,
+      indexOne,
+      "prev"
+    );
   const nextImageOne = () =>
-    changeImage(setIndexOne, setLoadingOne, propertyOne.images.length, indexOne, "next");
+    changeImage(
+      setIndexOne,
+      setLoadingOne,
+      propertyOne.images.length,
+      indexOne,
+      "next"
+    );
 
   const prevImageTwo = () =>
-    changeImage(setIndexTwo, setLoadingTwo, propertyTwo.images.length, indexTwo, "prev");
+    changeImage(
+      setIndexTwo,
+      setLoadingTwo,
+      propertyTwo.images.length,
+      indexTwo,
+      "prev"
+    );
   const nextImageTwo = () =>
-    changeImage(setIndexTwo, setLoadingTwo, propertyTwo.images.length, indexTwo, "next");
+    changeImage(
+      setIndexTwo,
+      setLoadingTwo,
+      propertyTwo.images.length,
+      indexTwo,
+      "next"
+    );
 
   const ImageWithLoader = ({ src, alt, loading }) => (
     <div className="relative h-80 w-full">
@@ -142,6 +168,9 @@ const ExclusiveListings = () => {
         {/* View All button */}
         <div className="text-center">
           <button
+            onClick={() =>
+              navigate(`/properties/pinecrest/exclusive-listings/all`)
+            }
             className="border border-white text-white px-8 py-3 text-sm font-medium tracking-wide hover:text-black transition-all duration-300 ease-in-out 
              hover:bg-gray-200 hover:shadow-[0_8px_30px_rgba(255,255,255,0.2)]
              hover:scale-105 hover:cursor-pointer"
