@@ -43,7 +43,7 @@ export const exclusiveProperties = {
   ],
   miamiDade: [
     {
-      id: 7,
+      id: 8,
       address: "8223 Estero Blvd, Fort Myers Beach, FL, 33931",
       location: "LEE",
       status: "EXCLUSIVE",
@@ -64,7 +64,7 @@ export const exclusiveProperties = {
 
   pinecrest: [
     {
-      id: 5,
+      id: 9,
       address: "6700 SW 115 ST, PINECREST, FL 33156, United States",
       location: "PINECREST",
       status: "SOLD",
