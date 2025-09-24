@@ -9,7 +9,7 @@ import ContactPage from "../components/ContactPage/ContactPage";
 import ShowcaseCustomHomes from "../components/ShowcaseCustomHomes/ShowcaseCustomHomes";
 import CustomHomes from "../components/CustomHomes/CustomHomes";
 import ExclusiveAll from "../components/Properties/ExclusiveProperties/ExclusiveAll/ExclusiveAll";
-import ExclusiveProperty from "../components/Properties/ExclusiveProperties/ExclusiveProperty/PropertyDetail";
+import ExclusiveProperty from "../components/Properties/ExclusiveProperties/ExclusiveProperty/ExclusiveProperty";
 
 export const router = createBrowserRouter([
   {
@@ -52,12 +52,12 @@ export const router = createBrowserRouter([
         element: <ShowcaseCustomHomes />,
       },
       {
-        path: "/properties/:county/exclusive-listings/all",
-        element: <ExclusiveAll /> ,
+        path: "/properties/:area/exclusive-listings/:id",
+        element: <ExclusiveProperty />,
       },
       {
-        path: "/properties/:county/exclusive-listings/:id",
-        element: <ExclusiveProperty />,
+        path: "/properties/:area/exclusive-listings/all",
+        element: <ExclusiveAll /> ,
       },
       {
         path: "/contact",
@@ -65,8 +65,8 @@ export const router = createBrowserRouter([
       },
     ],
   },
-  {
-    path: "*",
-    element: <Navigate to="/" />,
-  },
+  // {
+  //   path: "*",
+  //   element: <Navigate to="/" />,
+  // },
 ]);

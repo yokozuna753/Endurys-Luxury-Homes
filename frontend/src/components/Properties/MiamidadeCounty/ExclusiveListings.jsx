@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { propertiesObj } from "../PropertiesArray/properties";
 import { exclusiveProperties } from "../PropertiesArray/exclusiveListings";
 import { useNavigate } from "react-router-dom";
 
 const ExclusiveListings = () => {
-  const navigate = useNavigate();
 
+  
+  const navigate = useNavigate();
+  
   const propertyOne = exclusiveProperties.miamiDade[0];
   const propertyTwo = exclusiveProperties.miamiDade[1];
 
@@ -60,15 +61,18 @@ const ExclusiveListings = () => {
       "next"
     );
 
-  const ImageWithLoader = ({ src, alt, loading }) => (
+  const ImageWithLoader = ({ src, alt, loading, property }) => (
     <div className="relative h-80 w-full">
       {/* Image */}
       <img
+        onClick={() =>
+          navigate(`/properties/miami-dade/exclusive-listings/${property.id}`) // /properties/miami-dade/exclusive-listings/all
+        }
         src={src}
         alt={alt}
         className={`h-80 w-full object-cover transition-opacity duration-500 ${
           loading ? "opacity-0" : "opacity-100"
-        }`}
+        } hover:cursor-pointer`}
       />
       {/* Loader */}
       {loading && (
@@ -99,6 +103,8 @@ const ExclusiveListings = () => {
                 src={propertyOne.images[indexOne]}
                 alt={propertyOne.address}
                 loading={loadingOne}
+                property={propertyOne}
+                className="hover:cursor-pointer"
               />
               {/* Buttons */}
               <button
@@ -137,6 +143,7 @@ const ExclusiveListings = () => {
                 src={propertyTwo.images[indexTwo]}
                 alt={propertyTwo.address}
                 loading={loadingTwo}
+                property={propertyTwo}
               />
               {/* Buttons */}
               <button
@@ -172,7 +179,9 @@ const ExclusiveListings = () => {
         {/* View All button */}
         <div className="text-center">
           <button
-            onClick={() => navigate(`/properties/miami-dade/exclusive-listings/all`)}
+            onClick={() =>
+              navigate(`/properties/miami-dade/exclusive-listings/all`)
+            }
             className="border border-white text-white px-8 py-3 text-sm font-medium tracking-wide hover:text-black transition-all duration-300 ease-in-out 
              hover:bg-gray-200 hover:shadow-[0_8px_30px_rgba(255,255,255,0.2)]
              hover:scale-105 hover:cursor-pointer"
