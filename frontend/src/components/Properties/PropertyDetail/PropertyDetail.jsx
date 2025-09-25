@@ -12,23 +12,23 @@ export default function PropertyDetail() {
   let { area, id } = useParams();
   id = Number(id);
 
-  const validAreas = ["pinecrest", "miamiDade", "westcoast"];
+  const validAreas = ["pinecrest", "miami-dade", "westcoast", "lee"];
   const isValidArea = validAreas.includes(area);
   const property = isValidArea
     ? propertiesObj[area]?.find((prop) => prop.id == id) //
     : null;
 
   //   ✅ If invalid, route to your NotFound ("*") page
-  if (!isValidArea || !property) {
-    return <Navigate to="/" replace />;
-  }
+  // if (!isValidArea || !property) {
+  //   return <Navigate to="/" replace />;
+  // }
 
   return (
     <>
       <section className="bg-black">
         <div className="mx-auto">
           {/* Hero Section */}
-          <TopMedia />
+          <TopMedia property={property} />
 
           {/* Description section */}
           <Description property={property} />

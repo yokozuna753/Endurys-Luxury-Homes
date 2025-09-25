@@ -2,21 +2,7 @@ import { Navigate, useParams } from "react-router-dom";
 import { propertiesObj } from "../PropertiesArray/properties";
 import heroImage from "../../../assets/Pinecrest/6700-images/back-pool.webp";
 
-export default function TopMedia() {
-  let { area, id } = useParams();
-  id = Number(id);
-
-  const validAreas = ["pinecrest", "miamiDade", "westcoast", "lee"];
-  const isValidArea = validAreas.includes(area);
-  const property = isValidArea
-    ? propertiesObj[area]?.find((prop) => prop.id == id) //
-    : null;
-
-    
-    //   ✅ If invalid, route to your NotFound ("*") page
-    if (!isValidArea || !property) {
-      return <Navigate to="/" replace />;
-    }
+export default function TopMedia({property}) {
     
     const propertyAddress = property.address.split(',')[0].trim();
 
@@ -45,7 +31,7 @@ export default function TopMedia() {
                   {propertyAddress}
                 </h1>
                 <h2 className="text-lg md:text-2xl tracking-wider mb-6">
-                  {property.location}
+                  {property.location === "miami-dade" ? "Miami-Dade" : property.location}
                 </h2>
               </div>
             </div>

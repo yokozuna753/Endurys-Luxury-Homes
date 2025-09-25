@@ -20,7 +20,7 @@ const Properties = () => {
               <div className="relative overflow-hidden mb-4">
                 <div className="h-70 bg-gradient-to-br from-green-800 via-green-600 to-green-700 rounded-sm">
                   <Link
-                    to={{ pathname: `/properties/miami-dade/miamiDade/1` }}
+                    to={{ pathname: `/properties/miami-dade/miami-dade/1` }}
                     className="hover:cursor-pointer"
                   >
                     <img
@@ -32,7 +32,7 @@ const Properties = () => {
                 </div>
               </div>
               <Link
-                to={{ pathname: `/properties/miami-dade/miamiDade/1` }}
+                to={{ pathname: `/properties/miami-dade/miami-dade/1` }}
                 className="hover:cursor-pointer"
               >
                 {" "}
@@ -47,7 +47,7 @@ const Properties = () => {
               <div className="relative overflow-hidden mb-4">
                 <div className="h-70 bg-gradient-to-br from-amber-800 via-amber-600 to-amber-700 rounded-sm">
                   <Link
-                    to={{ pathname: `/properties/miami-dade/miamiDade/3` }}
+                    to={{ pathname: `/properties/miami-dade/miami-dade/3` }}
                     className="hover:cursor-pointer"
                   >
                     {" "}
@@ -59,7 +59,7 @@ const Properties = () => {
                 </div>
               </div>
               <Link
-                to={{ pathname: `/properties/miami-dade/miamiDade/3` }}
+                to={{ pathname: `/properties/miami-dade/miami-dade/3` }}
                 className="hover:cursor-pointer"
               >
                 <h3 className="text-xl font-light text-white text-center tracking-wide">
@@ -74,7 +74,7 @@ const Properties = () => {
                 <div className="h-70 bg-gradient-to-br from-blue-800 via-blue-600 to-blue-700 rounded-sm">
                   {" "}
                   <Link
-                    to={{ pathname: `/properties/miami-dade/miamiDade/2` }}
+                    to={{ pathname: `/properties/miami-dade/miami-dade/2` }}
                     className="hover:cursor-pointer"
                   >
                     <img
@@ -85,7 +85,7 @@ const Properties = () => {
                 </div>
               </div>
               <Link
-                to={{ pathname: `/properties/miami-dade/miamiDade/2` }}
+                to={{ pathname: `/properties/miami-dade/miami-dade/2` }}
                 className="hover:cursor-pointer"
               >
                 <h3 className="text-xl font-light text-white text-center tracking-wide">

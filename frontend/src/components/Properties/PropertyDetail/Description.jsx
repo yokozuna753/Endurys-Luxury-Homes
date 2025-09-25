@@ -9,7 +9,7 @@ export default function Description({ property }) {
         {/* Property => heading, attributes, description ==== MARGIN */}
         <div className="mx-auto">
           {/* Property => heading, attributes, description ==== CONTAINER */}
-          <div className="flex flex-col items-center justify-between justify-center max-w-7xl mx-auto lg:px-8">
+          <div className="flex flex-col items-center justify-center max-w-7xl mx-auto lg:px-8">
             {" "}
             <h2 className="text-4xl md:text-5xl font-light text-white tracking-wider mb-8">
               {" "}

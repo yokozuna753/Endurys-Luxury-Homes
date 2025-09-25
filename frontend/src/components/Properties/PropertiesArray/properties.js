@@ -45,11 +45,11 @@ import {
 //* Properties Below
 
 export const propertiesObj = {
-  miamiDade: [
+  "miami-dade": [
     {
       id: 1,
       address: "9669 SW 96 ST",
-      location: "MIAMI-DADE",
+      location: "miami-dade",
       status: "SOLD",
       images: [
         main9669,
@@ -72,7 +72,7 @@ export const propertiesObj = {
     {
       id: 2,
       address: "9765 SW 110 ST",
-      location: "MIAMI-DADE",
+      location: "miami-dade",
       status: "SOLD",
       images: [
         main9765,
@@ -94,7 +94,7 @@ export const propertiesObj = {
     {
       id: 3,
       address: "11035 SW 93 ST",
-      location: "MIAMI-DADE",
+      location: "miami-dade",
       status: "SOLD",
       images: [
         main11035,
