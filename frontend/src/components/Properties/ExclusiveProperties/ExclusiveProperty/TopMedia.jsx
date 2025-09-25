@@ -1,41 +1,28 @@
-import { Navigate, useParams } from "react-router-dom";
-import { exclusiveProperties } from "../../PropertiesArray/exclusiveListings";
-import heroImage from "../../../../assets/Pinecrest/6700-images/back-pool.webp";
+import { Navigate } from "react-router-dom";
 
-export default function TopMedia() {
-  let { area, id } = useParams();
-  id = Number(id);
+export default function TopMedia({ property }) {
 
-  console.log(`Area: ${area}, ID: ${id}`);
+  // If property not found, show fallback or return early
+  if (!property) {
+    console.log("TopMedia - No property provided");
+    return <Navigate to="/" replace />;
+  }
 
-  const validAreas = ["pinecrest", "miami-dade", "lee", "westcoast"];
-  const isValidArea = validAreas.includes(area);
-  const property = exclusiveProperties[area]?.find((prop) => prop.id == id);
-
-  console.log(`Property found ===>.  ${property}`);
-
-  // //   ✅ If invalid, route to your NotFound ("*") page
-  // if (!isValidArea || !property) {
-  //   return <Navigate to="/" replace />;
-  // }
-
-  const propertyAddress = property.address.split(",")[0].trim();
+  const propertyAddress = property.address?.split(",")[0]?.trim() || "Property Address";
 
   return (
     <>
       {/* Hero Section */}
       <section className="relative w-full h-[90vh] flex items-center justify-center ">
-        <div className="relative w-full h-full border-20 border-gray-700  overflow-hidden shadow">
+        <div className="relative w-full h-full border-20 border-gray-700 overflow-hidden shadow">
           {/* Background image */}
           <img
-            src={property?.images[0]}
+            src={property?.images?.[0]}
             alt="Property"
             className="w-full h-full object-cover"
           />
-
           {/* Overlay */}
           <div className="absolute inset-0 bg-black opacity-60"></div>
-
           {/* Centered text block */}
           <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center text-white px-4">
             <div className="uppercase tracking-widest text-xs border bg-black/70 px-3 py-1 mb-4">

@@ -1,8 +1,7 @@
 import { NavLink, useParams, useNavigate } from "react-router-dom";
 import { exclusiveProperties } from "../../PropertiesArray/exclusiveListings";
 
-export default function ShowcaseProperties({properties}) {
-
+export default function ShowcaseProperties({ properties }) {
   const navigate = useNavigate();
 
   // const properties = exclusiveProperties[county];
@@ -21,11 +20,13 @@ export default function ShowcaseProperties({properties}) {
             >
               <NavLink
                 to={`/properties/${
-                  property.location === "MIAMI-DADE"
-                    ? "miami-dade/miamiDade"
-                    : property.location === "LEE"
+                  property.location === "miami-dade"
+                    ? "miami-dade/exclusive-listings"
+                    : property.location === "lee"
                     ? "lee/exclusive-listings"
-                    : "pinecrest/exclusive-listings"
+                    : property.location === "miami-dade"
+                    ? "pinecrest/exclusive-listings"
+                    : null
                 }/${property.id}`}
               >
                 <img
@@ -41,9 +42,13 @@ export default function ShowcaseProperties({properties}) {
                 onClick={() =>
                   navigate(
                     `/properties/${
-                      property.location === "MIAMI-DADE"
-                        ? "miami-dade/miamiDade"
-                        : "pinecrest/pinecrest"
+                      property.location === "miami-dade"
+                        ? "miami-dade/exclusive-listings"
+                        : property.location === "lee"
+                        ? "lee/exclusive-listings"
+                        : property.location === "miami-dade"
+                        ? "pinecrest/exclusive-listings"
+                        : null
                     }/${property.id}`
                   )
                 }

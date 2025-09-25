@@ -8,7 +8,7 @@ import { useParams } from "react-router";
 export default function ExclusiveAll() {
   const { area } = useParams();
 
-  const exclusiveListings =
+  const exclusiveListings = // get the :area in the url and access the array of objects
     exclusiveProperties[
       area.includes("miami-dade")
         ? "miamiDade"
@@ -16,6 +16,7 @@ export default function ExclusiveAll() {
         ? "lee"
         : "pinecrest"
     ];
+
 
   return (
     <>

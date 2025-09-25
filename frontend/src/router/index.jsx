@@ -20,8 +20,12 @@ export const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "/properties/miami-dade/:area/:id",
-        element: <PropertyDetail />,
+        path: "/properties/:area/exclusive-listings/all",
+        element: <ExclusiveAll /> ,
+      },
+      {
+        path: "/properties/:area/exclusive-listings/:id",
+        element: <ExclusiveProperty />,
       },
       {
         path: "/properties/miami-dade",
@@ -32,12 +36,16 @@ export const router = createBrowserRouter([
         element: <Pinecrest />,
       },
       {
-        path: "/properties/pinecrest/:area/:id",
+        path: "/properties/westcoast",
+        element: <WestCoast />,
+      },
+      {
+        path: "/properties/miami-dade/:area/:id",
         element: <PropertyDetail />,
       },
       {
-        path: "/properties/westcoast",
-        element: <WestCoast />,
+        path: "/properties/pinecrest/:area/:id",
+        element: <PropertyDetail />,
       },
       {
         path: "/properties/westcoast/:area/:id",
@@ -52,21 +60,13 @@ export const router = createBrowserRouter([
         element: <ShowcaseCustomHomes />,
       },
       {
-        path: "/properties/:area/exclusive-listings/:id",
-        element: <ExclusiveProperty />,
-      },
-      {
-        path: "/properties/:area/exclusive-listings/all",
-        element: <ExclusiveAll /> ,
-      },
-      {
         path: "/contact",
         element: <ContactPage />,
       },
     ],
   },
-  // {
-  //   path: "*",
-  //   element: <Navigate to="/" />,
-  // },
+  {
+    path: "*",
+    element: <Navigate to="/" />,
+  },
 ]);

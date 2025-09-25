@@ -6,7 +6,7 @@ export default function TopMedia() {
   let { area, id } = useParams();
   id = Number(id);
 
-  const validAreas = ["pinecrest", "miamiDade", "westcoast"];
+  const validAreas = ["pinecrest", "miamiDade", "westcoast", "lee"];
   const isValidArea = validAreas.includes(area);
   const property = isValidArea
     ? propertiesObj[area]?.find((prop) => prop.id == id) //
