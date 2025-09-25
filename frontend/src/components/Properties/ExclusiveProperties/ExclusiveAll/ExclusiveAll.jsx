@@ -6,17 +6,20 @@ import { exclusiveProperties } from "../../PropertiesArray/exclusiveListings.js"
 import { useParams } from "react-router";
 
 export default function ExclusiveAll() {
-  const { area } = useParams();
+  const { county } = useParams();
+
+  const validAreas = ["pinecrest", "miami-dade", "lee", "westcoast"];
+  const isValidArea = validAreas.includes(county);
 
   const exclusiveListings = // get the :area in the url and access the array of objects
+  isValidArea &&
     exclusiveProperties[
-      area.includes("miami-dade")
-        ? "miamiDade"
+      county.includes("miami-dade")
+        ? "miami-dade"
         : area.includes("lee")
         ? "lee"
         : "pinecrest"
     ];
-
 
   return (
     <>

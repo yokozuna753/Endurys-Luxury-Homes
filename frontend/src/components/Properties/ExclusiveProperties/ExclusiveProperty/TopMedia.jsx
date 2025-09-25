@@ -3,10 +3,10 @@ import { Navigate } from "react-router-dom";
 export default function TopMedia({ property }) {
 
   // If property not found, show fallback or return early
-  if (!property) {
-    console.log("TopMedia - No property provided");
-    return <Navigate to="/" replace />;
-  }
+  // if (!property) {
+  //   console.log("TopMedia - No property provided");
+  //   return <Navigate to="/" replace />;
+  // }
 
   const propertyAddress = property.address?.split(",")[0]?.trim() || "Property Address";
 

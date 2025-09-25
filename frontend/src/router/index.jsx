@@ -20,11 +20,11 @@ export const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "/properties/:area/exclusive-listings/all",
+        path: "/properties/:county/exclusive-listings/all",
         element: <ExclusiveAll /> ,
       },
       {
-        path: "/properties/:area/exclusive-listings/:id",
+        path: "/properties/:county/exclusive-listings/:id",
         element: <ExclusiveProperty />,
       },
       {

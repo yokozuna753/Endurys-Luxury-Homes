@@ -8,8 +8,10 @@ const ExclusiveListings = () => {
   
   const navigate = useNavigate();
   
-  const propertyOne = exclusiveProperties.miamiDade[0];
-  const propertyTwo = exclusiveProperties.miamiDade[1];
+  const propertyOne = exclusiveProperties["miami-dade"][0];
+  const propertyTwo = exclusiveProperties["miami-dade"][1];
+
+  console.table(propertyOne, propertyTwo);
 
   const [indexOne, setIndexOne] = useState(0);
   const [indexTwo, setIndexTwo] = useState(0);

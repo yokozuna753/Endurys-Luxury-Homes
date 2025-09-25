@@ -2,6 +2,8 @@ import { Navigate, useParams } from "react-router-dom";
 import { propertiesObj } from "../../PropertiesArray/properties";
 import TopMedia from "./TopMedia";
 export default function Description({ property }) {
+
+  console.log(`Property from "ExclusiveProperty - Description" ${property}`);
   return (
     <>
       {" "}
