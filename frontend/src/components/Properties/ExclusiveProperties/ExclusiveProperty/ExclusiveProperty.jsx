@@ -24,9 +24,11 @@ export default function ExclusiveProperty() {
   ? "miami-dade"
   : county === "lee"
   ? "lee"
-  : county === "pinecrest"
-  ? "pinecrest"
-  : null;
+  : county === "westcoast"
+  ? "westcoast"
+  // : county === "pinecrest"
+  : "pinecrest"
+  // : null;
   
   
   const propertyArray = exclusiveProperties[dataKey];

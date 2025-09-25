@@ -11,15 +11,18 @@ export default function ExclusiveAll() {
   const validAreas = ["pinecrest", "miami-dade", "lee", "westcoast"];
   const isValidArea = validAreas.includes(county);
 
-  const exclusiveListings = // get the :area in the url and access the array of objects
-  isValidArea &&
-    exclusiveProperties[
-      county.includes("miami-dade")
-        ? "miami-dade"
-        : area.includes("lee")
-        ? "lee"
-        : "pinecrest"
-    ];
+  const dataKey =
+    county === "miami-dade"
+      ? "miami-dade"
+      : county === "lee"
+      ? "lee"
+      : county === "pinecrest"
+      ? "pinecrest"
+      : null;
+
+  const exclusiveListings = isValidArea && exclusiveProperties[dataKey]; // get the :area in the url and access the array of objects
+
+  console.table(exclusiveListings)
 
   return (
     <>

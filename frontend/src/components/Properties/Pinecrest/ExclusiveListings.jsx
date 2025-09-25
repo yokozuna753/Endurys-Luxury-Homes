@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { propertiesObj } from "../PropertiesArray/properties";
+import { exclusiveProperties } from "../PropertiesArray/exclusiveListings";
+import { useNavigate } from "react-router-dom";
 
 const ExclusiveListings = () => {
-  const propertyOne = propertiesObj.pinecrest[0];
-  const propertyTwo = propertiesObj.pinecrest[1];
+  const navigate = useNavigate();
+
+  
+  const propertyOne = exclusiveProperties.pinecrest[0];
+  const propertyTwo = exclusiveProperties.pinecrest[1];
 
   const [indexOne, setIndexOne] = useState(0);
   const [indexTwo, setIndexTwo] = useState(0);
@@ -56,15 +60,19 @@ const ExclusiveListings = () => {
       "next"
     );
 
-  const ImageWithLoader = ({ src, alt, loading }) => (
+  const ImageWithLoader = ({ src, alt, loading, property }) => (
     <div className="relative h-80 w-full">
       {/* Image */}
       <img
+        onClick={
+          () =>
+            navigate(`/properties/pinecrest/exclusive-listings/${property.id}`) // /properties/miami-dade/exclusive-listings/all
+        }
         src={src}
         alt={alt}
         className={`h-80 w-full object-cover transition-opacity duration-500 ${
           loading ? "opacity-0" : "opacity-100"
-        }`}
+        } hover:cursor-pointer`}
       />
       {/* Loader */}
       {loading && (
@@ -95,6 +103,8 @@ const ExclusiveListings = () => {
                 src={propertyOne.images[indexOne]}
                 alt={propertyOne.address}
                 loading={loadingOne}
+                property={propertyOne}
+                className="hover:cursor-pointer"
               />
               {/* Buttons */}
               <button
@@ -133,6 +143,8 @@ const ExclusiveListings = () => {
                 src={propertyTwo.images[indexTwo]}
                 alt={propertyTwo.address}
                 loading={loadingTwo}
+                property={propertyTwo}
+                className="hover:cursor-pointer"
               />
               {/* Buttons */}
               <button

@@ -4,10 +4,8 @@ import { exclusiveProperties } from "../PropertiesArray/exclusiveListings";
 import { useNavigate } from "react-router-dom";
 
 const ExclusiveListings = () => {
-
-  
   const navigate = useNavigate();
-  
+
   const propertyOne = exclusiveProperties["miami-dade"][0];
   const propertyTwo = exclusiveProperties["miami-dade"][1];
 
@@ -67,8 +65,9 @@ const ExclusiveListings = () => {
     <div className="relative h-80 w-full">
       {/* Image */}
       <img
-        onClick={() =>
-          navigate(`/properties/miami-dade/exclusive-listings/${property.id}`) // /properties/miami-dade/exclusive-listings/all
+        onClick={
+          () =>
+            navigate(`/properties/miami-dade/exclusive-listings/${property.id}`) // /properties/miami-dade/exclusive-listings/all
         }
         src={src}
         alt={alt}
