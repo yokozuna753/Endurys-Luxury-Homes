@@ -1,4 +1,3 @@
-import { Menu, X, Phone, Mail, MapPin, Star, ArrowRight, Home, Users, Award, Calendar, Heart, ChevronLeft, ChevronRight, Facebook, Instagram } from 'lucide-react';
 import logo from "../../assets/images/logo.webp"
 
 const Footer = () => {

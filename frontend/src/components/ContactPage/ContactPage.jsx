@@ -94,7 +94,7 @@ export default function ContactPage() {
               value={formData.first_name}
               onChange={handleChange}
               required
-              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3"
+              className="w-full rounded-md bg-gray-900 border border-gray-700 placeholder-gray-100 px-4 py-3"
             />
             <input
               type="text"
@@ -103,7 +103,7 @@ export default function ContactPage() {
               value={formData.last_name}
               onChange={handleChange}
               required
-              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3"
+              className="w-full rounded-md bg-gray-900 border border-gray-700 placeholder-gray-100 px-4 py-3"
             />
           </div>
 
@@ -116,7 +116,7 @@ export default function ContactPage() {
               value={formData.user_email}
               onChange={handleChange}
               required
-              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3"
+              className="w-full rounded-md bg-gray-900 border border-gray-700 placeholder-gray-100 px-4 py-3"
             />
             <input
               type="tel"
@@ -125,7 +125,7 @@ export default function ContactPage() {
               value={formData.phone}
               onChange={handleChange}
               required
-              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3"
+              className="w-full rounded-md bg-gray-900 border border-gray-700 placeholder-gray-100 px-4 py-3"
             />
           </div>
 
@@ -138,7 +138,7 @@ export default function ContactPage() {
               value={formData.street}
               onChange={handleChange}
               required
-              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3"
+              className="w-full rounded-md bg-gray-900 border border-gray-700 placeholder-gray-100 px-4 py-3"
             />
             <input
               type="text"
@@ -147,7 +147,7 @@ export default function ContactPage() {
               value={formData.city}
               onChange={handleChange}
               required
-              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3"
+              className="w-full rounded-md bg-gray-900 border border-gray-700 placeholder-gray-100 px-4 py-3"
             />
           </div>
 
@@ -159,7 +159,7 @@ export default function ContactPage() {
               value={formData.state}
               onChange={handleChange}
               required
-              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3"
+              className="w-full rounded-md bg-gray-900 border border-gray-700 placeholder-gray-100 px-4 py-3"
             />
             <input
               type="text"
@@ -168,7 +168,7 @@ export default function ContactPage() {
               value={formData.zip}
               onChange={handleChange}
               required
-              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3"
+              className="w-full rounded-md bg-gray-900 border border-gray-700 placeholder-gray-100 px-4 py-3"
             />
           </div>
 
@@ -180,7 +180,7 @@ export default function ContactPage() {
             value={formData.message}
             onChange={handleChange}
             required
-            className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3"
+            className="w-full rounded-md bg-gray-900 border border-gray-700 placeholder-gray-100 px-4 py-3"
           ></textarea>
 
           {/* Disclaimer */}

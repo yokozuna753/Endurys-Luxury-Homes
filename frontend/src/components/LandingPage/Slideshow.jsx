@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import img1 from "../../assets/images/one.jpg"
-import img2 from "../../assets/images/two.jpg"
-import img3 from "../../assets/images/three.jpg"
-import img4 from "../../assets/images/four.jpg"
-import img5 from "../../assets/images/five.jpg"
-import img6 from "../../assets/images/six.jpg"
+import img1 from "../../assets/images/one.webp"
+import img2 from "../../assets/images/two.webp"
+import img3 from "../../assets/images/three.webp"
+import img4 from "../../assets/images/four.webp"
+import img5 from "../../assets/images/five.webp"
+import img6 from "../../assets/images/six.webp"
 
 const Slideshow = () => {
   const trackRef = useRef(null);

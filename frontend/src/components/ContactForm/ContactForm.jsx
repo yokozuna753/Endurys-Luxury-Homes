@@ -64,7 +64,7 @@ export default function ContactForm() {
               value={formData.first_name}
               onChange={handleChange}
               required
-              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <input
               type="text"
@@ -73,7 +73,7 @@ export default function ContactForm() {
               value={formData.last_name}
               onChange={handleChange}
               required
-              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
@@ -86,7 +86,7 @@ export default function ContactForm() {
               value={formData.user_email}
               onChange={handleChange}
               required
-              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <input
               type="tel"
@@ -95,7 +95,7 @@ export default function ContactForm() {
               value={formData.phone}
               onChange={handleChange}
               required
-              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
@@ -108,7 +108,7 @@ export default function ContactForm() {
               value={formData.street}
               onChange={handleChange}
               required
-              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <input
               type="text"
@@ -117,7 +117,7 @@ export default function ContactForm() {
               value={formData.city}
               onChange={handleChange}
               required
-              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -128,7 +128,7 @@ export default function ContactForm() {
               value={formData.state}
               onChange={handleChange}
               required
-              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <input
               type="text"
@@ -137,7 +137,7 @@ export default function ContactForm() {
               value={formData.zip}
               onChange={handleChange}
               required
-              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
@@ -149,7 +149,7 @@ export default function ContactForm() {
             value={formData.message}
             onChange={handleChange}
             required
-            className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
           ></textarea>
 
           {/* Disclaimer */}
