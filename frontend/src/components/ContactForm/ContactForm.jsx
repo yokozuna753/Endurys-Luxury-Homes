@@ -26,10 +26,10 @@ export default function ContactForm() {
 
     try {
       await emailjs.send(
-        "service_tsvcmvw", // EmailJS service ID
-        "template_407jfow", // replace with your EmailJS template ID
+        "service_tsvcmvw",
+        "template_407jfow",
         formData,
-        "xlGCx8MegeXMolX_K" // replace with your EmailJS public key
+        "xlGCx8MegeXMolX_K"
       );
       setSubmitted(true);
     } catch (error) {
@@ -50,95 +50,31 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="pt-16 bg-black text-white ">
+    <section className="pt-16 bg-black text-white">
       <div className="flex flex-col justify-center items-center max-w-4xl mx-auto px-4">
-        <h2 className="text-4xl font-light mb-10">Contact Us</h2>
+        <h2 className="text-4xl font-light mb-10 text-white">Contact Us</h2>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
-          {/* First/Last Name */}
+        <form onSubmit={handleSubmit} className="space-y-6 w-full">
+          {/* Name Fields */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <input
-              type="text"
-              name="first_name"
-              placeholder="First Name *"
-              value={formData.first_name}
-              onChange={handleChange}
-              required
-              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <input
-              type="text"
-              name="last_name"
-              placeholder="Last Name *"
-              value={formData.last_name}
-              onChange={handleChange}
-              required
-              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
+            <Input name="first_name" placeholder="First Name *" value={formData.first_name} onChange={handleChange} />
+            <Input name="last_name" placeholder="Last Name *" value={formData.last_name} onChange={handleChange} />
           </div>
 
-          {/* Email/Phone */}
+          {/* Email / Phone */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <input
-              type="email"
-              name="user_email"
-              placeholder="Email *"
-              value={formData.user_email}
-              onChange={handleChange}
-              required
-              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Phone *"
-              value={formData.phone}
-              onChange={handleChange}
-              required
-              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
+            <Input name="user_email" type="email" placeholder="Email *" value={formData.user_email} onChange={handleChange} />
+            <Input name="phone" type="tel" placeholder="Phone *" value={formData.phone} onChange={handleChange} />
           </div>
 
-          {/* Address Split */}
+          {/* Address */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <input
-              type="text"
-              name="street"
-              placeholder="Street Address *"
-              value={formData.street}
-              onChange={handleChange}
-              required
-              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <input
-              type="text"
-              name="city"
-              placeholder="City *"
-              value={formData.city}
-              onChange={handleChange}
-              required
-              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
+            <Input name="street" placeholder="Street Address *" value={formData.street} onChange={handleChange} />
+            <Input name="city" placeholder="City *" value={formData.city} onChange={handleChange} />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <input
-              type="text"
-              name="state"
-              placeholder="State *"
-              value={formData.state}
-              onChange={handleChange}
-              required
-              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <input
-              type="text"
-              name="zip"
-              placeholder="ZIP Code *"
-              value={formData.zip}
-              onChange={handleChange}
-              required
-              className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
+            <Input name="state" placeholder="State *" value={formData.state} onChange={handleChange} />
+            <Input name="zip" placeholder="ZIP Code *" value={formData.zip} onChange={handleChange} />
           </div>
 
           {/* Message */}
@@ -149,21 +85,20 @@ export default function ContactForm() {
             value={formData.message}
             onChange={handleChange}
             required
-            className="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full rounded-md bg-[#1a1a1a] border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]"
           ></textarea>
 
-          {/* Disclaimer */}
+          {/* Consent */}
           <div className="flex items-start space-x-3 text-sm text-gray-400">
             <input
               type="checkbox"
               defaultChecked
               required
-              className="mt-1 h-4 w-4 rounded border-gray-700 bg-gray-900 text-blue-600 focus:ring-blue-500"
+              className="mt-1 h-4 w-4 rounded border-gray-700 bg-[#1a1a1a] text-[#C6A15B] focus:ring-[#C6A15B] accent-[#C6A15B]"
             />
             <p>
               I agree to be contacted by Endurys Luxury Homes via call, email,
-              and text for Luxury Homes services. To opt out, you can reply
-              'stop' at any time.{" "}
+              and text. To opt out, reply 'stop' at any time.{" "}
               <a href="/privacy" className="underline text-gray-300 hover:text-white">
                 Privacy Policy
               </a>{" "}
@@ -175,16 +110,30 @@ export default function ContactForm() {
             </p>
           </div>
 
-          {/* Submit */}
+          {/* Submit Button */}
           <button
             type="submit"
             disabled={loading}
-            className="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-md text-white font-medium transition hover:cursor-pointer"
+            className="bg-[#C6A15B] hover:bg-[#b28f4f] px-8 py-3 rounded-md text-black font-semibold tracking-wide transition"
           >
             {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
       </div>
     </section>
+  );
+}
+
+function Input({ name, placeholder, value, onChange, type = "text" }) {
+  return (
+    <input
+      type={type}
+      name={name}
+      placeholder={placeholder}
+      value={value}
+      onChange={onChange}
+      required
+      className="w-full rounded-md bg-[#1a1a1a] border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]"
+    />
   );
 }

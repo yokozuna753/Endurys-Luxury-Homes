@@ -13,8 +13,8 @@ const Services = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gray-900 mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl">🏗️</span>
+              <div className="w-16 h-16 bg-[] mx-auto mb-6 flex items-center justify-center">
+                <span className="text-white text-5xl">🏗️</span>
               </div>
               <h3 className="text-xl font-medium mb-4 text-white">
                 CUSTOM HOMES
@@ -26,8 +26,8 @@ const Services = () => {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-gray-900 mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl">🔨</span>
+              <div className="w-16 h-16 bg-[] mx-auto mb-6 flex items-center justify-center">
+                <span className="text-white text-5xl">🔨</span>
               </div>
               <h3 className="text-xl font-medium mb-4 text-white">
                 RENOVATIONS
@@ -39,15 +39,14 @@ const Services = () => {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-gray-900 mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl">🎯</span>
+              <div className="w-16 h-16 bg-[] mx-auto mb-6 flex items-center justify-center">
+                <span className="text-white text-5xl">🎯</span>
               </div>
-              <h3 className="text-xl font-medium mb-4 text-white">
-                PROJECT MANAGEMENT
+              <h3 className="text-xl font-medium mb-4 text-white uppercase">
+                Turnkey Luxury Living
               </h3>
               <p className="text-white">
-                Full-service project management from lot acquisition to turnkey
-                delivery.
+                Complete luxury homes with professionally designed interiors, premium landscaping, and move-in ready convenience.
               </p>
             </div>
           </div>
