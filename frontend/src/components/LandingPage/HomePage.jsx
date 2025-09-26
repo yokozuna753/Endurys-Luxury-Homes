@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router";
 import NavBar from "../NavBar/NavBar";
 import About from "./About";
 import Slideshow from "./Slideshow";
@@ -10,6 +11,8 @@ import Footer from "../Footer/Footer";
 import "../../index.css";
 
 const HomePage = () => {
+    const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-black">
       {/* Hero Section */}
@@ -41,9 +44,12 @@ const HomePage = () => {
             For over 20 years, defining luxury living through architecturally
             significant custom homes and transformative renovations.
           </p>
-          <button className="bg-white text-gray-900 px-8 py-3 font-medium hover:opacity-100 hover:cursor-pointer transition-all duration-300 ease-in-out 
+          <button
+            onClick={() => navigate("/our-work/showcase-custom-homes")}
+            className="bg-white text-gray-900 px-8 py-3 font-medium hover:opacity-100 hover:cursor-pointer transition-all duration-300 ease-in-out 
              hover:bg-gray-200 hover:shadow-[0_8px_30px_rgba(255,255,255,0.2)]
-             hover:scale-105 hover:cursor-pointer">
+             hover:scale-105 hover:cursor-pointer"
+          >
             EXPLORE OUR WORK
           </button>
         </div>
