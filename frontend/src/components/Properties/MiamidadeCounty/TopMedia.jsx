@@ -32,7 +32,7 @@ const TopMedia = () => {
       </section>
 
       {/* Pinecrest Description */}
-      <section className="bg-black mt-16 py-16">
+      <section className="bg-black section-spacing">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-lg text-gray-300 leading-relaxed mb-8">
             Living in Miami-Dade County, FL, is ideal for its peaceful and safe

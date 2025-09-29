@@ -13,9 +13,11 @@ export default function MiamiDade() {
         <TopMedia />
 
       {/* Properties Section */}
+      <section className='section-spacing'></section>
         <Properties />
 
       {/* Exclusive Listings Section */}
+      <section className='section-spacing'></section>
         <ExclusiveListings />
 
       {/* Contact Form */}

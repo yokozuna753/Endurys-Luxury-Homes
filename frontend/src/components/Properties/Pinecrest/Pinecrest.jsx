@@ -11,10 +11,14 @@ export default function Pinecrest() {
       <TopMedia />
 
       {/* Properties Section */}
+      <section className="section-spacing">
       <Properties />
+      </section>
 
       {/* Exclusive Listings Section */}
+      <section className="section-spacing">
       <ExclusiveListings />
+      </section>
 
       {/* Contact Form */}
       <ContactForm />
