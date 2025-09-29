@@ -3,7 +3,7 @@
 const Services = () => {
 
     return (
-        <section id="services" className="pt-16 bg-black mt-8">
+        <section id="services" className="bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-light mb-4 text-white">

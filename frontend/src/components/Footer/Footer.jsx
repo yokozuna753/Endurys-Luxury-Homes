@@ -3,15 +3,15 @@ import logo from "../../assets/images/logo.webp"
 const Footer = () => {
   return (
     <>
-      <footer className="bg-black py-10">
+      <footer className="bg-black section-spacing">
         <div className="flex flex-col items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="gap-12">
             <div>
-              <div className="w-70 bg-transparent font-light mb-8">
+              <div className="w-70 bg-transparent font-light">
                 <img src={logo}  style={{ clipPath: "inset(1px 0 0 0)" }} />
               </div>
 
-              <div className=" space-y-2 text-gray-400 mb-8">
+              <div className=" space-y-2 text-gray-400">
                 <div>Endurys Espinosa</div>
                 <div>CEO</div>
                 <div>305.783.7710</div>
@@ -20,7 +20,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="border-t border-gray-800 pt-8 mt-8">
+          <div className="border-t border-gray-800 section-spacing">
             <div className="text-xs text-gray-500 leading-relaxed mb-4">
               Amy Marcus Hollub is a real estate advisor affiliated with
               Compass, a licensed real estate broker and abides by Equal Housing

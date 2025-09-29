@@ -42,7 +42,7 @@ export default function ContactForm() {
 
   if (submitted) {
     return (
-      <section className="py-16 bg-black text-white text-center">
+      <section className="section-spacing bg-black text-white text-center">
         <h2 className="text-2xl">✅ Thank you!</h2>
         <p className="mt-4">We’ll be in touch with you soon.</p>
       </section>
@@ -50,7 +50,7 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="pt-16 bg-black text-white">
+    <section className="section-spacing bg-black text-white">
       <div className="flex flex-col justify-center items-center max-w-4xl mx-auto px-4">
         <h2 className="text-4xl font-light mb-10 text-white">Contact Us</h2>
 

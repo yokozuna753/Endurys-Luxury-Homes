@@ -94,7 +94,7 @@ export default function ContactPage() {
               value={formData.first_name}
               onChange={handleChange}
               required
-              className="w-full bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]"
+              className={`w-full bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
             />
             <input
               type="text"
@@ -103,7 +103,7 @@ export default function ContactPage() {
               value={formData.last_name}
               onChange={handleChange}
               required
-              className="w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]"
+              className={`w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
             />
           </div>
 
@@ -116,7 +116,7 @@ export default function ContactPage() {
               value={formData.user_email}
               onChange={handleChange}
               required
-              className="w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]"
+              className={`w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
             />
             <input
               type="tel"
@@ -125,7 +125,7 @@ export default function ContactPage() {
               value={formData.phone}
               onChange={handleChange}
               required
-              className="w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]"
+              className={`w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
             />
           </div>
 
@@ -138,7 +138,7 @@ export default function ContactPage() {
               value={formData.street}
               onChange={handleChange}
               required
-              className="w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]"
+              className={`w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
             />
             <input
               type="text"
@@ -147,7 +147,7 @@ export default function ContactPage() {
               value={formData.city}
               onChange={handleChange}
               required
-              className="w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]"
+              className={`w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
             />
           </div>
 
@@ -159,7 +159,7 @@ export default function ContactPage() {
               value={formData.state}
               onChange={handleChange}
               required
-              className="w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]"
+              className={`w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
             />
             <input
               type="text"
@@ -168,7 +168,7 @@ export default function ContactPage() {
               value={formData.zip}
               onChange={handleChange}
               required
-              className="w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]"
+              className={`w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
             />
           </div>
 
@@ -180,13 +180,13 @@ export default function ContactPage() {
             value={formData.message}
             onChange={handleChange}
             required
-            className="w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]"
+            className={`w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
           ></textarea>
 
           {/* Consent */}
           <div className="flex items-start space-x-3 text-sm text-gray-400">
-            <input type="checkbox" defaultChecked required className="mt-1 h-4 w-4 text-[#C6A15B] focus:ring-[#C6A15B] accent-[#C6A15B]" />
-            <p>
+            <input type="checkbox" defaultChecked required className={`mt-1 h-4 w-4 text-[#C6A15B] focus:ring-[#C6A15B] accent-[#C6A15B]`} />
+            <p className="text-gray-400">
               I agree to be contacted via call, email, and text for real estate
               services. To opt out, reply "stop". See our{" "}
               <a href="/privacy" className="underline text-gray-300 hover:text-white">
@@ -204,7 +204,7 @@ export default function ContactPage() {
           <button
             type="submit"
             disabled={loading}
-            className="bg-[#C6A15B] hover:bg-[#b28f4f] px-8 py-3 rounded-md text-black font-semibold tracking-wide transition hover:cursor-pointer"
+            className={`bg-[#C6A15B] hover:bg-[#b28f4f] px-8 py-3 rounded-md text-black font-semibold tracking-wide transition hover:cursor-pointer`}
           >
             {loading ? "Sending..." : "Submit"}
           </button>

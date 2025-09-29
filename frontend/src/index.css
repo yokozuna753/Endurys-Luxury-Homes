@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@tailwind utilities;
 
 @theme {
   --breakpoint-md: 790px;
@@ -15,6 +16,16 @@
 /* Custom override for Dark Reader */
 .force-black {
   color: #000 !important;
+}
+
+@layer utilities {
+  .section-spacing {
+    @apply mt-32 md:mt-40 lg:mt-48;
+  }
+
+  .inner-spacing {
+    @apply space-y-6 md:space-y-8;
+  }
 }
 
 /* Apple-style smooth animations */
@@ -63,8 +74,12 @@
 }
 
 @keyframes fadeInImage {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Animation utility classes */
@@ -94,8 +109,18 @@
 }
 
 /* Staggered delays */
-.delay-100 { animation-delay: 0.1s; }
-.delay-200 { animation-delay: 0.2s; }
-.delay-300 { animation-delay: 0.3s; }
-.delay-400 { animation-delay: 0.4s; }
-.delay-500 { animation-delay: 0.5s; }
+.delay-100 {
+  animation-delay: 0.1s;
+}
+.delay-200 {
+  animation-delay: 0.2s;
+}
+.delay-300 {
+  animation-delay: 0.3s;
+}
+.delay-400 {
+  animation-delay: 0.4s;
+}
+.delay-500 {
+  animation-delay: 0.5s;
+}

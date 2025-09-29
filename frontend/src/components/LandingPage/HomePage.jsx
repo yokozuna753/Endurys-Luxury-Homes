@@ -11,7 +11,7 @@ import Footer from "../Footer/Footer";
 import "../../index.css";
 
 const HomePage = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-black">
@@ -56,16 +56,23 @@ const HomePage = () => {
       </section>
 
       {/* About Section */}
-      <About />
-
+      <section className="section-spacing">
+        <About />
+      </section>
       {/* Slideshow */}
-      <Slideshow />
+      <section className="section-spacing">
+        <Slideshow />
+      </section>
 
       {/* Featured Projects */}
-      <Projects />
+      <section className="section-spacing">
+        <Projects />
+      </section>
 
       {/* Services Section */}
-      <Services />
+      <section className="section-spacing">
+        <Services />
+      </section>
 
       {/* Contact Section */}
       <ContactForm />
