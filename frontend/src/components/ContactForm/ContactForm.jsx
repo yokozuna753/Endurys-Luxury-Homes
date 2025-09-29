@@ -54,7 +54,7 @@ export default function ContactForm() {
       <div className="flex flex-col justify-center items-center max-w-4xl mx-auto px-4">
         <h2 className="text-4xl font-light mb-10 text-white">Contact Us</h2>
 
-        <form onSubmit={handleSubmit} className="space-y-6 w-full">
+        <form onSubmit={handleSubmit} className="inner-spacing w-full">
           {/* Name Fields */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Input name="first_name" placeholder="First Name *" value={formData.first_name} onChange={handleChange} />

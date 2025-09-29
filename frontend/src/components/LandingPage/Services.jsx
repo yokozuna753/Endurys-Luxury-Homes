@@ -12,8 +12,8 @@ const Services = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-[] mx-auto mb-6 flex items-center justify-center">
+            <div className="text-center ">
+              <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center">
                 <span className="text-white text-5xl">🏗️</span>
               </div>
               <h3 className="text-xl font-medium mb-4 text-white">
@@ -25,8 +25,8 @@ const Services = () => {
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-[] mx-auto mb-6 flex items-center justify-center">
+            <div className="text-center ">
+              <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center">
                 <span className="text-white text-5xl">🔨</span>
               </div>
               <h3 className="text-xl font-medium mb-4 text-white">
@@ -39,7 +39,7 @@ const Services = () => {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-[] mx-auto mb-6 flex items-center justify-center">
+              <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center">
                 <span className="text-white text-5xl">🎯</span>
               </div>
               <h3 className="text-xl font-medium mb-4 text-white uppercase">

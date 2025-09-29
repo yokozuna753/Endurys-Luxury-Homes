@@ -16,7 +16,7 @@ const Projects = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Project 1 */}
-          <div className="group cursor-pointer">
+          <div className="group cursor-pointer inner-spacing">
             <div className="relative overflow-hidden mb-4">
               <img
                 src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
@@ -32,7 +32,7 @@ const Projects = () => {
           </div>
 
           {/* Project 2 */}
-          <div className="group cursor-pointer">
+          <div className="group cursor-pointer inner-spacing">
             <div className="relative overflow-hidden mb-4">
               <img
                 src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2084&q=80"
