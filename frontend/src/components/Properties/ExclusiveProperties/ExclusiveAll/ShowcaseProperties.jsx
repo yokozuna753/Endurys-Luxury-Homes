@@ -7,7 +7,7 @@ export default function ShowcaseProperties({ properties }) {
   // const properties = exclusiveProperties[county];
 
   return (
-    <section className="py-10 mt-14 bg-black">
+    <section className="bg-black">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Heading */}
 

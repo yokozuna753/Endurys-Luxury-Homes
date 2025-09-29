@@ -22,7 +22,7 @@ export default function ExclusiveAll() {
 
   const exclusiveListings = isValidArea && exclusiveProperties[dataKey]; // get the :area in the url and access the array of objects
 
-  console.table(exclusiveListings)
+  console.table(exclusiveListings);
 
   return (
     <>
@@ -32,7 +32,9 @@ export default function ExclusiveAll() {
           <TopMedia />
 
           {/* Amenities section */}
-          <ShowcaseProperties properties={exclusiveListings} />
+          <section className="section-spacing">
+            <ShowcaseProperties properties={exclusiveListings} />
+          </section>
 
           {/* Contact Form Section */}
           <ContactForm />
