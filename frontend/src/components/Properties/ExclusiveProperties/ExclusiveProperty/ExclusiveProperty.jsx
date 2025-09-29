@@ -45,16 +45,34 @@ export default function ExclusiveProperty() {
           {/* Hero Section */}
           <TopMedia property={property} />
           {/* Description section */}
+          <section className="section-spacing">
           <Description property={property} />
+          </section>
           {/* Amenities section */}
+          <section className="section-spacing">
           <Amenities property={property} />
+          </section>
+          
+
           {/* Pictures Section */}
+          <section className="section-spacing">
           <Pictures property={property} />
+          </section>
+          
+
           {/* Maps section */}
+          <section className="section-spacing">
           <Maps property={property} />
+          </section>
+
+
           <ContactForm />
+
+
           {/* Footer section */}
           <Footer />
+
+
         </div>
       </section>
     </>

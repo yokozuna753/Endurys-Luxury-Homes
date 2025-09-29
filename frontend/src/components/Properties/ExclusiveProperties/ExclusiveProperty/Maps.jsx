@@ -16,7 +16,7 @@ export default function Maps({ property }) {
     //
 
   return (
-    <section className="pt-10 mt-12">
+    <section className="">
       <div className="mx-auto">
         {/* Heading */}
         <div className="flex items-center justify-center">
