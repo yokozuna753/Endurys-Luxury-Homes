@@ -43,11 +43,11 @@ const Slideshow = () => {
     title: "Resort-Style Pool",
     subtitle: "Relax in luxury",
   },
-  {
-    image: img6,
-    title: "HOTEL",
-    subtitle: "Relax in luxury",
-  },
+  // {
+  //   image: img6,
+  //   title: "HOTEL",
+  //   subtitle: "Relax in luxury",
+  // },
   ];
 
   const animate = (time) => {
