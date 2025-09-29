@@ -51,10 +51,10 @@ export default function ContactForm() {
 
   return (
     <section className="section-spacing bg-black text-white">
-      <div className="flex flex-col justify-center items-center max-w-4xl mx-auto px-4">
+      <div className="flex flex-col justify-center items-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-light mb-10 text-white">Contact Us</h2>
 
-        <form onSubmit={handleSubmit} className="inner-spacing w-full">
+        <form onSubmit={handleSubmit} className="flex flex-col items-center inner-spacing w-full">
           {/* Name Fields */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Input name="first_name" placeholder="First Name *" value={formData.first_name} onChange={handleChange} />
@@ -85,7 +85,7 @@ export default function ContactForm() {
             value={formData.message}
             onChange={handleChange}
             required
-            className="w-full rounded-md bg-[#1a1a1a] border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]"
+            className="w-150 rounded-md bg-[#1a1a1a] border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]"
           ></textarea>
 
           {/* Consent */}
@@ -133,7 +133,7 @@ function Input({ name, placeholder, value, onChange, type = "text" }) {
       value={value}
       onChange={onChange}
       required
-      className="w-full rounded-md bg-[#1a1a1a] border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]"
+      className="w-150 rounded-md bg-[#1a1a1a] border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]"
     />
   );
 }
