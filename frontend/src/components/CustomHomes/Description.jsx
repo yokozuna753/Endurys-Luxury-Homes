@@ -5,7 +5,7 @@ export default function Description() {
   const navigate = useNavigate();
 
   return (
-    <section className="pt-20 pb-20 bg-black">
+    <section className=" bg-black">
       <div className="max-w-5xl mx-auto px-6 text-center">
         {/* Heading */}
         <h2 className="text-4xl md:text-5xl font-light tracking-wide text-white mb-4">

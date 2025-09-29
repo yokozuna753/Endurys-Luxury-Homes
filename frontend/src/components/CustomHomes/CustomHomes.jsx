@@ -17,10 +17,15 @@ export default function CustomHomes() {
           <TopMedia />
 
           {/* Description section */}
+          <section className="section-spacing">
+
           <Description />
+          </section>
 
           {/* Amenities section */}
+          <section className="section-spacing">
           <ShowcaseProperties />
+          </section>
 
           {/* Contact Form Section */}
           <ContactForm />

@@ -11,7 +11,7 @@ export default function ShowcaseProperties() {
   const properties = [...propertiesObj["miami-dade"], ...propertiesObj.pinecrest];
 
 return (
-    <section className="py-10 bg-black">
+    <section className=" bg-black">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-12">
