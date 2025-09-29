@@ -31,16 +31,24 @@ export default function PropertyDetail() {
           <TopMedia property={property} />
 
           {/* Description section */}
-          <Description property={property} />
+          <section className="section-spacing">
+            <Description property={property} />
+          </section>
 
           {/* Amenities section */}
-          <Amenities property={property} />
+          <section className="section-spacing">
+            <Amenities property={property} />
+          </section>
 
           {/* Pictures Section */}
-          <Pictures property={property} />
+          <section className="section-spacing">
+            <Pictures property={property} />
+          </section>
 
           {/* Maps section */}
-          <Maps property={property} />
+          <section className="section-spacing">
+            <Maps property={property} />
+          </section>
 
           <ContactForm />
 

@@ -14,7 +14,10 @@ export default function ShowcaseCustomHomes() {
           <TopMedia />
 
           {/* Amenities section */}
+          <section className="section-spacing">
+
           <ShowcaseProperties />
+          </section>
 
           {/* Contact Form Section */}
           <ContactForm />

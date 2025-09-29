@@ -5,7 +5,7 @@ export default function Pictures({ property }) {
     const images = property?.images;
 
   return (
-    <section className="pt-10 mt-12">
+    <section className="">
       <div className="mx-auto">
         {/* Pictures Flexbox */}
         <div className="flex items-center justify-center mt-8">

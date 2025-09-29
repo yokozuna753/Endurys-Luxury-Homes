@@ -5,7 +5,7 @@ export default function Description({ property }) {
   return (
     <>
       {" "}
-      <section className="pt-10 mt-12">
+      <section className="">
         {/* Property => heading, attributes, description ==== MARGIN */}
         <div className="mx-auto">
           {/* Property => heading, attributes, description ==== CONTAINER */}
