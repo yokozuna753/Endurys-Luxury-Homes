@@ -158,9 +158,9 @@ const NavBar = () => {
       {isMenuOpen && (
         <div
           ref={menuRef}
-          className="md:hidden bg-white border-t border-gray-200 px-4 pt-4 pb-6 space-y-4"
+          className="md:hidden bg-black border-t border-gray-200 px-4 pt-4 pb-6 space-y-4"
         >
-          <NavLink to="/" onClick={() => setIsMenuOpen(false)} className="block text-gray-800">
+          <NavLink to="/" onClick={() => setIsMenuOpen(false)} className="block text-white">
             HOME
           </NavLink>
 
@@ -168,7 +168,7 @@ const NavBar = () => {
           <div>
             <button
               onClick={() => handleDropdownToggle("properties")}
-              className="w-full text-left text-gray-800 font-medium"
+              className="w-full text-left text-white font-medium"
             >
               PROPERTIES
             </button>
@@ -177,14 +177,14 @@ const NavBar = () => {
                 <NavLink
                   to="/properties/miami-dade"
                   onClick={() => setIsMenuOpen(false)}
-                  className="block text-sm text-gray-600 hover:text-blue-600"
+                  className="block text-sm text-gray-300 hover:text-blue-600"
                 >
                   MIAMI-DADE COUNTY
                 </NavLink>
                 <NavLink
                   to="/properties/pinecrest"
                   onClick={() => setIsMenuOpen(false)}
-                  className="block text-sm text-gray-600 hover:text-blue-600"
+                  className="block text-sm text-gray-300 hover:text-blue-600"
                 >
                   PINECREST, FL
                 </NavLink>
@@ -196,7 +196,7 @@ const NavBar = () => {
           <div>
             <button
               onClick={() => handleDropdownToggle("services")}
-              className="w-full text-left text-gray-800 font-medium"
+              className="w-full text-left text-white font-medium"
             >
               SERVICES
             </button>
@@ -205,7 +205,7 @@ const NavBar = () => {
                 <NavLink
                   to="/services/custom-homes"
                   onClick={() => setIsMenuOpen(false)}
-                  className="block text-sm text-gray-600 hover:text-blue-600"
+                  className="block text-sm text-gray-300 hover:text-blue-600"
                 >
                   CUSTOM HOMES
                 </NavLink>
@@ -217,7 +217,7 @@ const NavBar = () => {
           <div>
             <button
               onClick={() => handleDropdownToggle("ourwork")}
-              className="w-full text-left text-gray-800 font-medium"
+              className="w-full text-left text-white font-medium"
             >
               OUR WORK
             </button>
@@ -226,7 +226,7 @@ const NavBar = () => {
                 <NavLink
                   to="/our-work/showcase-custom-homes"
                   onClick={() => setIsMenuOpen(false)}
-                  className="block text-sm text-gray-600 hover:text-blue-600"
+                  className="block text-sm text-gray-300 hover:text-blue-600"
                 >
                   SHOWCASE & CUSTOM HOMES
                 </NavLink>
@@ -237,7 +237,7 @@ const NavBar = () => {
           <NavLink
             to="/contact"
             onClick={() => setIsMenuOpen(false)}
-            className="block text-gray-800"
+            className="block text-white"
           >
             CONTACT
           </NavLink>
