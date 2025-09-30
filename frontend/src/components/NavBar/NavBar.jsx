@@ -72,12 +72,12 @@ const NavBar = () => {
                 >
                   PINECREST, FL
                 </NavLink>
-                <NavLink
+                {/* <NavLink
                   to="/properties/westcoast"
                   className="block px-4 py-2 hover:cursor-pointer hover:bg-gray-100 text-black dark:hover:text-black"
                 >
                   WEST COAST
-                </NavLink>
+                </NavLink> */} 
               </div>
             </div>
 
