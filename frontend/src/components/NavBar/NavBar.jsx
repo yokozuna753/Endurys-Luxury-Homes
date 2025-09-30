@@ -6,6 +6,7 @@ const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
   const menuRef = useRef();
+  const buttonRef = useRef();
 
   const handleDropdownToggle = (menu) => {
     setOpenDropdown((prev) => (prev === menu ? null : menu));
@@ -13,7 +14,12 @@ const NavBar = () => {
 
   useEffect(() => {
     const handleClickOutside = (e) => {
-      if (menuRef.current && !menuRef.current.contains(e.target)) {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(e.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(e.target)
+      ) {
         setIsMenuOpen(false);
         setOpenDropdown(null);
       }
@@ -117,7 +123,11 @@ const NavBar = () => {
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            ref={buttonRef}
+              onClick={(e) => {
+                e.stopPropagation();
+                setIsMenuOpen(!isMenuOpen);
+              }}
               className="text-white focus:outline-none"
             >
               {isMenuOpen ? (
@@ -160,7 +170,11 @@ const NavBar = () => {
           ref={menuRef}
           className="md:hidden bg-black border-t border-gray-200 px-4 pt-4 pb-6 space-y-4"
         >
-          <NavLink to="/" onClick={() => setIsMenuOpen(false)} className="block text-white">
+          <NavLink
+            to="/"
+            onClick={() => setIsMenuOpen(false)}
+            className="block text-white"
+          >
             HOME
           </NavLink>
 
@@ -177,14 +191,14 @@ const NavBar = () => {
                 <NavLink
                   to="/properties/miami-dade"
                   onClick={() => setIsMenuOpen(false)}
-                  className="block text-sm text-gray-300 hover:text-blue-600"
+                  className="block text-sm text-gray-300 hover:text-[#C6A15B]"
                 >
                   MIAMI-DADE COUNTY
                 </NavLink>
                 <NavLink
                   to="/properties/pinecrest"
                   onClick={() => setIsMenuOpen(false)}
-                  className="block text-sm text-gray-300 hover:text-blue-600"
+                  className="block text-sm text-gray-300 hover:text-[#C6A15B]"
                 >
                   PINECREST, FL
                 </NavLink>
@@ -205,7 +219,7 @@ const NavBar = () => {
                 <NavLink
                   to="/services/custom-homes"
                   onClick={() => setIsMenuOpen(false)}
-                  className="block text-sm text-gray-300 hover:text-blue-600"
+                  className="block text-sm text-gray-300 hover:text-[#C6A15B]"
                 >
                   CUSTOM HOMES
                 </NavLink>
@@ -226,7 +240,7 @@ const NavBar = () => {
                 <NavLink
                   to="/our-work/showcase-custom-homes"
                   onClick={() => setIsMenuOpen(false)}
-                  className="block text-sm text-gray-300 hover:text-blue-600"
+                  className="block text-sm text-gray-300 hover:text-[#C6A15B]"
                 >
                   SHOWCASE & CUSTOM HOMES
                 </NavLink>
