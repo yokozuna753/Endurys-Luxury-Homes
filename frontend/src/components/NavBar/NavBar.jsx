@@ -1,14 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom"; // assuming you're using react-router-dom
 import logo from "../../assets/images/logo.webp";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+  const menuRef = useRef();
 
   const handleDropdownToggle = (menu) => {
     setOpenDropdown((prev) => (prev === menu ? null : menu));
   };
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
+        setIsMenuOpen(false);
+        setOpenDropdown(null);
+      }
+    };
+
+    if (isMenuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isMenuOpen]);
 
   return (
     <nav className="bg-black shadow-md fixed w-full z-50">
@@ -100,7 +118,7 @@ const NavBar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-800 focus:outline-none"
+              className="text-white focus:outline-none"
             >
               {isMenuOpen ? (
                 <svg
@@ -138,8 +156,11 @@ const NavBar = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden hover:cursor-pointer bg-white border-t border-gray-200 px-4 pt-4 pb-6 space-y-4">
-          <NavLink to="/" className="block text-gray-800">
+        <div
+          ref={menuRef}
+          className="md:hidden bg-white border-t border-gray-200 px-4 pt-4 pb-6 space-y-4"
+        >
+          <NavLink to="/" onClick={() => setIsMenuOpen(false)} className="block text-gray-800">
             HOME
           </NavLink>
 
@@ -147,21 +168,23 @@ const NavBar = () => {
           <div>
             <button
               onClick={() => handleDropdownToggle("properties")}
-              className="w-full text-left hover:cursor-pointer text-gray-800 font-medium"
+              className="w-full text-left text-gray-800 font-medium"
             >
               PROPERTIES
             </button>
             {openDropdown === "properties" && (
-              <div className="ml-4 mt-2 space-y-2 hover:cursor-pointer hover:text-blue-600">
+              <div className="ml-4 mt-2 space-y-2">
                 <NavLink
                   to="/properties/miami-dade"
-                  className="block text-sm text-gray-600 hover:cursor-pointer hover:text-blue-600"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="block text-sm text-gray-600 hover:text-blue-600"
                 >
                   MIAMI-DADE COUNTY
                 </NavLink>
                 <NavLink
                   to="/properties/pinecrest"
-                  className="block text-sm text-gray-600 hover:cursor-pointer hover:text-blue-600"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="block text-sm text-gray-600 hover:text-blue-600"
                 >
                   PINECREST, FL
                 </NavLink>
@@ -173,7 +196,7 @@ const NavBar = () => {
           <div>
             <button
               onClick={() => handleDropdownToggle("services")}
-              className="w-full text-left text-gray-800 font-medium hover:cursor-pointer"
+              className="w-full text-left text-gray-800 font-medium"
             >
               SERVICES
             </button>
@@ -181,7 +204,8 @@ const NavBar = () => {
               <div className="ml-4 mt-2 space-y-2">
                 <NavLink
                   to="/services/custom-homes"
-                  className="block text-sm text-gray-600 hover:cursor-pointer hover:text-blue-600"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="block text-sm text-gray-600 hover:text-blue-600"
                 >
                   CUSTOM HOMES
                 </NavLink>
@@ -193,7 +217,7 @@ const NavBar = () => {
           <div>
             <button
               onClick={() => handleDropdownToggle("ourwork")}
-              className="w-full text-left text-gray-800 font-medium hover:cursor-pointer"
+              className="w-full text-left text-gray-800 font-medium"
             >
               OUR WORK
             </button>
@@ -201,7 +225,8 @@ const NavBar = () => {
               <div className="ml-4 mt-2 space-y-2">
                 <NavLink
                   to="/our-work/showcase-custom-homes"
-                  className="block text-sm text-gray-600 hover:cursor-pointer hover:text-blue-600"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="block text-sm text-gray-600 hover:text-blue-600"
                 >
                   SHOWCASE & CUSTOM HOMES
                 </NavLink>
@@ -209,7 +234,11 @@ const NavBar = () => {
             )}
           </div>
 
-          <NavLink to="/contact" className="block text-gray-800">
+          <NavLink
+            to="/contact"
+            onClick={() => setIsMenuOpen(false)}
+            className="block text-gray-800"
+          >
             CONTACT
           </NavLink>
         </div>
