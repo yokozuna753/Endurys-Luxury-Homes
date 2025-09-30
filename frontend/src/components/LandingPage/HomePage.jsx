@@ -46,9 +46,9 @@ const HomePage = () => {
           </p>
           <button
             onClick={() => navigate("/our-work/showcase-custom-homes")}
-            className="bg-white text-gray-900 px-8 py-3 font-medium hover:opacity-100 hover:cursor-pointer transition-all duration-300 ease-in-out 
+            className="border border-white text-white px-8 py-4 mt-16 text-sm font-medium tracking-wide hover:text-black transition-all duration-300 ease-in-out 
              hover:bg-gray-200 hover:shadow-[0_8px_30px_rgba(255,255,255,0.2)]
-             hover:scale-105"
+             hover:scale-105 hover:cursor-pointer"
           >
             EXPLORE OUR WORK
           </button>
