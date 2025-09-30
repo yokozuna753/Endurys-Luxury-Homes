@@ -130,6 +130,7 @@ function Input({ name, placeholder, value, onChange, type = "text" }) {
       type={type}
       name={name}
       placeholder={placeholder}
+      alt={placeholder}
       value={value}
       onChange={onChange}
       required

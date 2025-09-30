@@ -91,19 +91,21 @@ export default function ContactPage() {
               type="text"
               name="first_name"
               placeholder="First Name *"
+              alt="First Name"
               value={formData.first_name}
               onChange={handleChange}
               required
-              className={`w-100 md:w-full bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
+              className={`w-full md:w-full bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
             />
             <input
               type="text"
               name="last_name"
+              alt="Last Name"
               placeholder="Last Name *"
               value={formData.last_name}
               onChange={handleChange}
               required
-              className={`w-100 md:w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
+              className={`w-full md:w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
             />
           </div>
 
@@ -112,20 +114,22 @@ export default function ContactPage() {
             <input
               type="email"
               name="user_email"
+              alt="Email Address"
               placeholder="Email *"
               value={formData.user_email}
               onChange={handleChange}
               required
-              className={`w-100 md:w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
+              className={`w-full md:w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
             />
             <input
               type="tel"
               name="phone"
+              alt="Phone Number"
               placeholder="Phone *"
               value={formData.phone}
               onChange={handleChange}
               required
-              className={`w-100 md:w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
+              className={`w-full md:w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
             />
           </div>
 
@@ -134,20 +138,22 @@ export default function ContactPage() {
             <input
               type="text"
               name="street"
+              alt="Street Address"
               placeholder="Street Address *"
               value={formData.street}
               onChange={handleChange}
               required
-              className={`w-100 md:w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
+              className={`w-full md:w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
             />
             <input
               type="text"
               name="city"
+              alt="City"
               placeholder="City *"
               value={formData.city}
               onChange={handleChange}
               required
-              className={`w-100 md:w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
+              className={`w-full md:w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
             />
           </div>
 
@@ -155,20 +161,22 @@ export default function ContactPage() {
             <input
               type="text"
               name="state"
+              alt="State"
               placeholder="State *"
               value={formData.state}
               onChange={handleChange}
               required
-              className={`w-100 md:w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
+              className={`w-full md:w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
             />
             <input
               type="text"
               name="zip"
+              alt="Zip Code"
               placeholder="ZIP Code *"
               value={formData.zip}
               onChange={handleChange}
               required
-              className={`w-100 md:w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
+              className={`w-full md:w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
             />
           </div>
 
@@ -180,7 +188,7 @@ export default function ContactPage() {
             value={formData.message}
             onChange={handleChange}
             required
-            className={`w-100 md:w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
+            className={`w-full md:w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
           ></textarea>
 
           {/* Consent */}
