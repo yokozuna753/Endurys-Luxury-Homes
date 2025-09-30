@@ -6,7 +6,7 @@ export default function Layout() {
   return (
     <>
       <NavBar />
-      <main className="pt-16">
+      <main className="pt-16 overflow-x-hidden">
         <Outlet />
         <ScrollRestoration />
       </main>

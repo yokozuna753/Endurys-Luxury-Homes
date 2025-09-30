@@ -73,7 +73,7 @@ export default function ContactPage() {
 
           <div className="w-full h-80 bg-gray-800 rounded-lg overflow-hidden">
             <iframe
-              className="w-full h-80"
+              className="w-full h-80 block"
               src={googleMapsURL}
               allowFullScreen
               loading="lazy"

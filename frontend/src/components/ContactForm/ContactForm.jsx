@@ -85,7 +85,7 @@ export default function ContactForm() {
             value={formData.message}
             onChange={handleChange}
             required
-            className="w-100 md:w-132  lg:w-full rounded-md bg-[#1a1a1a] border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]"
+            className="w-full  lg:w-full rounded-md bg-[#1a1a1a] border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]"
           ></textarea>
 
           {/* Consent */}
@@ -133,7 +133,7 @@ function Input({ name, placeholder, value, onChange, type = "text" }) {
       value={value}
       onChange={onChange}
       required
-      className="w-100 md:w-full rounded-md bg-[#1a1a1a] border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]"
+      className="w-full rounded-md bg-[#1a1a1a] border border-gray-700 px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]"
     />
   );
 }
