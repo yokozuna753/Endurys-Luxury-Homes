@@ -31,7 +31,7 @@ const HomePage = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 text-center backdrop-blur-md p-3 rounded-3xl px-4 max-w-4xl mx-auto">
+        <div className="relative z-10 text-center backdrop-blur-md p-3 rounded-3xl px-4 max-w-4xl mx-auto ">
           <h1
             style={{ color: "#000" }}
             className="text-4xl md:text-6xl force-black lg:text-7xl font-light mb-6 leading-tight"
@@ -48,7 +48,7 @@ const HomePage = () => {
             onClick={() => navigate("/our-work/showcase-custom-homes")}
             className="bg-white text-gray-900 px-8 py-3 font-medium hover:opacity-100 hover:cursor-pointer transition-all duration-300 ease-in-out 
              hover:bg-gray-200 hover:shadow-[0_8px_30px_rgba(255,255,255,0.2)]
-             hover:scale-105 hover:cursor-pointer"
+             hover:scale-105"
           >
             EXPLORE OUR WORK
           </button>
