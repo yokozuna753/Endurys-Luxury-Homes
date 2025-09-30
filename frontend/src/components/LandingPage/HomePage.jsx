@@ -25,7 +25,7 @@ const HomePage = () => {
     <img
       src={main11035}
       alt="Luxury Home"
-      className="w-full h-full object-cover object-[47%_center] lg:object-[52%_center]"
+      className="w-full h-full object-cover object-47-center object-52-center"
     />
     <div className="absolute inset-0"></div>
   </div>
