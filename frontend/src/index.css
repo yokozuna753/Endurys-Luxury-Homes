@@ -2,8 +2,8 @@
 @tailwind utilities;
 
 @theme {
---breakpoint-md: 790px;
---breakpoint-xxxxxxs: 308px;
+  --breakpoint-md: 790px;
+  --breakpoint-xxxxxxs: 308px;
   --breakpoint-xxxxxs: 385px;
   --breakpoint-xxxxs: 440px;
   --breakpoint-xxxs: 500px;
@@ -18,23 +18,12 @@
   color: #000 !important;
 }
 
-@layer utilities{
-
-    .object-47-center {
-    object-position: 47% center;
-  }
-
-    @media (min-width: 1024px) { /* lg breakpoint */
-    .object-52-center {
-      object-position: 70% center;
-    }
-  }
-
-  .section-spacing{
+@layer utilities {
+  .section-spacing {
     @apply mt-32 md:mt-40 lg:mt-48;
   }
 
-    .inner-spacing {
+  .inner-spacing {
     @apply space-y-6 md:space-y-8;
   }
 }
@@ -85,8 +74,12 @@
 }
 
 @keyframes fadeInImage {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Animation utility classes */
@@ -116,8 +109,18 @@
 }
 
 /* Staggered delays */
-.delay-100 { animation-delay: 0.1s; }
-.delay-200 { animation-delay: 0.2s; }
-.delay-300 { animation-delay: 0.3s; }
-.delay-400 { animation-delay: 0.4s; }
-.delay-500 { animation-delay: 0.5s; }
+.delay-100 {
+  animation-delay: 0.1s;
+}
+.delay-200 {
+  animation-delay: 0.2s;
+}
+.delay-300 {
+  animation-delay: 0.3s;
+}
+.delay-400 {
+  animation-delay: 0.4s;
+}
+.delay-500 {
+  animation-delay: 0.5s;
+}
