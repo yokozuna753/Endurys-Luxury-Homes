@@ -35,10 +35,10 @@ export const router = createBrowserRouter([
         path: "/properties/pinecrest",
         element: <Pinecrest />,
       },
-      {
-        path: "/properties/westcoast",
-        element: <WestCoast />,
-      },
+      // {
+      //   path: "/properties/westcoast", //! COMMENT BACK IN ONCE READY TO WORK ON
+      //   element: <WestCoast />,
+      // },
       {
         path: "/properties/miami-dade/:area/:id",
         element: <PropertyDetail />,
@@ -47,10 +47,10 @@ export const router = createBrowserRouter([
         path: "/properties/pinecrest/:area/:id",
         element: <PropertyDetail />,
       },
-      {
-        path: "/properties/westcoast/:area/:id",
-        element: <PropertyDetail />,
-      },
+      // {
+      //   path: "/properties/westcoast/:area/:id", //! COMMENT BACK IN ONCE READY TO WORK ON
+      //   element: <PropertyDetail />,
+      // },
       {
         path: "/services/custom-homes",
         element: <CustomHomes />,
