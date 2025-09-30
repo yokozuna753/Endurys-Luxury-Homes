@@ -90,7 +90,7 @@ const ExclusiveListings = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <p className="text-gray-400 text-sm italic mb-2">Explore Our</p>
-          <h2 className="text-4xl md:text-5xl font-light text-white tracking-wider">
+          <h2 className="text-4xl md:text-5xl font-light text-[#b28f4f] tracking-wider">
             EXCLUSIVE LISTINGS
           </h2>
         </div>

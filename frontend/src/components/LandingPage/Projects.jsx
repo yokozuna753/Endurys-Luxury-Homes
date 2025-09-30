@@ -5,8 +5,8 @@ const Projects = () => {
     <section id="projects" className="">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-light mb-4 text-white">
-            FEATURED <span className="font-bold">PROJECTS</span>
+          <h2 className="text-4xl md:text-5xl font-light mb-4 text-gray-100">
+            FEATURED <span className="font-bold text-[#b28f4f]">PROJECTS</span>
           </h2>
           <p className="text-white text-lg max-w-2xl mx-auto">
             Discover our portfolio of exceptional homes across South Florida's

@@ -52,7 +52,7 @@ export default function ContactForm() {
   return (
     <section className="section-spacing bg-black text-white">
       <div className="flex flex-col justify-center items-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-light mb-10 text-white">Contact Us</h2>
+        <h2 className="text-4xl font-light mb-10 text-[#b28f4f]">Contact Us</h2>
 
         <form onSubmit={handleSubmit} className=" lg:w-full lg:block flex flex-col inner-spacing  items-center">
           {/* Name Fields */}

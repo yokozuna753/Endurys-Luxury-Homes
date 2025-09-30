@@ -53,10 +53,10 @@ const About = () => {
                 sectionVisible ? "animate-fade-in-left" : ""
               }`}
             >
-              <h2 className="text-center text-4xl lg:text-left md:text-5xl font-light mb-6 text-white">
+              <h2 className="text-center text-4xl lg:text-left md:text-5xl font-light mb-6 text-gray-100">
                 LEGACY BUILT
                 <br />
-                <span className="font-bold">SINCE 2006</span>
+                <span className="font-bold text-[#b28f4f]">SINCE 2006</span>
               </h2>
             </div>
 
