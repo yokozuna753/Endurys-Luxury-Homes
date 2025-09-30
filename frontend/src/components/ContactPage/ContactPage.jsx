@@ -84,9 +84,9 @@ export default function ContactPage() {
         </div>
 
         {/* RIGHT COLUMN (EMAILJS FORM) */}
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="flex flex-col lg:block items-center space-y-4">
           {/* First / Last Name */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="md:grid flex flex-col md:grid-cols-2 gap-6">
             <input
               type="text"
               name="first_name"
@@ -94,7 +94,7 @@ export default function ContactPage() {
               value={formData.first_name}
               onChange={handleChange}
               required
-              className={`w-full bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
+              className={`w-100 md:w-full bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
             />
             <input
               type="text"
@@ -103,7 +103,7 @@ export default function ContactPage() {
               value={formData.last_name}
               onChange={handleChange}
               required
-              className={`w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
+              className={`w-100 md:w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
             />
           </div>
 
@@ -116,7 +116,7 @@ export default function ContactPage() {
               value={formData.user_email}
               onChange={handleChange}
               required
-              className={`w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
+              className={`w-100 md:w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
             />
             <input
               type="tel"
@@ -125,7 +125,7 @@ export default function ContactPage() {
               value={formData.phone}
               onChange={handleChange}
               required
-              className={`w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
+              className={`w-100 md:w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
             />
           </div>
 
@@ -138,7 +138,7 @@ export default function ContactPage() {
               value={formData.street}
               onChange={handleChange}
               required
-              className={`w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
+              className={`w-100 md:w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
             />
             <input
               type="text"
@@ -147,7 +147,7 @@ export default function ContactPage() {
               value={formData.city}
               onChange={handleChange}
               required
-              className={`w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
+              className={`w-100 md:w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
             />
           </div>
 
@@ -159,7 +159,7 @@ export default function ContactPage() {
               value={formData.state}
               onChange={handleChange}
               required
-              className={`w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
+              className={`w-100 md:w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
             />
             <input
               type="text"
@@ -168,7 +168,7 @@ export default function ContactPage() {
               value={formData.zip}
               onChange={handleChange}
               required
-              className={`w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
+              className={`w-100 md:w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
             />
           </div>
 
@@ -180,7 +180,7 @@ export default function ContactPage() {
             value={formData.message}
             onChange={handleChange}
             required
-            className={`w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
+            className={`w-100 md:w-full rounded-md bg-[#1a1a1a] border border-gray-700 text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]`}
           ></textarea>
 
           {/* Consent */}
