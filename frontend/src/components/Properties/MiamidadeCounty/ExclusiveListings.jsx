@@ -110,16 +110,16 @@ const ExclusiveListings = () => {
               {/* Buttons */}
               <button
                 onClick={prevImageOne}
-                className="absolute left-4 top-1/2 -translate-y-1/2 opacity-0 
-                  group-hover:opacity-100 transition-all duration-500 bg-black/40 
+                className="absolute left-4 top-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 
+                  lg:group-hover:opacity-100 transition-all duration-500 bg-black/40 
                   hover:bg-black/60 rounded-full p-2 text-white hover:cursor-pointer"
               >
                 <ChevronLeft className="h-6 w-6" />
               </button>
               <button
                 onClick={nextImageOne}
-                className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 
-                  group-hover:opacity-100 transition-all duration-500 bg-black/40 
+                className="absolute right-4 top-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 
+                  lg:group-hover:opacity-100 transition-all duration-500 bg-black/40 
                   hover:bg-black/60 rounded-full p-2 text-white hover:cursor-pointer"
               >
                 <ChevronRight className="h-6 w-6" />
@@ -149,16 +149,16 @@ const ExclusiveListings = () => {
               {/* Buttons */}
               <button
                 onClick={prevImageTwo}
-                className="absolute left-4 top-1/2 -translate-y-1/2 opacity-0 
-                  group-hover:opacity-100 transition-all duration-500 bg-black/40 
+                className="absolute left-4 top-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 
+                  lg:group-hover:opacity-100 transition-all duration-500 bg-black/40 
                   hover:bg-black/60 rounded-full p-2 text-white hover:cursor-pointer"
               >
                 <ChevronLeft className="h-6 w-6" />
               </button>
               <button
                 onClick={nextImageTwo}
-                className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 
-                  group-hover:opacity-100 transition-all duration-500 bg-black/40 
+                className="absolute right-4 top-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 
+                  lg:group-hover:opacity-100 transition-all duration-500 bg-black/40 
                   hover:bg-black/60 rounded-full p-2 text-white hover:cursor-pointer"
               >
                 <ChevronRight className="h-6 w-6" />
