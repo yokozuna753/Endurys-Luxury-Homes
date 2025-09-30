@@ -11,7 +11,7 @@ export default function Description({ property }) {
           {/* Property => heading, attributes, description ==== CONTAINER */}
           <div className="flex flex-col items-center  max-w-7xl mx-auto lg:px-8">
             {" "}
-            <h2 className="text-2xl md:text-4xl md:text-5xl font-light text-white tracking-wider mb-8">
+            <h2 className="text-2xl md:text-5xl font-light text-white tracking-wider mb-8">
               {" "}
               Enter Property Main Heading
             </h2>{" "}
