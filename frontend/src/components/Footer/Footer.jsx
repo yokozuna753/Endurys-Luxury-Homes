@@ -1,4 +1,4 @@
-import logo from "../../assets/images/logo.webp"
+import logo from "../../assets/images/logo.webp";
 
 const Footer = () => {
   return (
@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="gap-12">
             <div>
               <div className="w-70 bg-transparent font-light">
-                <img src={logo}  style={{ clipPath: "inset(1px 0 0 0)" }} />
+                <img src={logo} style={{ clipPath: "inset(1px 0 0 0)" }} />
               </div>
 
               <div className=" space-y-2 text-gray-400">
@@ -22,17 +22,13 @@ const Footer = () => {
 
           <div className="border-t border-gray-800 section-spacing">
             <div className="text-xs text-gray-500 leading-relaxed mb-4">
-              Amy Marcus Hollub is a real estate advisor affiliated with
-              Compass, a licensed real estate broker and abides by Equal Housing
-              Opportunity laws. All material presented herein is intended for
-              informational purposes only. Information is compiled from sources
-              deemed reliable but is subject to errors, omissions, changes in
-              price, condition, sale, or withdrawal without notice. No statement
-              is made as to accuracy of any description. All measurements and
-              square footages are approximate. This is not intended to solicit
-              property already listed. Nothing herein shall be construed as
-              legal, accounting or other professional advice outside the realm
-              of real estate brokerage.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
             </div>
 
             <div className="flex justify-between items-center">
@@ -51,12 +47,10 @@ const Footer = () => {
                 | © 2025 All Rights Reserved
               </div>
               <div className="text-xs text-blue-400">
-                <span className="text-white">TREM</span>
-                <span className="text-blue-400">GROUP</span>{" "}
+                <span className="text-white">Endurys Luxury Homes </span>
+                {/* <span className="text-blue-400">GROUP</span>{" "} */}
                 <span className="text-white">Powered by</span>{" "}
-                <span className="text-white">
-                  The Real Estate Marketing Group
-                </span>
+                <span className="text-white">A & E Development Plus Inc</span>
               </div>
             </div>
           </div>
