@@ -19,9 +19,9 @@ export default function PropertyDetail() {
     : null;
 
   //   ✅ If invalid, route to your NotFound ("*") page
-  // if (!isValidArea || !property) {
-  //   return <Navigate to="/" replace />;
-  // }
+  if (!isValidArea || !property) {
+    return <Navigate to="/" replace />;
+  }
 
   return (
     <>
