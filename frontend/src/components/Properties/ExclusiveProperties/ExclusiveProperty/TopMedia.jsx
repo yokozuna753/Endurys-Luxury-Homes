@@ -31,7 +31,7 @@ export default function TopMedia({ property }) {
             <h1 className="text-4xl md:text-6xl font-semibold tracking-wider mb-2">
               {propertyAddress}
             </h1>
-            <h2 className="text-lg md:text-2xl tracking-wider mb-6">
+            <h2 className="text-lg md:text-2xl tracking-wider mb-6 uppercase">
               {property.location}
             </h2>
           </div>

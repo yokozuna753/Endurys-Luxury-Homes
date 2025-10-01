@@ -20,7 +20,7 @@ export default function Maps({ property }) {
       <div className="mx-auto">
         {/* Heading */}
         <div className="flex items-center justify-center">
-          <h2 className="text-2xl md:text-5xl font-light text-white tracking-wider">
+          <h2 className="text-2xl md:text-5xl font-light text-[#b28f4f] tracking-wider">
             Location
           </h2>
         </div>

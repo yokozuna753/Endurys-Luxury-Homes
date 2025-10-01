@@ -24,7 +24,7 @@ export default function Amenities({ property }) {
       <div className="mx-auto">
         {/* Heading */}
         <div className="flex items-center justify-center">
-          <h2 className="text-3xl md:text-5xl font-light text-white tracking-wider">
+          <h2 className="text-3xl md:text-5xl font-light text-[#b28f4f] tracking-wider">
             Amenities
           </h2>
         </div>
@@ -39,7 +39,7 @@ export default function Amenities({ property }) {
                            w-full md:w-1/2 lg:w-1/4"
               >
                 <CheckIcon className="h-5 w-5 text-white mt-1 flex-shrink-0" />
-                <span className="text-white text-lg">{item}</span>
+                <span className="text-gray-400 text-lg">{item}</span>
               </div>
             ))}
           </div>
