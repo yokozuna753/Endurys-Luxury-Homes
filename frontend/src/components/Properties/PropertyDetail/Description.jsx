@@ -18,46 +18,46 @@ export default function Description({ property }) {
             <div className="flex justify-between md:justify-center md:gap-16 w-full mb-8 mt-8">
               {/* Stat 1 */}
               <div className="flex flex-col items-center">
-                <div className="md:text-3xl font-light text-gray-100 mb-2">
+                <div className="md:text-3xl font-light text-gray-400 mb-2">
                   {property.sellPrice}{" "}
                 </div>
-                <div className="text-xs md:text-sm tracking-widest text-gray-100 uppercase">
+                <div className="text-xs md:text-sm tracking-widest text-white uppercase">
                   {property.status}
                 </div>
               </div>
 
               {/* Stat 2 */}
               <div className="flex flex-col items-center">
-                <div className="md:text-3xl font-light text-gray-100 mb-2">
+                <div className="md:text-3xl font-light text-gray-400 mb-2">
                   {property.beds}
                 </div>
-                <div className="text-xs md:text-sm tracking-widest text-gray-100 uppercase">
+                <div className="text-xs md:text-sm tracking-widest text-white uppercase">
                   Beds
                 </div>
               </div>
 
               {/* Stat 3 */}
               <div className="flex flex-col items-center">
-                <div className="md:text-3xl font-light text-gray-100 mb-2">
+                <div className="md:text-3xl font-light text-gray-400 mb-2">
                   {property.baths}
                 </div>
-                <div className="text-xs md:text-sm tracking-widest text-gray-100 uppercase">
+                <div className="text-xs md:text-sm tracking-widest text-white uppercase">
                   Baths
                 </div>
               </div>
 
               {/* Stat 4 */}
               <div className="flex flex-col items-center">
-                <div className="md:text-3xl font-light text-gray-100 mb-2">
+                <div className="md:text-3xl font-light text-gray-400 mb-2">
                   {property.livingArea}
                 </div>
-                <div className="text-xs md:text-sm tracking-widest text-gray-100 uppercase">
+                <div className="text-xs md:text-sm tracking-widest text-white uppercase">
                   Living Size
                 </div>
               </div>
             </div>
             <div className="mt-8"> {/* Description */}
-                <p className="text-center text-gray-100">
+                <p className="text-center text-gray-400">
                     {property.description}
                 </p>
             </div>
