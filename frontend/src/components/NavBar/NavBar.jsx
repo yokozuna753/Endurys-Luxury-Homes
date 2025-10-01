@@ -48,7 +48,7 @@ const NavBar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6 items-center">
-            <NavLink to="/" className="text-white ">
+            <NavLink to="/" className="text-white hover:text-[#b28f4f]">
               HOME
             </NavLink>
 
@@ -59,16 +59,16 @@ const NavBar = () => {
               </button>
 
               {/* This dropdown stays visible while hovering parent OR the dropdown itself */}
-              <div className="absolute left-0 mt-2 w-48 bg-white border rounded shadow-lg z-50 invisible group-hover:visible opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-1000 ease-out">
+              <div className="absolute left-0 mt-2 w-48 bg-black border rounded shadow-lg z-50 invisible group-hover:visible opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-1000 ease-out">
                 <NavLink
                   to="/properties/miami-dade"
-                  className="block px-4 py-2 hover:cursor-pointer hover:bg-gray-100 text-black dark:hover:text-black"
+                  className="block px-4 py-2 hover:cursor-pointer text-white hover:text-[#b28f4f]"
                 >
                   MIAMI-DADE COUNTY
                 </NavLink>
                 <NavLink
                   to="/properties/pinecrest"
-                  className="block px-4 py-2 hover:cursor-pointer hover:bg-gray-100 text-black dark:hover:text-black"
+                  className="block px-4 py-2 hover:cursor-pointer text-white hover:text-[#b28f4f]"
                 >
                   PINECREST, FL
                 </NavLink>
@@ -88,10 +88,10 @@ const NavBar = () => {
               </button>
 
               {/* This dropdown stays visible while hovering parent OR the dropdown itself */}
-              <div className="absolute left-0 mt-2 w-48 bg-white border rounded shadow-lg z-50 invisible group-hover:visible opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-1000 ease-out">
+              <div className="absolute left-0 mt-2 w-48 bg-black border rounded shadow-lg z-50 invisible group-hover:visible opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-1000 ease-out">
                 <NavLink
                   to="/services/custom-homes"
-                  className="block px-4 py-2 hover:cursor-pointer hover:bg-gray-100 dark:hover:text-black"
+                  className="block px-4 py-2 hover:cursor-pointer text-white hover:text-[#b28f4f]"
                 >
                   CUSTOM HOMES
                 </NavLink>
@@ -105,17 +105,17 @@ const NavBar = () => {
               </button>
 
               {/* This dropdown stays visible while hovering parent OR the dropdown itself */}
-              <div className="absolute left-0 mt-2 w-48 bg-white border rounded shadow-lg z-50 invisible group-hover:visible opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-1000 ease-out">
+              <div className="absolute left-0 mt-2 w-48 bg-black border rounded shadow-lg z-50 invisible group-hover:visible opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-1000 ease-out">
                 <NavLink
                   to="/our-work/showcase-custom-homes"
-                  className="block px-4 py-2 hover:cursor-pointer hover:bg-gray-100 dark:hover:text-black"
+                  className="block px-4 py-2 hover:cursor-pointer text-white hover:text-[#b28f4f]"
                 >
                   SHOWCASE & CUSTOM HOMES
                 </NavLink>
               </div>
             </div>
 
-            <NavLink to="/contact" className="text-white hover:cursor-pointer ">
+            <NavLink to="/contact" className="text-white hover:cursor-pointer hover:text-[#b28f4f]">
               CONTACT
             </NavLink>
           </div>
