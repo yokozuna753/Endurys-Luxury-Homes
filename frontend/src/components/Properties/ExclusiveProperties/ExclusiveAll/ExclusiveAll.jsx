@@ -4,6 +4,7 @@ import Footer from "../../../Footer/Footer.jsx";
 import ShowcaseProperties from "./ShowcaseProperties.jsx";
 import { exclusiveProperties } from "../../PropertiesArray/exclusiveListings.js";
 import { useParams } from "react-router";
+import { Navigate } from "react-router-dom";
 
 export default function ExclusiveAll() {
   const { county } = useParams();
@@ -22,7 +23,9 @@ export default function ExclusiveAll() {
 
   const exclusiveListings = isValidArea && exclusiveProperties[dataKey]; // get the :area in the url and access the array of objects
 
-  console.table(exclusiveListings);
+    if (!isValidArea || !exclusiveListings) {
+    return <Navigate to="/" replace />;
+  }
 
   return (
     <>
