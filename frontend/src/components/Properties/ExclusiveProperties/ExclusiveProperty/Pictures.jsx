@@ -128,7 +128,7 @@ const Pictures = ({ property }) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/95 z-50 overflow-y-auto"
-            onClick={() => setIsModalOpen(false)}
+            // onClick={() => setIsModalOpen(false)}
           >
             <div className="min-h-screen px-4 py-8">
               {/* Close Button */}
