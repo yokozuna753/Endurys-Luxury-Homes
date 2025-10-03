@@ -59,7 +59,7 @@ const Slideshow = () => {
 
     const track = trackRef.current;
     if (track) {
-      const trackWidth = track.scrollWidth / 2; // half (because duplicated)
+      const trackWidth = track.scrollWidth / 3; // half (because duplicated)
       if (offsetRef.current >= trackWidth) {
         offsetRef.current -= trackWidth; // loop seamlessly
       }
@@ -75,7 +75,7 @@ const Slideshow = () => {
     return () => {
       if (requestRef.current) cancelAnimationFrame(requestRef.current);
     };
-  }, []);
+  }, [isHovered]);
 
   return (
 <div
@@ -84,7 +84,7 @@ const Slideshow = () => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <div ref={trackRef} className="flex will-change-transform">
-        {[...slides, ...slides].map((slide, index) => (
+        {[...slides, ...slides, ...slides].map((slide, index) => (
           <div
             key={index}
             className="flex-shrink-0 w-[250px] h-[200px] mr-5 rounded-xl overflow-hidden relative"
@@ -97,8 +97,8 @@ const Slideshow = () => {
             />
             {/* Overlay for text */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-5 flex flex-col justify-end">
-              <h3 className="text-lg font-semibold text-white">{slide.title}</h3>
-              <p className="text-sm opacity-80 text-white">{slide.subtitle}</p>
+              {/* <h3 className="text-lg font-semibold text-white">{slide.title}</h3>
+              <p className="text-sm opacity-80 text-white">{slide.subtitle}</p> */}
             </div>
           </div>
         ))}
