@@ -49,7 +49,7 @@ const Pictures = ({ property }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-12">
-            <p className="text-gray-400 text-sm italic mb-2">View Property</p>
+            {/* <p className="text-gray-400 text-sm italic mb-2">View Property</p> */}
             <h2 className="text-4xl md:text-5xl font-light text-[#b28f4f] tracking-wider">
               IMAGES
             </h2>
@@ -161,12 +161,12 @@ const Pictures = ({ property }) => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.05 }}
-                    className="relative group overflow-hidden rounded-lg"
+                    className="relative group overflow-hidden rounded-lg h-[300px]"
                   >
                     <img
                       src={image}
                       alt={`${property.address} - Image ${index + 1}`}
-                      className="w-full h-auto object-cover"
+                      className="w-full h-full object-cover"
                     />
                     {/* Image Number Overlay */}
                     <div className="absolute top-4 left-4 bg-black/60 text-white px-3 py-1 rounded-full text-sm">
