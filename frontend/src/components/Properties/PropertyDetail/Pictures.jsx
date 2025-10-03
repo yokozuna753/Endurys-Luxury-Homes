@@ -1,120 +1,188 @@
 import React, { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { exclusiveProperties } from "../PropertiesArray/exclusiveListings";
-import { useNavigate } from "react-router-dom";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Pictures = ({ property }) => {
-  // const navigate = useNavigate();
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const [indexOne, setIndexOne] = useState(0);
-
-  const [loadingOne, setLoadingOne] = useState(false);
-
-  const changeImage = (setter, setLoading, length, index, dir) => {
-    setLoading(true);
-    setTimeout(() => {
-      setter(
-        dir === "next" ? (index + 1) % length : (index - 1 + length) % length
-      );
-      setLoading(false);
-    }, 300); // 300ms delay
+  const slideVariants = {
+    enter: (direction) => ({
+      x: direction > 0 ? 1000 : -1000,
+      opacity: 0
+    }),
+    center: {
+      zIndex: 1,
+      x: 0,
+      opacity: 1
+    },
+    exit: (direction) => ({
+      zIndex: 0,
+      x: direction < 0 ? 1000 : -1000,
+      opacity: 0
+    })
   };
 
-  const prevImageOne = () =>
-    changeImage(
-      setIndexOne,
-      setLoadingOne,
-      property.images.length,
-      indexOne,
-      "prev"
-    );
-  const nextImageOne = () =>
-    changeImage(
-      setIndexOne,
-      setLoadingOne,
-      property.images.length,
-      indexOne,
-      "next"
-    );
+  const swipeConfidenceThreshold = 10000;
+  const swipePower = (offset, velocity) => {
+    return Math.abs(offset) * velocity;
+  };
 
-  const ImageWithLoader = ({ src, alt, loading, property }) => (
-    <div className="relative h-[500px] w-4xl">
-      {/* Image */}
-      <img
-        src={src}
-        alt={alt}
-        className={`h-full w-full object-cover transition-opacity duration-500 ${
-          loading ? "opacity-0" : "opacity-100"
-        } hover:cursor-pointer`}
-      />
-      {/* Loader */}
-      {loading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-black/40">
-          <div className="w-10 h-10 border-4 border-white/30 border-t-white rounded-full animate-spin" />
-        </div>
-      )}
-    </div>
-  );
+  const paginate = (newDirection) => {
+    setDirection(newDirection);
+    setCurrentIndex((prev) => {
+      if (newDirection === 1) {
+        return (prev + 1) % property.images.length;
+      } else {
+        return (prev - 1 + property.images.length) % property.images.length;
+      }
+    });
+  };
+
+  const prevImage = () => paginate(-1);
+  const nextImage = () => paginate(1);
 
   return (
-    <section className="bg-black">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <p className="text-gray-400 text-sm italic mb-2">View Property</p>
-          <h2 className="text-4xl md:text-5xl font-light text-[#b28f4f] tracking-wider">
-            IMAGES
-          </h2>
-        </div>
+    <>
+      <section className="bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <p className="text-gray-400 text-sm italic mb-2">View Property</p>
+            <h2 className="text-4xl md:text-5xl font-light text-[#b28f4f] tracking-wider">
+              IMAGES
+            </h2>
+          </div>
 
-        {/* Listings */}
-        <div className="flex flex-col items-center gap-8 mb-8">
-          {/* Listing 1 */}
-          <div className="flex flex-col items-center w-fit bg-transparent rounded-md overflow-hidden">
-            <div className="relative group">
-              <ImageWithLoader
-                src={property.images[indexOne]}
-                alt={property.address}
-                loading={loadingOne}
-                property={property}
-                className="hover:cursor-pointer"
-              />
-              {/* Buttons */}
-              <button
-                onClick={prevImageOne}
-                className="absolute left-4 top-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 
-                  lg:group-hover:opacity-100 transition-all duration-500 bg-black/40 
-                  hover:bg-black/60 rounded-full p-2 text-white hover:cursor-pointer"
-              >
-                <ChevronLeft className="h-6 w-6" />
-              </button>
-              <button
-                onClick={nextImageOne}
-                className="absolute right-4 top-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 
-                  lg:group-hover:opacity-100 transition-all duration-500 bg-black/40 
-                  hover:bg-black/60 rounded-full p-2 text-white hover:cursor-pointer"
-              >
-                <ChevronRight className="h-6 w-6" />
-              </button>
+          {/* Main Image Carousel */}
+          <div className="flex flex-col items-center gap-8 mb-8">
+            <div className="flex flex-col items-center w-full max-w-5xl bg-transparent rounded-md overflow-hidden">
+              <div className="relative group w-full h-[500px] overflow-hidden">
+                <AnimatePresence initial={false} custom={direction}>
+                  <motion.img
+                    key={currentIndex}
+                    src={property.images[currentIndex]}
+                    alt={`${property.address} - Image ${currentIndex + 1}`}
+                    custom={direction}
+                    variants={slideVariants}
+                    initial="enter"
+                    animate="center"
+                    exit="exit"
+                    transition={{
+                      x: { type: "spring", stiffness: 300, damping: 30 },
+                      opacity: { duration: 0.2 }
+                    }}
+                    drag="x"
+                    dragConstraints={{ left: 0, right: 0 }}
+                    dragElastic={1}
+                    onDragEnd={(e, { offset, velocity }) => {
+                      const swipe = swipePower(offset.x, velocity.x);
+
+                      if (swipe < -swipeConfidenceThreshold) {
+                        paginate(1);
+                      } else if (swipe > swipeConfidenceThreshold) {
+                        paginate(-1);
+                      }
+                    }}
+                    className="absolute w-full h-full object-cover cursor-pointer"
+                    onClick={() => setIsModalOpen(true)}
+                  />
+                </AnimatePresence>
+
+                {/* Navigation Buttons */}
+                <button
+                  onClick={prevImage}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 
+                    lg:group-hover:opacity-100 transition-all duration-300 bg-black/40 
+                    hover:bg-black/60 rounded-full p-2 text-white z-10"
+                  aria-label="Previous image"
+                >
+                  <ChevronLeft className="h-6 w-6 hover:cursor-pointer" />
+                </button>
+                <button
+                  onClick={nextImage}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 
+                    lg:group-hover:opacity-100 transition-all duration-300 bg-black/40 
+                    hover:bg-black/60 rounded-full p-2 text-white z-10"
+                  aria-label="Next image"
+                >
+                  <ChevronRight className="h-6 w-6 hover:cursor-pointer" />
+                </button>
+
+                {/* Image Counter */}
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/60 text-white px-4 py-2 rounded-full text-sm">
+                  {currentIndex + 1} / {property.images.length}
+                </div>
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* View All button
-        <div className="text-center">
-          <button
-            onClick={() =>
-              navigate(`/properties/miami-dade/exclusive-listings/all`)
-            }
-            className="border border-white text-white px-8 py-3 text-sm font-medium tracking-wide hover:text-black transition-all duration-300 ease-in-out 
-             hover:bg-gray-200 hover:shadow-[0_8px_30px_rgba(255,255,255,0.2)]
-             hover:scale-105 hover:cursor-pointer"
+      {/* Modal Gallery */}
+      <AnimatePresence>
+        {isModalOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/95 z-50 overflow-y-auto"
+            onClick={() => setIsModalOpen(false)}
           >
-            View All
-          </button>
-        </div> */}
-      </div>
-    </section>
+            <div className="min-h-screen px-4 py-8">
+              {/* Close Button */}
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="fixed top-4 right-4 bg-white/10 hover:bg-white/20 rounded-full p-2 text-white transition-colors z-50 hover:cursor-pointer"
+                aria-label="Close modal"
+              >
+                <X className="h-6 w-6" />
+              </button>
+
+              {/* Header */}
+              <div className="text-center mb-8 pt-4">
+                <h3 className="text-2xl md:text-3xl font-light text-[#b28f4f] tracking-wider">
+                  ALL IMAGES
+                </h3>
+                <p className="text-gray-400 text-sm mt-2">
+                  {property.address}
+                </p>
+              </div>
+
+              {/* Image Grid */}
+              <div
+                className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {property.images.map((image, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.05 }}
+                    className="relative group overflow-hidden rounded-lg"
+                  >
+                    <img
+                      src={image}
+                      alt={`${property.address} - Image ${index + 1}`}
+                      className="w-full h-auto object-cover"
+                    />
+                    {/* Image Number Overlay */}
+                    <div className="absolute top-4 left-4 bg-black/60 text-white px-3 py-1 rounded-full text-sm">
+                      {index + 1}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Bottom Padding */}
+              <div className="h-8" />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 };
 
