@@ -94,9 +94,9 @@ const About = () => {
             >
               <button
                 onClick={() => navigate("/contact")}
-                className="bg-gray-900 text-white px-8 py-3 font-medium hover:bg-gray-800 transition-all duration-300 ease-in-out 
-             hover:bg-gray-200 hover:shadow-[0_8px_30px_rgba(255,255,255,0.2)]
-             hover:scale-105 hover:cursor-pointer"
+                className="border border-white text-white mb-8 px-8 py-4 text-sm font-medium tracking-wide hover:text-black transition-all duration-300 ease-in-out
+        hover:bg-gray-200 hover:shadow-[0_8px_30px_rgba(255,255,255,0.2)]
+        hover:scale-105 hover:cursor-pointer"
               >
                 LEARN MORE
               </button>
