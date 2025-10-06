@@ -32,10 +32,6 @@ const ExclusiveListings = () => {
     return Math.abs(offset) * velocity;
   };
 
-  const handleNavigate = (propertyId) => {
-    navigate(`/properties/miami-dade/exclusive-listings/${propertyId}`);
-  };
-
   const AnimatedImageCarousel = ({
     property,
     currentIndex,
@@ -68,7 +64,7 @@ const ExclusiveListings = () => {
               paginate(-1);
             }
           }}
-          onClick={() => handleNavigate(property.id)}
+          onClick={() => navigate(`/properties/miami-dade/exclusive-listings/${property.id}`)}
           className="absolute h-80 w-full object-cover cursor-pointer"
         />
       </AnimatePresence>

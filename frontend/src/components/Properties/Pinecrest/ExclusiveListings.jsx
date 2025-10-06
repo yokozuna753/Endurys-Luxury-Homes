@@ -1,90 +1,136 @@
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { exclusiveProperties } from "../PropertiesArray/exclusiveListings";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 const ExclusiveListings = () => {
+  const miamiDadeProperties = exclusiveProperties["pinecrest"] || [];
+  const displayProperties = miamiDadeProperties.slice(0, 2);
+
   const navigate = useNavigate();
 
-  
-  const propertyOne = exclusiveProperties.pinecrest[0];
-  const propertyTwo = exclusiveProperties.pinecrest[1];
-
-  const [indexOne, setIndexOne] = useState(0);
-  const [indexTwo, setIndexTwo] = useState(0);
-
-  const [loadingOne, setLoadingOne] = useState(false);
-  const [loadingTwo, setLoadingTwo] = useState(false);
-
-  const changeImage = (setter, setLoading, length, index, dir) => {
-    setLoading(true);
-    setTimeout(() => {
-      setter(
-        dir === "next" ? (index + 1) % length : (index - 1 + length) % length
-      );
-      setLoading(false);
-    }, 300); // 300ms delay
+  const slideVariants = {
+    enter: (direction) => ({
+      x: direction > 0 ? "100%" : "-100%",
+      opacity: 0,
+    }),
+    center: {
+      zIndex: 1,
+      x: 0,
+      opacity: 1,
+    },
+    exit: (direction) => ({
+      zIndex: 0,
+      x: direction < 0 ? "100%" : "-100%",
+      opacity: 0,
+    }),
   };
 
-  const prevImageOne = () =>
-    changeImage(
-      setIndexOne,
-      setLoadingOne,
-      propertyOne.images.length,
-      indexOne,
-      "prev"
-    );
-  const nextImageOne = () =>
-    changeImage(
-      setIndexOne,
-      setLoadingOne,
-      propertyOne.images.length,
-      indexOne,
-      "next"
-    );
+  const swipeConfidenceThreshold = 10000;
+  const swipePower = (offset, velocity) => {
+    return Math.abs(offset) * velocity;
+  };
 
-  const prevImageTwo = () =>
-    changeImage(
-      setIndexTwo,
-      setLoadingTwo,
-      propertyTwo.images.length,
-      indexTwo,
-      "prev"
-    );
-  const nextImageTwo = () =>
-    changeImage(
-      setIndexTwo,
-      setLoadingTwo,
-      propertyTwo.images.length,
-      indexTwo,
-      "next"
-    );
-
-  const ImageWithLoader = ({ src, alt, loading, property }) => (
-    <div className="relative h-80 w-full">
-      {/* Image */}
-      <img
-        onClick={
-          () =>
-            navigate(`/properties/pinecrest/exclusive-listings/${property.id}`) // /properties/miami-dade/exclusive-listings/all
-        }
-        src={src}
-        alt={alt}
-        className={`h-80 w-full object-cover transition-opacity duration-500 ${
-          loading ? "opacity-0" : "opacity-100"
-        } hover:cursor-pointer`}
-      />
-      {/* Loader */}
-      {loading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-black/40">
-          <div className="w-10 h-10 border-4 border-white/30 border-t-white rounded-full animate-spin" />
-        </div>
-      )}
+  const AnimatedImageCarousel = ({
+    property,
+    currentIndex,
+    direction,
+    paginate,
+  }) => (
+    <div className="relative h-80 w-full overflow-hidden">
+      <AnimatePresence initial={false} custom={direction}>
+        <motion.img
+          key={currentIndex}
+          src={property.images[currentIndex]}
+          alt={property.address}
+          custom={direction}
+          variants={slideVariants}
+          initial="enter"
+          animate="center"
+          exit="exit"
+          transition={{
+            x: { type: false, stiffness: 300, damping: 30 },
+            opacity: { duration: 0.2 },
+          }}
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          dragElastic={1}
+          onDragEnd={(e, { offset, velocity }) => {
+            const swipe = swipePower(offset.x, velocity.x);
+            if (swipe < -swipeConfidenceThreshold) {
+              paginate(1);
+            } else if (swipe > swipeConfidenceThreshold) {
+              paginate(-1);
+            }
+          }}
+          onClick={() => navigate(`/properties/pinecrest/exclusive-listings/${property.id}`)}
+          className="absolute h-80 w-full object-cover cursor-pointer"
+        />
+      </AnimatePresence>
     </div>
   );
 
+  const ListingCard = ({ property }) => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [direction, setDirection] = useState(0);
+
+    const paginate = (newDirection) => {
+      setDirection(newDirection);
+      setCurrentIndex((prev) => {
+        if (newDirection === 1) {
+          return (prev + 1) % property.images.length;
+        } else {
+          return (prev - 1 + property.images.length) % property.images.length;
+        }
+      });
+    };
+
+    const prevImage = () => paginate(-1);
+    const nextImage = () => paginate(1);
+
+    return (
+      <div className="bg-gray-900 rounded-sm overflow-hidden">
+        <div className="relative group">
+          <AnimatedImageCarousel
+            property={property}
+            currentIndex={currentIndex}
+            direction={direction}
+            paginate={paginate}
+          />
+          <button
+            onClick={prevImage}
+            className="absolute left-4 top-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 
+                  lg:group-hover:opacity-100 transition-all duration-500 bg-black/40 
+                  hover:bg-black/60 rounded-full p-2 text-white hover:cursor-pointer z-10"
+          >
+            <ChevronLeft className="h-6 w-6" />
+          </button>
+          <button
+            onClick={nextImage}
+            className="absolute right-4 top-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 
+                  lg:group-hover:opacity-100 transition-all duration-500 bg-black/40 
+                  hover:bg-black/60 rounded-full p-2 text-white hover:cursor-pointer z-10"
+          >
+            <ChevronRight className="h-6 w-6" />
+          </button>
+        </div>
+        <div className="p-6">
+          <div className="text-2xl font-light text-white">
+            {property.sellPrice}
+          </div>
+          <div className="text-gray-400 mb-2">
+            {property.beds} Bed(s) • {property.baths} Bath(s) •{" "}
+            {property.livingArea} Sq.Ft.
+          </div>
+          <div className="text-gray-400 text-sm">{property.address}</div>
+        </div>
+      </div>
+    );
+  };
+
   return (
-    <section className="bg-black">
+    <section className="bg-black py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
@@ -96,93 +142,15 @@ const ExclusiveListings = () => {
 
         {/* Listings */}
         <div className="grid md:grid-cols-2 gap-8 mb-8">
-          {/* Listing 1 */}
-          <div className="bg-gray-900 rounded-sm overflow-hidden">
-            <div className="relative group">
-              <ImageWithLoader
-                src={propertyOne.images[indexOne]}
-                alt={propertyOne.address}
-                loading={loadingOne}
-                property={propertyOne}
-                className="hover:cursor-pointer"
-              />
-              {/* Buttons */}
-              <button
-                onClick={prevImageOne}
-                className="absolute left-4 top-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 
-                  lg:group-hover:opacity-100 transition-all duration-500 bg-black/40 
-                  hover:bg-black/60 rounded-full p-2 text-white hover:cursor-pointer"
-              >
-                <ChevronLeft className="h-6 w-6" />
-              </button>
-              <button
-                onClick={nextImageOne}
-                className="absolute right-4 top-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 
-                  lg:group-hover:opacity-100 transition-all duration-500 bg-black/40 
-                  hover:bg-black/60 rounded-full p-2 text-white hover:cursor-pointer"
-              >
-                <ChevronRight className="h-6 w-6" />
-              </button>
-            </div>
-            <div className="p-6">
-              <div className="text-2xl font-light text-white">
-                {propertyOne.sellPrice}
-              </div>
-              <div className="text-gray-400 mb-2">
-                {propertyOne.beds} Bed(s) • {propertyOne.baths} Bath(s) •{" "}
-                {propertyOne.livingArea} Sq.Ft.
-              </div>
-              <div className="text-gray-400 text-sm">{propertyOne.address}</div>
-            </div>
-          </div>
-
-          {/* Listing 2 */}
-          <div className="bg-gray-900 rounded-sm overflow-hidden">
-            <div className="relative group">
-              <ImageWithLoader
-                src={propertyTwo.images[indexTwo]}
-                alt={propertyTwo.address}
-                loading={loadingTwo}
-                property={propertyTwo}
-                className="hover:cursor-pointer"
-              />
-              {/* Buttons */}
-              <button
-                onClick={prevImageTwo}
-                className="absolute left-4 top-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 
-                  lg:group-hover:opacity-100 transition-all duration-500 bg-black/40 
-                  hover:bg-black/60 rounded-full p-2 text-white hover:cursor-pointer"
-              >
-                <ChevronLeft className="h-6 w-6" />
-              </button>
-              <button
-                onClick={nextImageTwo}
-                className="absolute right-4 top-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 
-                  lg:group-hover:opacity-100 transition-all duration-500 bg-black/40 
-                  hover:bg-black/60 rounded-full p-2 text-white hover:cursor-pointer"
-              >
-                <ChevronRight className="h-6 w-6" />
-              </button>
-            </div>
-            <div className="p-6">
-              <div className="text-2xl font-light text-white">
-                {propertyTwo.sellPrice}
-              </div>
-              <div className="text-gray-400 mb-2">
-                {propertyTwo.beds} Bed(s) • {propertyTwo.baths} Bath(s) •{" "}
-                {propertyTwo.livingArea} Sq.Ft.
-              </div>
-              <div className="text-gray-400 text-sm">{propertyTwo.address}</div>
-            </div>
-          </div>
+          {displayProperties.map((property) => (
+            <ListingCard key={property.id} property={property} />
+          ))}
         </div>
 
         {/* View All button */}
         <div className="text-center">
           <button
-            onClick={() =>
-              navigate(`/properties/pinecrest/exclusive-listings/all`)
-            }
+            onClick={() => navigate("/properties/miami-dade/exclusive-listings/all")}
             className="border border-white text-white px-8 py-3 text-sm font-medium tracking-wide hover:text-black transition-all duration-300 ease-in-out 
              hover:bg-gray-200 hover:shadow-[0_8px_30px_rgba(255,255,255,0.2)]
              hover:scale-105 hover:cursor-pointer"
