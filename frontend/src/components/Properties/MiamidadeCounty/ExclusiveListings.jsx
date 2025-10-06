@@ -5,31 +5,26 @@ import { exclusiveProperties } from "../PropertiesArray/exclusiveListings";
 import { useNavigate } from "react-router";
 
 const ExclusiveListings = () => {
-  const propertyOne = exclusiveProperties["miami-dade"][0];
-  const propertyTwo = exclusiveProperties["miami-dade"][1];
-
-  const [indexOne, setIndexOne] = useState(0);
-  const [indexTwo, setIndexTwo] = useState(0);
-  const [directionOne, setDirectionOne] = useState(0);
-  const [directionTwo, setDirectionTwo] = useState(0);
+  const miamiDadeProperties = exclusiveProperties["miami-dade"] || [];
+  const displayProperties = miamiDadeProperties.slice(0, 2);
 
   const navigate = useNavigate();
 
   const slideVariants = {
     enter: (direction) => ({
-      x: direction > 0 ? '100%' : '-100%',
-      opacity: 0
+      x: direction > 0 ? "100%" : "-100%",
+      opacity: 0,
     }),
     center: {
       zIndex: 1,
       x: 0,
-      opacity: 1
+      opacity: 1,
     },
     exit: (direction) => ({
       zIndex: 0,
-      x: direction < 0 ? '100%' : '-100%',
-      opacity: 0
-    })
+      x: direction < 0 ? "100%" : "-100%",
+      opacity: 0,
+    }),
   };
 
   const swipeConfidenceThreshold = 10000;
@@ -37,39 +32,16 @@ const ExclusiveListings = () => {
     return Math.abs(offset) * velocity;
   };
 
-  const paginateOne = (newDirection) => {
-    setDirectionOne(newDirection);
-    setIndexOne((prev) => {
-      if (newDirection === 1) {
-        return (prev + 1) % propertyOne.images.length;
-      } else {
-        return (prev - 1 + propertyOne.images.length) % propertyOne.images.length;
-      }
-    });
-  };
-
-  const paginateTwo = (newDirection) => {
-    setDirectionTwo(newDirection);
-    setIndexTwo((prev) => {
-      if (newDirection === 1) {
-        return (prev + 1) % propertyTwo.images.length;
-      } else {
-        return (prev - 1 + propertyTwo.images.length) % propertyTwo.images.length;
-      }
-    });
-  };
-
-  const prevImageOne = () => paginateOne(-1);
-  const nextImageOne = () => paginateOne(1);
-  const prevImageTwo = () => paginateTwo(-1);
-  const nextImageTwo = () => paginateTwo(1);
-
   const handleNavigate = (propertyId) => {
-
     navigate(`/properties/miami-dade/exclusive-listings/${propertyId}`);
   };
 
-  const AnimatedImageCarousel = ({ property, currentIndex, direction, paginate }) => (
+  const AnimatedImageCarousel = ({
+    property,
+    currentIndex,
+    direction,
+    paginate,
+  }) => (
     <div className="relative h-80 w-full overflow-hidden">
       <AnimatePresence initial={false} custom={direction}>
         <motion.img
@@ -82,8 +54,8 @@ const ExclusiveListings = () => {
           animate="center"
           exit="exit"
           transition={{
-            x: { type: "spring", stiffness: 300, damping: 30 },
-            opacity: { duration: 0.2 }
+            x: { type: false, stiffness: 300, damping: 30 },
+            opacity: { duration: 0.2 },
           }}
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
@@ -103,6 +75,64 @@ const ExclusiveListings = () => {
     </div>
   );
 
+  const ListingCard = ({ property }) => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [direction, setDirection] = useState(0);
+
+    const paginate = (newDirection) => {
+      setDirection(newDirection);
+      setCurrentIndex((prev) => {
+        if (newDirection === 1) {
+          return (prev + 1) % property.images.length;
+        } else {
+          return (prev - 1 + property.images.length) % property.images.length;
+        }
+      });
+    };
+
+    const prevImage = () => paginate(-1);
+    const nextImage = () => paginate(1);
+
+    return (
+      <div className="bg-gray-900 rounded-sm overflow-hidden">
+        <div className="relative group">
+          <AnimatedImageCarousel
+            property={property}
+            currentIndex={currentIndex}
+            direction={direction}
+            paginate={paginate}
+          />
+          <button
+            onClick={prevImage}
+            className="absolute left-4 top-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 
+                  lg:group-hover:opacity-100 transition-all duration-500 bg-black/40 
+                  hover:bg-black/60 rounded-full p-2 text-white hover:cursor-pointer z-10"
+          >
+            <ChevronLeft className="h-6 w-6" />
+          </button>
+          <button
+            onClick={nextImage}
+            className="absolute right-4 top-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 
+                  lg:group-hover:opacity-100 transition-all duration-500 bg-black/40 
+                  hover:bg-black/60 rounded-full p-2 text-white hover:cursor-pointer z-10"
+          >
+            <ChevronRight className="h-6 w-6" />
+          </button>
+        </div>
+        <div className="p-6">
+          <div className="text-2xl font-light text-white">
+            {property.sellPrice}
+          </div>
+          <div className="text-gray-400 mb-2">
+            {property.beds} Bed(s) • {property.baths} Bath(s) •{" "}
+            {property.livingArea} Sq.Ft.
+          </div>
+          <div className="text-gray-400 text-sm">{property.address}</div>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <section className="bg-black py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -116,83 +146,9 @@ const ExclusiveListings = () => {
 
         {/* Listings */}
         <div className="grid md:grid-cols-2 gap-8 mb-8">
-          {/* Listing 1 */}
-          <div className="bg-gray-900 rounded-sm overflow-hidden">
-            <div className="relative group">
-              <AnimatedImageCarousel
-                property={propertyOne}
-                currentIndex={indexOne}
-                direction={directionOne}
-                paginate={paginateOne}
-              />
-              {/* Buttons */}
-              <button
-                onClick={prevImageOne}
-                className="absolute left-4 top-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 
-                  lg:group-hover:opacity-100 transition-all duration-500 bg-black/40 
-                  hover:bg-black/60 rounded-full p-2 text-white hover:cursor-pointer z-10"
-              >
-                <ChevronLeft className="h-6 w-6" />
-              </button>
-              <button
-                onClick={nextImageOne}
-                className="absolute right-4 top-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 
-                  lg:group-hover:opacity-100 transition-all duration-500 bg-black/40 
-                  hover:bg-black/60 rounded-full p-2 text-white hover:cursor-pointer z-10"
-              >
-                <ChevronRight className="h-6 w-6" />
-              </button>
-            </div>
-            <div className="p-6">
-              <div className="text-2xl font-light text-white">
-                {propertyOne.sellPrice}
-              </div>
-              <div className="text-gray-400 mb-2">
-                {propertyOne.beds} Bed(s) • {propertyOne.baths} Bath(s) •{" "}
-                {propertyOne.livingArea} Sq.Ft.
-              </div>
-              <div className="text-gray-400 text-sm">{propertyOne.address}</div>
-            </div>
-          </div>
-
-          {/* Listing 2 */}
-          <div className="bg-gray-900 rounded-sm overflow-hidden">
-            <div className="relative group">
-              <AnimatedImageCarousel
-                property={propertyTwo}
-                currentIndex={indexTwo}
-                direction={directionTwo}
-                paginate={paginateTwo}
-              />
-              {/* Buttons */}
-              <button
-                onClick={prevImageTwo}
-                className="absolute left-4 top-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 
-                  lg:group-hover:opacity-100 transition-all duration-500 bg-black/40 
-                  hover:bg-black/60 rounded-full p-2 text-white hover:cursor-pointer z-10"
-              >
-                <ChevronLeft className="h-6 w-6" />
-              </button>
-              <button
-                onClick={nextImageTwo}
-                className="absolute right-4 top-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 
-                  lg:group-hover:opacity-100 transition-all duration-500 bg-black/40 
-                  hover:bg-black/60 rounded-full p-2 text-white hover:cursor-pointer z-10"
-              >
-                <ChevronRight className="h-6 w-6" />
-              </button>
-            </div>
-            <div className="p-6">
-              <div className="text-2xl font-light text-white">
-                {propertyTwo.sellPrice}
-              </div>
-              <div className="text-gray-400 mb-2">
-                {propertyTwo.beds} Bed(s) • {propertyTwo.baths} Bath(s) •{" "}
-                {propertyTwo.livingArea} Sq.Ft.
-              </div>
-              <div className="text-gray-400 text-sm">{propertyTwo.address}</div>
-            </div>
-          </div>
+          {displayProperties.map((property) => (
+            <ListingCard key={property.id} property={property} />
+          ))}
         </div>
 
         {/* View All button */}
