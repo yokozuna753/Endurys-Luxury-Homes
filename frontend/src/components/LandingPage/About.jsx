@@ -81,7 +81,7 @@ const About = () => {
             >
               <p className="text-center lg:text-left text-white text-lg leading-relaxed">
                 With a legacy rooted in Pinecrest, Coral Gables, Boca Raton, and
-                beyond, Hollub Group is trusted for exceptional craftsmanship,
+                beyond, Endurys Luxury Homes is trusted for exceptional craftsmanship,
                 lasting value, and relationships that endure.
               </p>
             </div>
