@@ -22,13 +22,17 @@ const Footer = () => {
 
           <div className="border-t border-gray-800 section-spacing">
             <div className="text-xs text-gray-500 leading-relaxed mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Endurys Luxury Homes is affiliated to A & E Development Plus Inc.
+              A licensed, certified, general contractor in the state of Florida.
+              All material presented herein is intended for informational
+              purposes only. Information is compiled from sources deemed
+              reliable but is subject to errors, omissions, changes in price,
+              condition, sale, or withdrawal without notice. No statement is
+              made as to accuracy of any description. All measurements and
+              square footages are approximate. This is not intended to solicit
+              property already listed. Nothing herein shall be construed as
+              legal, accounting or other professional advice outside the realm
+              of real estate brokerage.
             </div>
 
             <div className="flex justify-between items-center">
