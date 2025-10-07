@@ -146,8 +146,8 @@ export const propertiesObj = {
       location: "miami-dade",
       status: "SOLD",
       images: [
-        pool11481,
         poolNight11481,
+        pool11481,
         poolDay11481,
         backPool11481,
         outdoorKitchen11481,
