@@ -80,9 +80,9 @@ const About = () => {
               }`}
             >
               <p className="text-center lg:text-left text-white text-lg leading-relaxed">
-                With a legacy rooted in Pinecrest, Coral Gables, Boca Raton, and
-                beyond, Endurys Luxury Homes is trusted for exceptional craftsmanship,
-                lasting value, and relationships that endure.
+                With a legacy rooted in Pinecrest, Miami, and Florida's West
+                Coast, Endurys Luxury Homes is trusted for exceptional
+                craftsmanship, lasting value, and relationships that endure.
               </p>
             </div>
 

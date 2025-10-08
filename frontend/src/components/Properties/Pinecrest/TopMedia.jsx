@@ -2,7 +2,6 @@ import vid10801house from "../../../assets/Pinecrest/video/10801-pinecrest.mp4";
 import { useNavigate } from "react-router-dom";
 
 const TopMedia = () => {
-
   const navigate = useNavigate();
 
   return (
@@ -36,20 +35,18 @@ const TopMedia = () => {
       <section className="bg-black section-spacing">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-lg text-gray-300 leading-relaxed mb-8">
-            Living in Miami-Dade County, FL, is ideal for its peaceful and safe
+            Living in Pinecrest, FL, is ideal for its peaceful and safe
             environment, perfect for families. It offers excellent public and
             private schools, recognized statewide. The community is surrounded
-            by green areas and well-maintained parks, such as Pinecrest Gardens.
-            Its location is strategic, close to Miami but away from the urban
-            hustle and bustle. It also boasts a high quality of life and
-            first-class services.
+            by green areas and well-maintained parks. Its location is strategic,
+            close to Miami but away from the urban hustle and bustle. It also
+            boasts a high quality of life and first-class services.
           </p>
           <button
-          onClick={()=> navigate("/contact")}
+            onClick={() => navigate("/contact")}
             className="border border-white text-white px-8 py-3 text-sm font-medium tracking-wide hover:text-black transition-all duration-300 ease-in-out 
              hover:bg-gray-200 hover:shadow-[0_8px_30px_rgba(255,255,255,0.2)]
              hover:scale-105 hover:cursor-pointer"
-
           >
             REQUEST INFORMATION
           </button>

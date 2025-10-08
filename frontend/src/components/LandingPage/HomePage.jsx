@@ -35,22 +35,22 @@ const HomePage = () => {
         {/* Top Hero Content - Title */}
         <div className="relative z-10 text-center pt-22 lg:pt-16 px-4">
           <h1
-            className="text-4xl md:text-6xl lg:text-6xl font-light mb-6 lg:mb-7 leading-tight text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]"
+            className="uppercase text-4xl md:text-6xl lg:text-6xl font-light mb-6 lg:mb-7 leading-tight text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]"
             style={{
               textShadow:
                 "2px 2px 8px rgba(0,0,0,0.9), -2px -2px 8px rgba(0,0,0,0.9)",
             }}
           >
-            CRAFTING SOUTH FLORIDA'S
+            Building South Florida’s 
             <br />
-            <span className="font-bold">FINEST HOMES</span>
+            <span className="font-bold uppercase">Finest Custom Homes</span>
           </h1>
         </div>
 
         {/* Bottom Hero Content - Description & Button */}
         <div className="relative z-10 text-center pb-16 px-4 bg-gradient-to-t from-black/80 via-black/40 to-transparent pt-32">
           <p className="text-lg text-white md:text-xl mb-12 font-light max-w-2xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
-            For over 20 years, defining luxury living through architecturally
+            For almost 20 years, defining luxury living through architecturally
             significant custom homes and transformative renovations.
           </p>
           <button
