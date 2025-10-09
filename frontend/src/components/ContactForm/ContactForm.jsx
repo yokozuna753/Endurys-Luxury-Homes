@@ -300,20 +300,6 @@ export default function ContactForm() {
             <p>
               I agree to be contacted by Endurys Luxury Homes via call, email,
               and text. To opt out, reply 'stop' at any time.{" "}
-              <a
-                href="/privacy"
-                className="underline text-gray-300 hover:text-white"
-              >
-                Privacy Policy
-              </a>{" "}
-              and{" "}
-              <a
-                href="/terms"
-                className="underline text-gray-300 hover:text-white"
-              >
-                Terms of Service
-              </a>
-              .
             </p>
           </div>
 
