@@ -37,18 +37,7 @@ const Footer = () => {
 
             <div className="flex justify-between items-center">
               <div className="text-xs text-gray-500">
-                <a href="#" className="hover:text-white">
-                  Terms & Conditions
-                </a>{" "}
-                |{" "}
-                <a href="#" className="hover:text-white">
-                  Privacy Policy
-                </a>{" "}
-                |{" "}
-                <a href="#" className="hover:text-white">
-                  Accessibility
-                </a>{" "}
-                | © 2025 All Rights Reserved
+                © 2025 All Rights Reserved
               </div>
               <div className="text-xs text-blue-400">
                 <span className="text-white">Endurys Luxury Homes </span>

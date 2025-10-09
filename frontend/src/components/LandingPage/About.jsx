@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router";
+import { livingRoom6290 } from "../../assets/Pinecrest/6290-images";
 
 const useScrollAnimation = (
   threshold = 0.1,
@@ -111,7 +112,7 @@ const About = () => {
           >
             <div className="overflow-hidden rounded-lg shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2053&q=80"
+                src={livingRoom6290}
                 alt="Luxury Interior"
                 className="w-full h-96 object-cover transition-transform duration-700 hover:scale-105"
               />
