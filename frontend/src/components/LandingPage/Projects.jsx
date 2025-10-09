@@ -1,4 +1,7 @@
 import React from "react";
+import { pool6290 } from "../../assets/Pinecrest/6290-images";
+import { nightShot9669 } from "../../assets/Miami-Dade/9669-images";
+import { poolNight11481 } from "../../assets/Miami-Dade/11481-images";
 
 const Projects = () => {
   return (
@@ -19,48 +22,48 @@ const Projects = () => {
           <div className="group cursor-pointer inner-spacing">
             <div className="relative overflow-hidden mb-4">
               <img
-                src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                alt="Modern Estate"
+                src={pool6290}
+                alt="Pinecrest Mansion"
                 className="w-full h-64 object-cover dark:opacity-100 brightness-100 group-hover:scale-105  transition-transform duration-500"
               />
               <div className="absolute inset-0 group-hover:bg-black/40 transition-colors duration-300"></div>
             </div>
             <h3 className="text-xl font-medium mb-2 text-white">
-              PONCE DAVIS ESTATE
+              PINECREST RESIDENCE
             </h3>
-            <p className="text-white">6 bed / 7 bath Modern Farmhouse</p>
+            <p className="text-white">7 bed / 8 bath Pinecrest Mansion</p>
           </div>
 
           {/* Project 2 */}
           <div className="group cursor-pointer inner-spacing">
             <div className="relative overflow-hidden mb-4">
               <img
-                src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2084&q=80"
+                src={poolNight11481}
                 alt="Contemporary Home"
                 className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 group-hover:bg-black/40 transition-colors duration-300"></div>
             </div>
             <h3 className="text-xl font-medium mb-2 text-white">
-              CORAL GABLES RESIDENCE
+              Miami Modern Residence
             </h3>
-            <p className="text-white">Custom Contemporary Design</p>
+            <p className="text-white">6 bed / 7 bath Luxury Mansion</p>
           </div>
 
           {/* Project 3 */}
           <div className="group cursor-pointer">
             <div className="relative overflow-hidden mb-4">
               <img
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                src={nightShot9669}
                 alt="Luxury Villa"
                 className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 group-hover:bg-black/40 transition-colors duration-300"></div>
             </div>
             <h3 className="text-xl font-medium mb-2 text-white">
-              BOCA RATON VILLA
+              Miami Luxury Home
             </h3>
-            <p className="text-white">Luxury Mediterranean Style</p>
+            <p className="text-white">6 bed / 6 bath Premium Home</p>
           </div>
         </div>
 
