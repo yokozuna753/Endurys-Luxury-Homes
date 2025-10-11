@@ -1,5 +1,6 @@
 import { Navigate, NavLink, useParams } from "react-router-dom";
 import { propertiesObj } from "../Properties/PropertiesArray/properties";
+import { exclusiveProperties } from "../Properties/PropertiesArray/exclusiveListings";
 import TopMedia from "./TopMedia";
 import { CheckIcon } from "@heroicons/react/24/solid";
 import { useNavigate } from "react-router-dom";
@@ -8,7 +9,29 @@ export default function ShowcaseProperties() {
 
   const navigate = useNavigate();
 
-  const properties = [...propertiesObj["miami-dade"], ...propertiesObj.pinecrest];
+  // get the exclusive properties object
+  // turn all of the properties into an array 
+  // any properties that have the same address should only exist once
+    // create a set
+    // iterate through the properties in exclusive Props
+    // if the property address is not in the set, add it to the set
+
+const tempProperties = [];
+const propertiesSet = new Set();
+const exclusiveProps = [];
+
+for(let county in exclusiveProperties){
+  tempProperties.push(...exclusiveProperties[county]);
+}
+
+for(let property of tempProperties){
+  if(!(propertiesSet.has(property.address))){
+    propertiesSet.add(property.address)
+    exclusiveProps.push(property);
+  }
+}
+
+  const properties = [...propertiesObj["miami-dade"], ...propertiesObj.pinecrest, ...exclusiveProps];
 
 return (
     <section className=" bg-black">
