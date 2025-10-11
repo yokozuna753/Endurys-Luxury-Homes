@@ -63,9 +63,9 @@ export const exclusiveProperties = {
   ],
   "miami-dade": [
     {
-      id: 9,
+      id: 11,
       address: "8223 Estero Blvd, Fort Myers Beach, FL, 33931",
-      location: "miami-dade",
+      location: "pinecrest",
       status: "EXCLUSIVE",
       images: [
         main8223Estero,
@@ -82,16 +82,13 @@ export const exclusiveProperties = {
       livingArea: "7,200",
     },
     {
-      id: 10,
+      id: 12,
       address: "6700 Sw 115 St, Pinecrest, FL, 33156",
-      location: "miami-dade",
+      location: "pinecrest",
       status: "EXCLUSIVE",
       images: [
-        main8223Estero,
-        beachAccess8223Estero,
-        dock8223Estero,
-        lot8223Estero,
-        pool8223Estero,
+        backPool6700,
+        main6700,
       ],
       heading: "",
       description: `Luxury residence located at 8223 Estero Blvd, in Fort Myer's prestigious St. Andrews Country Club. Designed by Hollub Group, it features 6 bedrooms, 8.2 bathrooms, an office, a gym, and a media room. The gourmet kitchen and dual-bath master suite are strikingly elegant. It offers over 11.954 square feet of construction on a 0.37-acre lot. Resort-like exterior with a pool, spa, summer kitchen, and lake views. Includes an elevator, a 3-car garage, and high-end finishes throughout.`,

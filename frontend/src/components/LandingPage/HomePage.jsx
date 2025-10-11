@@ -5,7 +5,7 @@ import About from "./About";
 import Slideshow from "./Slideshow";
 import Projects from "./Projects";
 import { main11035 } from "../../assets/Miami-Dade/11035-images";
-import { main6290 } from "../../assets/Pinecrest/6290-images";
+import { pool6290 } from "../../assets/Pinecrest/6290-images";
 import Services from "./Services";
 import ContactForm from "../ContactForm/ContactForm";
 import Footer from "../Footer/Footer";
@@ -25,7 +25,7 @@ const HomePage = () => {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
-            src={main6290}
+            src={pool6290}
             alt="Luxury Home"
             className="w-full h-full object-cover object-[47%] lg:object-[59%] lg:scale-100"
           />
