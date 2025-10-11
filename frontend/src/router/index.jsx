@@ -47,10 +47,14 @@ export const router = createBrowserRouter([
         path: "/properties/pinecrest/:area/:id",
         element: <PropertyDetail />,
       },
-      // {
-      //   path: "/properties/westcoast/:area/:id", //! COMMENT BACK IN ONCE READY TO WORK ON
-      //   element: <PropertyDetail />,
-      // },
+      {
+        path: "/properties/lee/:area/:id",
+        element: <PropertyDetail />,
+      },
+      {
+        path: "/properties/westcoast/:area/:id",
+        element: <PropertyDetail />,
+      },
       {
         path: "/services/custom-homes",
         element: <CustomHomes />,

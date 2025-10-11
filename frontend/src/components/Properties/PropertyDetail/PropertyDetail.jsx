@@ -1,12 +1,13 @@
 import { Navigate, useParams } from "react-router-dom";
-import { propertiesObj } from "../PropertiesArray/properties";
-import TopMedia from "./TopMedia";
-import Description from "./Description";
-import Amenities from "./Amenities";
-import Pictures from "./Pictures";
-import Maps from "./Maps";
-import Footer from "../../Footer/Footer";
 import ContactForm from "../../ContactForm/ContactForm";
+import Footer from "../../Footer/Footer";
+import { exclusiveProperties } from "../PropertiesArray/exclusiveListings";
+import { propertiesObj } from "../PropertiesArray/properties";
+import Amenities from "./Amenities";
+import Description from "./Description";
+import Maps from "./Maps";
+import Pictures from "./Pictures";
+import TopMedia from "./TopMedia";
 
 export default function PropertyDetail() {
   let { area, id } = useParams();
@@ -14,9 +15,19 @@ export default function PropertyDetail() {
 
   const validAreas = ["pinecrest", "miami-dade", "westcoast", "lee"];
   const isValidArea = validAreas.includes(area);
-  const property = isValidArea
-    ? propertiesObj[area]?.find((prop) => prop.id == id) //
-    : null;
+
+  // Check both regular properties and exclusive properties
+  let property = null;
+  if (isValidArea) {
+    // First check regular properties
+    property = propertiesObj[area]?.find((prop) => prop.id == id);
+
+    // If not found in regular properties, check exclusive properties
+    if (!property) {
+      const exclusiveProps = exclusiveProperties[area] || [];
+      property = exclusiveProps.find((prop) => prop.id == id);
+    }
+  }
 
   //   ✅ If invalid, route to your NotFound ("*") page
   if (!isValidArea || !property) {

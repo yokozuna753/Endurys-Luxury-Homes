@@ -1,8 +1,8 @@
 import {
-  main8223Estero,
   beachAccess8223Estero,
   dock8223Estero,
   lot8223Estero,
+  main8223Estero,
   pool8223Estero,
 } from "../../../assets/Lee/8223-Estero-Blvd-Images/index";
 import { backPool6700, main6700 } from "../../../assets/Pinecrest/6700-images";
@@ -81,22 +81,6 @@ export const exclusiveProperties = {
       baths: 8,
       livingArea: "7,200",
     },
-    {
-      id: 12,
-      address: "6700 Sw 115 St, Pinecrest, FL, 33156",
-      location: "pinecrest",
-      status: "EXCLUSIVE",
-      images: [
-        backPool6700,
-        main6700,
-      ],
-      heading: "",
-      description: `Luxury residence located at 8223 Estero Blvd, in Fort Myer's prestigious St. Andrews Country Club. Designed by Hollub Group, it features 6 bedrooms, 8.2 bathrooms, an office, a gym, and a media room. The gourmet kitchen and dual-bath master suite are strikingly elegant. It offers over 11.954 square feet of construction on a 0.37-acre lot. Resort-like exterior with a pool, spa, summer kitchen, and lake views. Includes an elevator, a 3-car garage, and high-end finishes throughout.`,
-      sellPrice: "$11,700,000",
-      beds: 7,
-      baths: 10,
-      livingArea: "9,400",
-    },
   ],
   pinecrest: [
     {
@@ -118,34 +102,8 @@ export const exclusiveProperties = {
       baths: 8,
       livingArea: "7,200",
     },
-    {
-      id: 5,
-      address: "6700 SW 115 ST, PINECREST, FL 33156, United States",
-      location: "PINECREST",
-      status: "SOLD",
-      images: [main6700, backPool6700],
-      heading: "",
-      description: `Luxury residence located at 17133 Ericarose Court, in Boca Raton's prestigious St. Andrews Country Club. Designed by Hollub Group, it features 6 bedrooms, 8.2 bathrooms, an office, a gym, and a media room. The gourmet kitchen and dual-bath master suite are strikingly elegant. It offers over 11.954 square feet of construction on a 0.37-acre lot. Resort-like exterior with a pool, spa, summer kitchen, and lake views. Includes an elevator, a 3-car garage, and high-end finishes throughout.`,
-      sellPrice: "$2,995,000",
-      beds: 4,
-      baths: 4,
-      livingArea: "3,931",
-    },
   ],
   westcoast: [
-    {
-      id: 13,
-      address: "6700 Sw 115 St, Pinecrest, FL, 33156",
-      location: "westcoast",
-      status: "EXCLUSIVE",
-      images: [main6700, backPool6700],
-      heading: "",
-      description: `Luxury residence located at 17133 Ericarose Court, in Boca Raton's prestigious St. Andrews Country Club. Designed by Hollub Group, it features 6 bedrooms, 8.2 bathrooms, an office, a gym, and a media room. The gourmet kitchen and dual-bath master suite are strikingly elegant. It offers over 11.954 square feet of construction on a 0.37-acre lot. Resort-like exterior with a pool, spa, summer kitchen, and lake views. Includes an elevator, a 3-car garage, and high-end finishes throughout.`,
-      sellPrice: "$2,995,000",
-      beds: 4,
-      baths: 4,
-      livingArea: "3,931",
-    },
     {
       id: 14,
       address: "8223 Estero Blvd, Fort Myers Beach, FL, 33931",

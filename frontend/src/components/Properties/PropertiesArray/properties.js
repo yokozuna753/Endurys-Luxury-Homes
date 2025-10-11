@@ -1,14 +1,50 @@
 import {
+  famRoom11035,
+  kitchen11035,
+  kitchenTwo11035,
+  livingRooom11035,
+  main11035,
+} from "../../../assets/Miami-Dade/11035-images";
+import {
+  aerialFront11481,
+  aerialTop11481,
+  backPool11481,
+  bathroomBlack11481,
+  bathroomBlue11481,
+  bathroomShower11481,
+  bathroomWhite11481,
+  bathroomWhite2_11481,
+  driveway11481,
+  drivewayFront11481,
+  frontGrass11481,
+  indoorPool11481,
+  kitchen11481,
+  kitchen2_11481,
+  kitchen3_11481,
+  kitchen4_11481,
+  kitchenPool11481,
+  living11481,
+  living2_11481,
+  outdoorKitchen11481,
+  pool11481,
+  poolDay11481,
+  poolNight11481,
+  roomPool11481,
+  roomWhite11481,
+  sideLeft11481,
+  window11481,
+} from "../../../assets/Miami-Dade/11481-images";
+import {
   bathroom9669,
   bathtub9669,
   closet9669,
+  court9669,
   familyRoom9669,
   garage9669,
   kitchen9669,
   livingRoom9669,
   main9669,
   nightShot9669,
-  court9669,
 } from "../../../assets/Miami-Dade/9669-images";
 import {
   aerial9765,
@@ -22,56 +58,18 @@ import {
   room9765,
 } from "../../../assets/Miami-Dade/9765-images";
 import {
-  famRoom11035,
-  kitchen11035,
-  kitchenTwo11035,
-  livingRooom11035,
-  main11035,
-} from "../../../assets/Miami-Dade/11035-images";
-import {
-  pool11481,
-  poolNight11481,
-  poolDay11481,
-  backPool11481,
-  outdoorKitchen11481,
-  driveway11481,
-  drivewayFront11481,
-  bathroomShower11481,
-  bathroomBlack11481,
-  roomPool11481,
-  indoorPool11481,
-  roomWhite11481,
-  bathroomWhite2_11481,
-  frontGrass11481,
-  living2_11481,
-  living11481,
-  kitchen4_11481,
-  window11481,
-  bathroomWhite11481,
-  bathroomBlue11481,
-  kitchen3_11481,
-  kitchen2_11481,
-  kitchen11481,
-  kitchenPool11481,
-  aerialTop11481,
-  aerialFront11481,
-  sideLeft11481,
-} from "../../../assets/Miami-Dade/11481-images";
-import {
-  bathroom6290,
-  kitchen6290,
-  livingRoom6290,
-  main6290,
-  kitchenTwo6290,
-  pool6290,
-} from "../../../assets/Pinecrest/6290-images";
-import { backPool6700, main6700 } from "../../../assets/Pinecrest/6700-images";
-import {
   backPool10801,
   main10801,
 } from "../../../assets/Pinecrest/10801-images";
-
-
+import {
+  bathroom6290,
+  kitchen6290,
+  kitchenTwo6290,
+  livingRoom6290,
+  main6290,
+  pool6290,
+} from "../../../assets/Pinecrest/6290-images";
+import { backPool6700, main6700 } from "../../../assets/Pinecrest/6700-images";
 
 //* Properties Below
 
@@ -190,7 +188,7 @@ export const propertiesObj = {
     {
       id: 4,
       address: "6290 SW 130 TER",
-      location: "PINECREST",
+      location: "pinecrest",
       status: "RENTED",
       images: [
         main6290,
@@ -207,23 +205,23 @@ export const propertiesObj = {
       baths: 8,
       livingArea: "7,028",
     },
-    // {
-    //   id: 5,
-    //   address: "6700 SW 115 ST, PINECREST, FL 33156, United States",
-    //   location: "PINECREST",
-    //   status: "SOLD",
-    //   images: [main6700, backPool6700],
-    //   heading: "",
-    //   description: `Luxury residence located at 17133 Ericarose Court, in Boca Raton's prestigious St. Andrews Country Club. Designed by Hollub Group, it features 6 bedrooms, 8.2 bathrooms, an office, a gym, and a media room. The gourmet kitchen and dual-bath master suite are strikingly elegant. It offers over 11.954 square feet of construction on a 0.37-acre lot. Resort-like exterior with a pool, spa, summer kitchen, and lake views. Includes an elevator, a 3-car garage, and high-end finishes throughout.`,
-    //   sellPrice: "$2,995,000",
-    //   beds: 4,
-    //   baths: 4,
-    //   livingArea: "3,931",
-    // },
+    {
+      id: 5,
+      address: "6700 SW 115 ST, PINECREST, FL 33156, United States",
+      location: "pinecrest",
+      status: "SOLD",
+      images: [main6700, backPool6700],
+      heading: "",
+      description: `Luxury residence located at 6700 SW 115 ST, in Pinecrest's prestigious area. Designed by Hollub Group, it features 4 bedrooms, 4 bathrooms, an office, and modern amenities. The gourmet kitchen and master suite are elegantly designed. It offers over 3,931 square feet of construction on a beautiful lot. Resort-like exterior with a pool, spa, and outdoor living space. Includes high-end finishes throughout.`,
+      sellPrice: "$2,995,000",
+      beds: 4,
+      baths: 4,
+      livingArea: "3,931",
+    },
     {
       id: 6,
       address: "10801 SW 67 AVE",
-      location: "PINECREST",
+      location: "pinecrest",
       status: "SOLD",
       images: [main10801, backPool10801],
       heading: "",
@@ -235,5 +233,3 @@ export const propertiesObj = {
     },
   ],
 };
-
-
