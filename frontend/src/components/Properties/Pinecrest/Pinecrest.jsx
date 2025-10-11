@@ -16,9 +16,9 @@ export default function Pinecrest() {
       </section>
 
       {/* Exclusive Listings Section */}
-      <section className="section-spacing">
+      {/* <section className="section-spacing">
       <ExclusiveListings />
-      </section>
+      </section> */}
 
       {/* Contact Form */}
       <ContactForm />

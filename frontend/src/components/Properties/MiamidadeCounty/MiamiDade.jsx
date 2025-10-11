@@ -17,8 +17,8 @@ export default function MiamiDade() {
         <Properties />
 
       {/* Exclusive Listings Section */}
-      <section className='section-spacing'></section>
-        <ExclusiveListings />
+      {/* <section className='section-spacing'></section>
+        <ExclusiveListings /> */}
 
       {/* Contact Form */}
       <ContactForm />

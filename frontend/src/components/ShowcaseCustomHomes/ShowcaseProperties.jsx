@@ -11,14 +11,16 @@ export default function ShowcaseProperties() {
     ...propertiesObj.pinecrest,
   ];
 
-  // Add exclusive properties, but skip duplicates
-  const seenAddresses = new Set();
+  // Add exclusive properties, but skip duplicates by address AND location
+  const seenProperties = new Set();
   const exclusiveProps = [];
 
   for (let county in exclusiveProperties) {
     for (let property of exclusiveProperties[county]) {
-      if (!seenAddresses.has(property.address)) {
-        seenAddresses.add(property.address);
+      // Create a unique key combining address and location to avoid duplicates
+      const uniqueKey = `${property.address}-${property.location}`;
+      if (!seenProperties.has(uniqueKey)) {
+        seenProperties.add(uniqueKey);
         exclusiveProps.push(property);
       }
     }
@@ -52,7 +54,7 @@ export default function ShowcaseProperties() {
 
             return (
               <div
-                key={property.id}
+                key={`${property.id}-${property.location}-${property.address}`}
                 className="group flex flex-col items-center text-center"
               >
                 <NavLink to={propertyRoute}>

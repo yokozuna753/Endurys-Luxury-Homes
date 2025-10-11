@@ -69,13 +69,6 @@ import {
   main6290,
   pool6290,
 } from "../../../assets/Pinecrest/6290-images";
-import {
-  back16700,
-  backPool6700,
-  front,
-  front2,
-  main6700,
-} from "../../../assets/Pinecrest/6700-images";
 
 //* Properties Below
 
@@ -210,19 +203,6 @@ export const propertiesObj = {
       beds: 7,
       baths: 8,
       livingArea: "7,028",
-    },
-    {
-      id: 5,
-      address: "6700 SW 115 ST, PINECREST, FL 33156, United States",
-      location: "pinecrest",
-      status: "SOLD",
-      images: [main6700, backPool6700, back16700, front, front2],
-      heading: "",
-      description: `Luxury residence located at 6700 SW 115 ST, in Pinecrest's prestigious area. Designed by Hollub Group, it features 4 bedrooms, 4 bathrooms, an office, and modern amenities. The gourmet kitchen and master suite are elegantly designed. It offers over 3,931 square feet of construction on a beautiful lot. Resort-like exterior with a pool, spa, and outdoor living space. Includes high-end finishes throughout.`,
-      sellPrice: "$2,995,000",
-      beds: 4,
-      baths: 4,
-      livingArea: "3,931",
     },
     {
       id: 6,

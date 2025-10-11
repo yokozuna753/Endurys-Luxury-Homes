@@ -67,7 +67,7 @@ const Properties = () => {
             </div>
 
             {/* Property 3 */}
-            <div className="group">
+            {/* <div className="group">
               <div className="relative overflow-hidden mb-4">
                 <div className="h-70 bg-gradient-to-br from-blue-800 via-blue-600 to-blue-700 rounded-sm">
                   <Link to={{pathname: `/properties/pinecrest/pinecrest/5`}} className="hover:cursor-pointer">
@@ -80,7 +80,7 @@ const Properties = () => {
                 6700 SW 115 ST
               </h3>
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
