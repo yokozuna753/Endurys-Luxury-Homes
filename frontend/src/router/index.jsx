@@ -1,15 +1,14 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
-import Layout from "./Layout";
-import HomePage from "../components/LandingPage/HomePage";
-import MiamiDade from "../components/Properties/MiamidadeCounty/MiamiDade";
-import Pinecrest from "../components/Properties/Pinecrest/Pinecrest";
-import WestCoast from "../components/Properties/WestCoast/WestCoast";
-import PropertyDetail from "../components/Properties/PropertyDetail/PropertyDetail";
 import ContactPage from "../components/ContactPage/ContactPage";
-import ShowcaseCustomHomes from "../components/ShowcaseCustomHomes/ShowcaseCustomHomes";
 import CustomHomes from "../components/CustomHomes/CustomHomes";
+import HomePage from "../components/LandingPage/HomePage";
 import ExclusiveAll from "../components/Properties/ExclusiveProperties/ExclusiveAll/ExclusiveAll";
 import ExclusiveProperty from "../components/Properties/ExclusiveProperties/ExclusiveProperty/ExclusiveProperty";
+import MiamiDade from "../components/Properties/MiamidadeCounty/MiamiDade";
+import Pinecrest from "../components/Properties/Pinecrest/Pinecrest";
+import PropertyDetail from "../components/Properties/PropertyDetail/PropertyDetail";
+import ShowcaseCustomHomes from "../components/ShowcaseCustomHomes/ShowcaseCustomHomes";
+import Layout from "./Layout";
 
 export const router = createBrowserRouter([
   {
@@ -21,7 +20,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/properties/:county/exclusive-listings/all",
-        element: <ExclusiveAll /> ,
+        element: <ExclusiveAll />,
       },
       {
         path: "/properties/:county/exclusive-listings/:id",
@@ -47,14 +46,14 @@ export const router = createBrowserRouter([
         path: "/properties/pinecrest/:area/:id",
         element: <PropertyDetail />,
       },
-      {
-        path: "/properties/lee/:area/:id",
-        element: <PropertyDetail />,
-      },
-      {
-        path: "/properties/westcoast/:area/:id",
-        element: <PropertyDetail />,
-      },
+      // {
+      //   path: "/properties/lee/:area/:id",
+      //   element: <PropertyDetail />,
+      // },
+      // {
+      //   path: "/properties/westcoast/:area/:id",
+      //   element: <PropertyDetail />,
+      // },
       {
         path: "/services/custom-homes",
         element: <CustomHomes />,

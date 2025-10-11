@@ -69,11 +69,6 @@ export default function ShowcaseProperties() {
                   <span className="text-sm text-gray-300 capitalize">
                     {property.status.toLowerCase()}
                   </span>
-                  {property.status === "EXCLUSIVE" && (
-                    <span className="text-xs bg-yellow-500 text-black px-2 py-1 rounded">
-                      EXCLUSIVE
-                    </span>
-                  )}
                 </div>
                 <button
                   onClick={() => navigate(propertyRoute)}
