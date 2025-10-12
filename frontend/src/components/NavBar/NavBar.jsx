@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom"; // assuming you're using react-router-dom
 import logo from "../../assets/images/logo.webp";
 
@@ -77,7 +77,7 @@ const NavBar = () => {
                   className="block px-4 py-2 hover:cursor-pointer hover:bg-gray-100 text-black dark:hover:text-black"
                 >
                   WEST COAST
-                </NavLink> */} 
+                </NavLink> */}
               </div>
             </div>
 
@@ -115,7 +115,17 @@ const NavBar = () => {
               </div>
             </div>
 
-            <NavLink to="/contact" className="text-white hover:cursor-pointer hover:text-[#b28f4f]">
+            <NavLink
+              to="/properties/exclusive-listings/all"
+              className="text-white hover:text-[#b28f4f]"
+            >
+              EXCLUSIVE LISTINGS
+            </NavLink>
+
+            <NavLink
+              to="/contact"
+              className="text-white hover:cursor-pointer hover:text-[#b28f4f]"
+            >
               CONTACT
             </NavLink>
           </div>
@@ -123,7 +133,7 @@ const NavBar = () => {
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
-            ref={buttonRef}
+              ref={buttonRef}
               onClick={(e) => {
                 e.stopPropagation();
                 setIsMenuOpen(!isMenuOpen);
@@ -247,6 +257,14 @@ const NavBar = () => {
               </div>
             )}
           </div>
+
+          <NavLink
+            to="/properties/exclusive-listings/all"
+            onClick={() => setIsMenuOpen(false)}
+            className="block text-white"
+          >
+            EXCLUSIVE LISTINGS
+          </NavLink>
 
           <NavLink
             to="/contact"

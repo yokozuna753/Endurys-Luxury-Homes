@@ -2,7 +2,8 @@ import { createBrowserRouter, Navigate } from "react-router-dom";
 import ContactPage from "../components/ContactPage/ContactPage";
 import CustomHomes from "../components/CustomHomes/CustomHomes";
 import HomePage from "../components/LandingPage/HomePage";
-import ExclusiveAll from "../components/Properties/ExclusiveProperties/ExclusiveAll/ExclusiveAll";
+
+import ExclusiveListingsAll from "../components/Properties/ExclusiveProperties/ExclusiveListingsAll/ExclusiveListingsAll";
 import ExclusiveProperty from "../components/Properties/ExclusiveProperties/ExclusiveProperty/ExclusiveProperty";
 import Lee from "../components/Properties/Lee/Lee";
 import MiamiDade from "../components/Properties/MiamidadeCounty/MiamiDade";
@@ -20,9 +21,10 @@ export const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "/properties/:county/exclusive-listings/all",
-        element: <ExclusiveAll />,
+        path: "/properties/exclusive-listings/all",
+        element: <ExclusiveListingsAll />,
       },
+
       {
         path: "/properties/:county/exclusive-listings/:id",
         element: <ExclusiveProperty />,
