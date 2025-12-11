@@ -13,7 +13,7 @@ export default function Description({ property }) {
             {" "}
             <h2 className="text-2xl md:text-5xl font-light text-[#b28f4f] tracking-wider mb-8">
               {" "}
-              Enter Property Main Heading
+              {property.heading}
             </h2>{" "}
             <div className="flex justify-between md:justify-center md:gap-16 w-full mb-8 mt-8">
               {/* Stat 1 */}
