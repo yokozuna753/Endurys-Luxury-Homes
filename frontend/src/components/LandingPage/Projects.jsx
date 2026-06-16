@@ -2,6 +2,7 @@ import React from "react";
 import { pool6290 } from "../../assets/Pinecrest/6290-images";
 import { nightShot9669 } from "../../assets/Miami-Dade/9669-images";
 import { poolNight11481 } from "../../assets/Miami-Dade/11481-images";
+import { Navigate, NavLink } from "react-router-dom";
 
 const Projects = () => {
   return (
@@ -21,49 +22,63 @@ const Projects = () => {
           {/* Project 1 */}
           <div className="group cursor-pointer inner-spacing">
             <div className="relative overflow-hidden mb-4">
-              <img
-                src={pool6290}
-                alt="Pinecrest Mansion"
-                className="w-full h-64 object-cover dark:opacity-100 brightness-100 group-hover:scale-105  transition-transform duration-500"
-              />
-              <div className="absolute inset-0 group-hover:bg-black/40 transition-colors duration-300"></div>
+              <NavLink to={`/properties/pinecrest/pinecrest/4`}>
+                <img
+                  src={pool6290}
+                  alt="Pinecrest Mansion"
+                  className="w-full h-64 object-cover dark:opacity-100 brightness-100 group-hover:scale-105  transition-transform duration-500 hover:cursor-pointer"
+                />
+              </NavLink>
+              <div className="absolute inset-0 pointer-events-none group-hover:bg-black/40 transition-colors duration-300"></div>
             </div>
-            <h3 className="text-xl font-medium mb-2 text-white">
-              PINECREST RESIDENCE
-            </h3>
-            <p className="text-white">7 bed / 8 bath Pinecrest Mansion</p>
+            <NavLink to={`/properties/pinecrest/pinecrest/4`}>
+              <h3 className="text-xl font-medium mb-2 text-white hover:cursor-pointer">
+                PINECREST RESIDENCE
+              </h3>
+              <p className="text-white hover:cursor-pointer">
+                7 bed / 8 bath Pinecrest Mansion
+              </p>
+            </NavLink>
           </div>
 
           {/* Project 2 */}
           <div className="group cursor-pointer inner-spacing">
             <div className="relative overflow-hidden mb-4">
-              <img
-                src={poolNight11481}
-                alt="Contemporary Home"
-                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 group-hover:bg-black/40 transition-colors duration-300"></div>
+              <NavLink to={`/properties/miami-dade/miami-dade/15`}>
+                <img
+                  src={poolNight11481}
+                  alt="Contemporary Home"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </NavLink>
+              <div className="absolute inset-0 pointer-events-none group-hover:bg-black/40 transition-colors duration-300"></div>
             </div>
+            <NavLink to={`/properties/miami-dade/miami-dade/15`}>
             <h3 className="text-xl font-medium mb-2 text-white">
               Miami Modern Residence
             </h3>
             <p className="text-white">6 bed / 7 bath Luxury Mansion</p>
+            </NavLink>
           </div>
 
           {/* Project 3 */}
           <div className="group cursor-pointer">
             <div className="relative overflow-hidden mb-4">
+              <NavLink to={`/properties/miami-dade/miami-dade/1`}>
               <img
                 src={nightShot9669}
                 alt="Luxury Villa"
                 className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 group-hover:bg-black/40 transition-colors duration-300"></div>
+                />
+                </NavLink>
+              <div className="absolute inset-0 pointer-events-none group-hover:bg-black/40 transition-colors duration-300"></div>
             </div>
+            <NavLink to={`/properties/miami-dade/miami-dade/1`}>
             <h3 className="text-xl font-medium mb-2 text-white">
               Miami Luxury Home
             </h3>
             <p className="text-white">6 bed / 6 bath Premium Home</p>
+            </NavLink>
           </div>
         </div>
 
