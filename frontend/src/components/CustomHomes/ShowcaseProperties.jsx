@@ -15,9 +15,10 @@ return (
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-light tracking-wide text-white">
+          <h2 className="text-4xl md:text-6xl font-light tracking-[0.12em] text-white">
             SHOWCASE PROPERTIES
           </h2>
+          <div className="gold-rule"></div>
         </div>
 
         {/* Property Grid */}
@@ -28,17 +29,15 @@ return (
               <img
                 src={property.images[0]}
                 alt={property.address}
-                className="w-full h-80 object-cover mb-6 hover:cursor-pointer group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-80 object-cover mb-6 hover:cursor-pointer group-hover:scale-[1.03] transition-transform duration-1000 ease-out"
                 />
                 </NavLink>
-              <h3 className="text-lg font-light text-white mb-2">
+              <h3 className="font-display text-2xl font-light text-white mb-2 tracking-wide group-hover:text-[#c6a15b] transition-colors duration-500">
                 {property.address.split(',')[0].trim()}
               </h3>
               <button
                 onClick={()=> navigate(`/properties/${property.location === "miami-dade" ? "miami-dade/miami-dade" : "pinecrest/pinecrest"}/${property.id}`)}
-                className="border border-white text-white px-8 py-4 mt-4 text-sm font-medium tracking-wide hover:text-black transition-all duration-300 ease-in-out
-                hover:bg-gray-200 hover:shadow-[0_8px_30px_rgba(255,255,255,0.2)]
-                hover:scale-105 hover:cursor-pointer"
+                className="btn-luxury mt-4"
               >
                 VIEW HOME
               </button>

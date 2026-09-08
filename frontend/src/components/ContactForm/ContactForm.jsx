@@ -170,7 +170,11 @@ export default function ContactForm() {
   return (
     <section className="section-spacing bg-black text-white">
       <div className="flex flex-col justify-center items-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-light mb-10 text-[#b28f4f]">Contact Us</h2>
+        <p className="eyebrow mb-4">Begin the Conversation</p>
+        <h2 className="text-4xl md:text-6xl font-light tracking-[0.06em] text-white">
+          Contact <span className="text-[#c6a15b]">Us</span>
+        </h2>
+        <div className="gold-rule mb-12"></div>
 
         <form
           onSubmit={handleSubmit}
@@ -232,10 +236,8 @@ export default function ContactForm() {
                   onChange={handleChange}
                   placeholder="Street Address *"
                   required
-                  className={`w-full rounded-md bg-[#1a1a1a] border px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 ${
-                    errors.street
-                      ? "border-red-500 focus:ring-red-500"
-                      : "border-gray-700 focus:ring-[#C6A15B]"
+                  className={`field-luxury ${
+                    errors.street ? "field-luxury-error" : ""
                   }`}
                 />
               </Autocomplete>
@@ -278,10 +280,8 @@ export default function ContactForm() {
               value={formData.message}
               onChange={handleChange}
               required
-              className={`w-full lg:w-full rounded-md bg-[#1a1a1a] border px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 ${
-                errors.message
-                  ? "border-red-500 focus:ring-red-500"
-                  : "border-gray-700 focus:ring-[#C6A15B]"
+              className={`field-luxury ${
+                errors.message ? "field-luxury-error" : ""
               }`}
             ></textarea>
             {errors.message && (
@@ -307,7 +307,7 @@ export default function ContactForm() {
           <button
             type="submit"
             disabled={loading}
-            className="bg-[#C6A15B] hover:bg-[#b28f4f] px-8 py-3 rounded-md text-black font-semibold tracking-wide transition hover:cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+            className="btn-gold"
           >
             {loading ? "Sending..." : "Send Message"}
           </button>
@@ -328,11 +328,7 @@ function Input({ name, placeholder, value, onChange, type = "text", error }) {
         value={value}
         onChange={onChange}
         required
-        className={`w-full rounded-md bg-[#1a1a1a] border px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 ${
-          error
-            ? "border-red-500 focus:ring-red-500"
-            : "border-gray-700 focus:ring-[#C6A15B]"
-        }`}
+        className={`field-luxury ${error ? "field-luxury-error" : ""}`}
       />
       {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
     </div>

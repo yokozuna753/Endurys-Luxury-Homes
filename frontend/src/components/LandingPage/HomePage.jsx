@@ -23,44 +23,45 @@ const HomePage = () => {
         className="relative h-screen flex flex-col justify-between overflow-hidden"
       >
         {/* Background Image */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 overflow-hidden">
           <img
             src={pool6290}
             alt="Luxury Home"
-            className="w-full h-full object-cover object-[47%] lg:object-[59%] lg:scale-100"
+            className="w-full h-full object-cover object-[47%] lg:object-[59%] animate-kenburns"
           />
-          <div className="absolute inset-0"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/10 to-transparent"></div>
         </div>
 
         {/* Top Hero Content - Title */}
-        <div className="relative z-10 text-center pt-22 lg:pt-16 px-4">
-          <h1
-            className="uppercase text-4xl md:text-6xl lg:text-6xl font-light mb-6 lg:mb-7 leading-tight text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]"
-            style={{
-              textShadow:
-                "2px 2px 8px rgba(0,0,0,0.9), -2px -2px 8px rgba(0,0,0,0.9)",
-            }}
-          >
-            Building South Florida’s 
+        <div className="relative z-10 text-center pt-28 lg:pt-24 px-4">
+          <h1 className="uppercase text-4xl md:text-6xl lg:text-7xl font-light mb-6 lg:mb-7 leading-tight text-white drop-shadow-[0_4px_18px_rgba(0,0,0,0.85)] animate-track-in">
+            Building South Florida’s
             <br />
-            <span className="font-bold uppercase">Finest Custom Homes</span>
+            <span className="font-semibold uppercase text-[#dfc08a]">
+              Finest Custom Homes
+            </span>
           </h1>
+          <div className="gold-rule animate-rule-grow"></div>
         </div>
 
         {/* Bottom Hero Content - Description & Button */}
-        <div className="relative z-10 text-center pb-16 px-4 bg-gradient-to-t from-black/80 via-black/40 to-transparent pt-32">
-          <p className="text-lg text-white md:text-xl mb-12 font-light max-w-2xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+        <div className="relative z-10 text-center pb-20 px-4 bg-gradient-to-t from-black via-black/50 to-transparent pt-32">
+          <p className="scroll-animate animate-fade-in-up delay-500 text-lg text-gray-100 md:text-xl mb-12 font-light tracking-wide max-w-2xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
             For almost 20 years, defining luxury living through architecturally
             significant custom homes and transformative renovations.
           </p>
-          <button
-            onClick={() => navigate("/our-work/showcase-custom-homes")}
-            className="border border-white text-white mb-8 px-8 py-4 text-sm font-medium tracking-wide hover:text-black transition-all duration-300 ease-in-out
-        hover:bg-gray-200 hover:shadow-[0_8px_30px_rgba(255,255,255,0.2)]
-        hover:scale-105 hover:cursor-pointer"
-          >
-            EXPLORE OUR WORK
-          </button>
+          <div className="scroll-animate animate-fade-in-up delay-700">
+            <button
+              onClick={() => navigate("/our-work/showcase-custom-homes")}
+              className="btn-luxury mb-8"
+            >
+              EXPLORE OUR WORK
+            </button>
+          </div>
+          <div
+            className="mx-auto w-px h-12 bg-gradient-to-b from-[#c6a15b] to-transparent animate-float"
+            aria-hidden="true"
+          ></div>
         </div>
       </section>
 

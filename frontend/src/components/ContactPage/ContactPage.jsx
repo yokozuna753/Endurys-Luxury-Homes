@@ -163,15 +163,21 @@ export default function ContactPage() {
       <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12">
         {/* LEFT COLUMN */}
         <div className="space-y-8">
-          <h2 className="text-4xl font-light">Contact</h2>
-
-          <div className="space-y-4 text-gray-300">
-            <p>📞 (305) 783-7710</p>
-            <p>✉️ eespinosa@aedevelopmentplus.com</p>
-            <p>📍 7766 NW 46 ST, Doral, Florida, 33166</p>
+          <div>
+            <p className="eyebrow mb-4">Get in Touch</p>
+            <h2 className="text-5xl md:text-6xl font-light tracking-[0.06em]">
+              Contact
+            </h2>
+            <div className="gold-rule-left"></div>
           </div>
 
-          <div className="w-full h-80 bg-gray-800 rounded-lg overflow-hidden">
+          <div className="space-y-4 text-gray-300 font-light tracking-wide">
+            <p className="hover:text-[#c6a15b] transition-colors duration-300">📞 (305) 783-7710</p>
+            <p className="hover:text-[#c6a15b] transition-colors duration-300">✉️ eespinosa@aedevelopmentplus.com</p>
+            <p className="hover:text-[#c6a15b] transition-colors duration-300">📍 7766 NW 46 ST, Doral, Florida, 33166</p>
+          </div>
+
+          <div className="w-full h-80 bg-[#131313] overflow-hidden ring-1 ring-white/10">
             <iframe
               className="w-full h-80 block"
               src={googleMapsURL}
@@ -196,11 +202,7 @@ export default function ContactPage() {
                 value={formData.first_name}
                 onChange={handleChange}
                 required
-                className={`w-full md:w-full bg-[#1a1a1a] border ${
-                  errors.first_name ? "border-red-500" : "border-gray-700"
-                } text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 ${
-                  errors.first_name ? "focus:ring-red-500" : "focus:ring-[#C6A15B]"
-                }`}
+                className={`field-luxury ${errors.first_name ? "field-luxury-error" : ""}`}
               />
               {errors.first_name && (
                 <p className="text-red-500 text-sm mt-1">{errors.first_name}</p>
@@ -215,11 +217,7 @@ export default function ContactPage() {
                 value={formData.last_name}
                 onChange={handleChange}
                 required
-                className={`w-full md:w-full rounded-md bg-[#1a1a1a] border ${
-                  errors.last_name ? "border-red-500" : "border-gray-700"
-                } text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 ${
-                  errors.last_name ? "focus:ring-red-500" : "focus:ring-[#C6A15B]"
-                }`}
+                className={`field-luxury ${errors.last_name ? "field-luxury-error" : ""}`}
               />
               {errors.last_name && (
                 <p className="text-red-500 text-sm mt-1">{errors.last_name}</p>
@@ -238,11 +236,7 @@ export default function ContactPage() {
                 value={formData.user_email}
                 onChange={handleChange}
                 required
-                className={`w-full md:w-full rounded-md bg-[#1a1a1a] border ${
-                  errors.user_email ? "border-red-500" : "border-gray-700"
-                } text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 ${
-                  errors.user_email ? "focus:ring-red-500" : "focus:ring-[#C6A15B]"
-                }`}
+                className={`field-luxury ${errors.user_email ? "field-luxury-error" : ""}`}
               />
               {errors.user_email && (
                 <p className="text-red-500 text-sm mt-1">{errors.user_email}</p>
@@ -257,11 +251,7 @@ export default function ContactPage() {
                 value={formData.phone}
                 onChange={handleChange}
                 required
-                className={`w-full md:w-full rounded-md bg-[#1a1a1a] border ${
-                  errors.phone ? "border-red-500" : "border-gray-700"
-                } text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 ${
-                  errors.phone ? "focus:ring-red-500" : "focus:ring-[#C6A15B]"
-                }`}
+                className={`field-luxury ${errors.phone ? "field-luxury-error" : ""}`}
               />
               {errors.phone && (
                 <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
@@ -280,11 +270,7 @@ export default function ContactPage() {
                 value={formData.street}
                 onChange={handleChange}
                 required
-                className={`w-full md:w-full rounded-md bg-[#1a1a1a] border ${
-                  errors.street ? "border-red-500" : "border-gray-700"
-                } text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 ${
-                  errors.street ? "focus:ring-red-500" : "focus:ring-[#C6A15B]"
-                }`}
+                className={`field-luxury ${errors.street ? "field-luxury-error" : ""}`}
               />
               {errors.street && (
                 <p className="text-red-500 text-sm mt-1">{errors.street}</p>
@@ -299,11 +285,7 @@ export default function ContactPage() {
                 value={formData.city}
                 onChange={handleChange}
                 required
-                className={`w-full md:w-full rounded-md bg-[#1a1a1a] border ${
-                  errors.city ? "border-red-500" : "border-gray-700"
-                } text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 ${
-                  errors.city ? "focus:ring-red-500" : "focus:ring-[#C6A15B]"
-                }`}
+                className={`field-luxury ${errors.city ? "field-luxury-error" : ""}`}
               />
               {errors.city && (
                 <p className="text-red-500 text-sm mt-1">{errors.city}</p>
@@ -321,11 +303,7 @@ export default function ContactPage() {
                 value={formData.state}
                 onChange={handleChange}
                 required
-                className={`w-full md:w-full rounded-md bg-[#1a1a1a] border ${
-                  errors.state ? "border-red-500" : "border-gray-700"
-                } text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 ${
-                  errors.state ? "focus:ring-red-500" : "focus:ring-[#C6A15B]"
-                }`}
+                className={`field-luxury ${errors.state ? "field-luxury-error" : ""}`}
               />
               {errors.state && (
                 <p className="text-red-500 text-sm mt-1">{errors.state}</p>
@@ -340,11 +318,7 @@ export default function ContactPage() {
                 value={formData.zip}
                 onChange={handleChange}
                 required
-                className={`w-full md:w-full rounded-md bg-[#1a1a1a] border ${
-                  errors.zip ? "border-red-500" : "border-gray-700"
-                } text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 ${
-                  errors.zip ? "focus:ring-red-500" : "focus:ring-[#C6A15B]"
-                }`}
+                className={`field-luxury ${errors.zip ? "field-luxury-error" : ""}`}
               />
               {errors.zip && (
                 <p className="text-red-500 text-sm mt-1">{errors.zip}</p>
@@ -361,11 +335,7 @@ export default function ContactPage() {
               value={formData.message}
               onChange={handleChange}
               required
-              className={`w-full md:w-full rounded-md bg-[#1a1a1a] border ${
-                errors.message ? "border-red-500" : "border-gray-700"
-              } text-gray-200 placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 ${
-                errors.message ? "focus:ring-red-500" : "focus:ring-[#C6A15B]"
-              }`}
+              className={`field-luxury ${errors.message ? "field-luxury-error" : ""}`}
             ></textarea>
             {errors.message && (
               <p className="text-red-500 text-sm mt-1">{errors.message}</p>
@@ -393,7 +363,7 @@ export default function ContactPage() {
           <button
             type="submit"
             disabled={loading}
-            className={`bg-[#C6A15B] hover:bg-[#b28f4f] px-8 py-3 rounded-md text-black font-semibold tracking-wide transition hover:cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed`}
+            className="btn-gold"
           >
             {loading ? "Sending..." : "Submit"}
           </button>

@@ -79,7 +79,7 @@ const Slideshow = () => {
 
   return (
 <div
-      className="overflow-hidden relative w-full h-[220px] py-3"
+      className="overflow-hidden relative w-full h-[220px] py-3 fade-edges"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -87,13 +87,13 @@ const Slideshow = () => {
         {[...slides, ...slides, ...slides].map((slide, index) => (
           <div
             key={index}
-            className="flex-shrink-0 w-[250px] h-[200px] mr-5 rounded-xl overflow-hidden relative"
+            className="flex-shrink-0 w-[250px] h-[200px] mr-5 overflow-hidden relative ring-1 ring-white/10 hover:ring-[#c6a15b]/60 transition-shadow duration-500 group"
           >
             {/* Property image */}
             <img
               src={slide.image}
               alt={slide.title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
             />
             {/* Overlay for text */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-5 flex flex-col justify-end">

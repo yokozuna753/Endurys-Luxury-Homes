@@ -10,7 +10,7 @@ const Properties = () => {
       <section className="bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-light text-[#b28f4f] tracking-wider mb-8">
+            <h2 className="text-4xl md:text-6xl font-light text-[#c6a15b] tracking-[0.15em] mb-8">
               LEE COUNTY PROPERTIES
             </h2>
           </div>
@@ -19,15 +19,15 @@ const Properties = () => {
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               {leeProperties.map((property) => (
                 <div key={property.id} className="group">
-                  <div className="relative overflow-hidden mb-4">
-                    <div className="h-70 bg-gradient-to-br from-blue-800 via-blue-600 to-blue-700 rounded-sm">
+                  <div className="card-media mb-6">
+                    <div className="h-70 bg-[#131313]">
                       <Link
                         to={`/properties/lee/lee/${property.id}`}
                         className="hover:cursor-pointer"
                       >
                         <img
                           src={property.images[0]}
-                          className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                          className="w-full h-full object-cover"
                           alt={property.address}
                         />
                       </Link>
@@ -37,7 +37,7 @@ const Properties = () => {
                     to={`/properties/lee/lee/${property.id}`}
                     className="hover:cursor-pointer"
                   >
-                    <h3 className="text-xl font-light text-white text-center tracking-wide">
+                    <h3 className="text-2xl font-light text-white text-center tracking-[0.15em] group-hover:text-[#c6a15b] transition-colors duration-500">
                       {property.address.split(",")[0].trim()}
                     </h3>
                   </Link>

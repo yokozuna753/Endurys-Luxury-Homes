@@ -61,10 +61,10 @@ export default function ShowcaseProperties() {
                   <img
                     src={property.images[0]}
                     alt={property.address}
-                    className="w-full h-80 object-cover mb-6 hover:cursor-pointer group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-80 object-cover mb-6 hover:cursor-pointer group-hover:scale-[1.03] transition-transform duration-1000 ease-out"
                   />
                 </NavLink>
-                <h3 className="text-lg font-light text-white mb-2">
+                <h3 className="font-display text-2xl font-light text-white mb-2 tracking-wide group-hover:text-[#c6a15b] transition-colors duration-500">
                   {property.address.split(",")[0].trim()}
                 </h3>
                 <div className="flex items-center gap-2 mb-2">
@@ -74,9 +74,7 @@ export default function ShowcaseProperties() {
                 </div>
                 <button
                   onClick={() => navigate(propertyRoute)}
-                  className="border border-white text-white px-8 py-4 mt-4 text-sm font-medium tracking-wide hover:text-black transition-all duration-300 ease-in-out
-                  hover:bg-gray-200 hover:shadow-[0_8px_30px_rgba(255,255,255,0.2)]
-                  hover:scale-105 hover:cursor-pointer"
+                  className="btn-luxury mt-4"
                 >
                   VIEW HOME
                 </button>

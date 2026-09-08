@@ -50,7 +50,7 @@ const Pictures = ({ property }) => {
           {/* Header */}
           <div className="text-center mb-12">
             {/* <p className="text-gray-400 text-sm italic mb-2">View Property</p> */}
-            <h2 className="text-4xl md:text-5xl font-light text-[#b28f4f] tracking-wider">
+            <h2 className="text-4xl md:text-5xl font-light text-[#c6a15b] tracking-wider">
               IMAGES
             </h2>
           </div>
@@ -58,7 +58,7 @@ const Pictures = ({ property }) => {
           {/* Main Image Carousel */}
           <div className="flex flex-col items-center gap-8 mb-8">
             <div className="flex flex-col items-center w-full max-w-5xl bg-transparent rounded-md overflow-hidden">
-              <div className="relative group w-full h-[500px] overflow-hidden">
+              <div className="relative group w-full h-[500px] overflow-hidden ring-1 ring-white/10">
                 <AnimatePresence initial={false} custom={direction}>
                   <motion.img
                     key={currentIndex}
@@ -142,7 +142,7 @@ const Pictures = ({ property }) => {
 
               {/* Header */}
               <div className="text-center mb-8 pt-4">
-                <h3 className="text-2xl md:text-3xl font-light text-[#b28f4f] tracking-wider">
+                <h3 className="text-2xl md:text-3xl font-light text-[#c6a15b] tracking-wider">
                   ALL IMAGES
                 </h3>
                 <p className="text-gray-400 text-sm mt-2">

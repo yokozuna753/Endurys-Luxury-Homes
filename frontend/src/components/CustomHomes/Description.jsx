@@ -8,7 +8,7 @@ export default function Description() {
     <section className=" bg-black">
       <div className="max-w-5xl mx-auto px-6 text-center">
         {/* Heading */}
-        <h2 className="text-4xl md:text-5xl font-light tracking-wide text-[#b28f4f] mb-4">
+        <h2 className="text-4xl md:text-5xl font-light tracking-wide text-[#c6a15b] mb-4">
           THE ART OF LUXURY LIVING
         </h2>
         <p className="text-lg md:text-xl font-light text-gray-400 mb-12">
@@ -47,11 +47,11 @@ export default function Description() {
                    - mr-3: Adds a clean space after the diamond.
                    - flex-shrink-0: Ensures the diamond doesn't wrap oddly.
               */}
-              <span className="text-[#b28f4f] font-bold mr-3 mt-0.5 flex-shrink-0">
+              <span className="text-[#c6a15b] font-bold mr-3 mt-0.5 flex-shrink-0">
                 ♦
               </span>
               <span>
-                <span className="text-[#b28f4f] font-semibold">
+                <span className="text-[#c6a15b] font-semibold">
                   Tailored Design Excellence:
                 </span>
                 {" "}Every home is a unique masterpiece, shaped to reflect your
@@ -59,11 +59,11 @@ export default function Description() {
               </span>
             </li>
             <li className="flex items-start">
-              <span className="text-[#b28f4f] font-bold mr-3 mt-0.5 flex-shrink-0">
+              <span className="text-[#c6a15b] font-bold mr-3 mt-0.5 flex-shrink-0">
                 ♦
               </span>
               <span>
-                <span className="text-[#b28f4f] font-semibold">
+                <span className="text-[#c6a15b] font-semibold">
                   Elite Partnerships:
                 </span>
                 {" "} We collaborate with the region’s most distinguished architects,
@@ -71,11 +71,11 @@ export default function Description() {
               </span>
             </li>
             <li className="flex items-start">
-              <span className="text-[#b28f4f] font-bold mr-3 mt-0.5 flex-shrink-0">
+              <span className="text-[#c6a15b] font-bold mr-3 mt-0.5 flex-shrink-0">
                 ♦
               </span>
               <span>
-                <span className="text-[#b28f4f] font-semibold">
+                <span className="text-[#c6a15b] font-semibold">
                   Precision & Transparency:
                 </span>
                 {" "} From planning to final handover, every detail is managed with
@@ -83,11 +83,11 @@ export default function Description() {
               </span>
             </li>
             <li className="flex items-start">
-              <span className="text-[#b28f4f] font-bold mr-3 mt-0.5 flex-shrink-0">
+              <span className="text-[#c6a15b] font-bold mr-3 mt-0.5 flex-shrink-0">
                 ♦
               </span>
               <span>
-                <span className="text-[#b28f4f] font-semibold">
+                <span className="text-[#c6a15b] font-semibold">
                   On-Time, Beyond Expectations:
                 </span>
                 {" "} Our disciplined project management ensures flawless execution
@@ -95,11 +95,11 @@ export default function Description() {
               </span>
             </li>
             <li className="flex items-start">
-              <span className="text-[#b28f4f] font-bold mr-3 mt-0.5 flex-shrink-0">
+              <span className="text-[#c6a15b] font-bold mr-3 mt-0.5 flex-shrink-0">
                 ♦
               </span>
               <span className="">
-                <span className="text-[#b28f4f] font-semibold">
+                <span className="text-[#c6a15b] font-semibold">
                   Guidance Beyond Building:
                 </span>
                 {" "} From site selection to design development, we stand beside you at
@@ -117,9 +117,7 @@ export default function Description() {
           together, we create a home that stands as the true embodiment of
           luxury.
         </p>
-      <button onClick={() => navigate(`/contact`) } className="border border-white text-white px-8 py-4 mt-16 text-sm font-medium tracking-wide hover:text-black transition-all duration-300 ease-in-out 
-             hover:bg-gray-200 hover:shadow-[0_8px_30px_rgba(255,255,255,0.2)]
-             hover:scale-105 hover:cursor-pointer">Request Information</button>
+      <button onClick={() => navigate(`/contact`) } className="btn-luxury mt-16">Request Information</button>
       </div>
     </section>
   );

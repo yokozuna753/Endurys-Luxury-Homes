@@ -90,7 +90,7 @@ const ExclusiveListings = () => {
     const nextImage = () => paginate(1);
 
     return (
-      <div className="bg-gray-900 rounded-sm overflow-hidden">
+      <div className="bg-white/[0.03] border border-white/5 hover:border-[#c6a15b]/30 transition-colors duration-500 overflow-hidden">
         <div className="relative group">
           <AnimatedImageCarousel
             property={property}
@@ -116,7 +116,7 @@ const ExclusiveListings = () => {
           </button>
         </div>
         <div className="p-6">
-          <div className="text-2xl font-light text-white">
+          <div className="font-display text-3xl font-light text-[#c6a15b]">
             {property.sellPrice}
           </div>
           <div className="text-gray-400 mb-2">
@@ -135,7 +135,7 @@ const ExclusiveListings = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <p className="text-gray-400 text-sm italic mb-2">Explore Our</p>
-          <h2 className="text-4xl md:text-5xl font-light text-[#b28f4f] tracking-wider">
+          <h2 className="text-4xl md:text-5xl font-light text-[#c6a15b] tracking-wider">
             EXCLUSIVE LISTINGS
           </h2>
         </div>
@@ -151,9 +151,7 @@ const ExclusiveListings = () => {
         <div className="text-center">
           <button
             onClick={() => navigate("/properties/miami-dade/exclusive-listings/all")}
-            className="border border-white text-white px-8 py-3 text-sm font-medium tracking-wide hover:text-black transition-all duration-300 ease-in-out 
-             hover:bg-gray-200 hover:shadow-[0_8px_30px_rgba(255,255,255,0.2)]
-             hover:scale-105 hover:cursor-pointer"
+            className="btn-luxury"
           >
             View All
           </button>

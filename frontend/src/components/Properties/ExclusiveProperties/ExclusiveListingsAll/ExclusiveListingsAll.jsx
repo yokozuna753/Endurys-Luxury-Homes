@@ -15,12 +15,12 @@ export default function ExclusiveListingsAll() {
   }
 
   return (
-    <section className="bg-black">
+    <section className="bg-black pt-28">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-12">
           <p className="text-gray-400 text-sm italic mb-2">Explore Our</p>
-          <h2 className="text-4xl md:text-5xl font-light text-[#b28f4f] tracking-wider mb-8">
+          <h2 className="text-4xl md:text-5xl font-light text-[#c6a15b] tracking-wider mb-8">
             EXCLUSIVE LISTINGS
           </h2>
           <p className="text-gray-300 text-lg max-w-3xl mx-auto">
@@ -58,16 +58,16 @@ export default function ExclusiveListingsAll() {
                     <img
                       src={property.images[0]}
                       alt={property.address}
-                      className="w-full h-80 object-cover mb-6 hover:cursor-pointer group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-80 object-cover mb-6 hover:cursor-pointer group-hover:scale-[1.03] transition-transform duration-1000 ease-out"
                     />
                   </NavLink>
 
                   <div className="w-full">
-                    <span className="inline-block text-xs bg-yellow-500 text-black px-3 py-1 rounded mb-3">
+                    <span className="inline-block text-xs tracking-[0.3em] border border-[#c6a15b]/70 text-[#c6a15b] px-4 py-1.5 mb-3">
                       EXCLUSIVE
                     </span>
 
-                    <h3 className="text-lg font-light text-white mb-2">
+                    <h3 className="font-display text-2xl font-light text-white mb-2 tracking-wide group-hover:text-[#c6a15b] transition-colors duration-500">
                       {property.address.split(",")[0].trim()}
                     </h3>
 
@@ -79,7 +79,7 @@ export default function ExclusiveListingsAll() {
                         : property.location}
                     </p>
 
-                    <div className="text-xl font-light text-[#b28f4f] mb-4">
+                    <div className="text-xl font-light text-[#c6a15b] mb-4">
                       {property.sellPrice}
                     </div>
 
@@ -90,9 +90,7 @@ export default function ExclusiveListingsAll() {
 
                     <button
                       onClick={() => navigate(propertyRoute)}
-                      className="border border-white text-white px-8 py-4 mt-4 text-sm font-medium tracking-wide hover:text-black transition-all duration-300 ease-in-out
-                      hover:bg-gray-200 hover:shadow-[0_8px_30px_rgba(255,255,255,0.2)]
-                      hover:scale-105 hover:cursor-pointer w-full"
+                      className="btn-luxury mt-4 w-full"
                     >
                       VIEW HOME
                     </button>

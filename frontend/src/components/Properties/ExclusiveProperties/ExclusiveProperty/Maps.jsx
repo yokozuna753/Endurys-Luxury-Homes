@@ -20,16 +20,16 @@ export default function Maps({ property }) {
       <div className="mx-auto">
         {/* Heading */}
         <div className="flex items-center justify-center">
-          <h2 className="text-2xl md:text-5xl font-light text-[#b28f4f] tracking-wider">
+          <h2 className="text-2xl md:text-5xl font-light text-[#c6a15b] tracking-wider">
             Location
           </h2>
         </div>
 
         {/* Maps Flexbox */}
         <div className="flex flex-col items-center justify-center mt-8">
-          <div className="flex flex-wrap items-center justify-center w-fit gap-x-12 gap-y-6">
+          <div className="w-full max-w-5xl px-4">
             <iframe
-              className="map-top"
+              className="map-top w-full aspect-video ring-1 ring-white/10"
               width="998"
               height="450"
               src={googleMapsURL}

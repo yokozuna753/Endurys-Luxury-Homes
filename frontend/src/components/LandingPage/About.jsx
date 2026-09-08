@@ -54,11 +54,12 @@ const About = () => {
                 sectionVisible ? "animate-fade-in-left" : ""
               }`}
             >
-              <h2 className="text-center text-4xl lg:text-left md:text-5xl font-light mb-6 text-gray-100">
+              <h2 className="text-center text-4xl lg:text-left md:text-6xl font-light tracking-[0.08em] mb-2 text-gray-100">
                 LEGACY BUILT
                 <br />
-                <span className="font-bold text-[#b28f4f]">SINCE 2006</span>
+                <span className="font-semibold text-[#c6a15b]">SINCE 2006</span>
               </h2>
+              <div className="gold-rule-left mx-auto lg:mx-0"></div>
             </div>
 
             {/* First Paragraph */}
@@ -67,7 +68,7 @@ const About = () => {
                 sectionVisible ? "animate-fade-in-left" : ""
               }`}
             >
-              <p className="text-center lg:text-left text-white text-lg leading-relaxed">
+              <p className="text-center lg:text-left text-gray-300 text-lg font-light leading-loose">
                 From lot acquisition to turnkey delivery, our fully integrated,
                 concierge-level approach ensures a seamless, personalized
                 experience for discerning clients.
@@ -80,7 +81,7 @@ const About = () => {
                 sectionVisible ? "animate-fade-in-left" : ""
               }`}
             >
-              <p className="text-center lg:text-left text-white text-lg leading-relaxed">
+              <p className="text-center lg:text-left text-gray-300 text-lg font-light leading-loose">
                 With a legacy rooted in Pinecrest, Miami, and Florida's West
                 Coast, Endurys Luxury Homes is trusted for exceptional
                 craftsmanship, lasting value, and relationships that endure.
@@ -95,9 +96,7 @@ const About = () => {
             >
               <button
                 onClick={() => navigate("/contact")}
-                className="border border-white text-white mb-8 px-8 py-4 text-sm font-medium tracking-wide hover:text-black transition-all duration-300 ease-in-out
-        hover:bg-gray-200 hover:shadow-[0_8px_30px_rgba(255,255,255,0.2)]
-        hover:scale-105 hover:cursor-pointer"
+                className="btn-luxury mb-8"
               >
                 LEARN MORE
               </button>
@@ -110,12 +109,14 @@ const About = () => {
               sectionVisible ? "animate-fade-in-right" : ""
             }`}
           >
-            <div className="overflow-hidden rounded-lg shadow-2xl">
-              <img
-                src={livingRoom6290}
-                alt="Luxury Interior"
-                className="w-full h-96 object-cover transition-transform duration-700 hover:scale-105"
-              />
+            <div className="frame-gold">
+              <div className="card-media shadow-2xl">
+                <img
+                  src={livingRoom6290}
+                  alt="Luxury Interior"
+                  className="w-full h-96 object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>

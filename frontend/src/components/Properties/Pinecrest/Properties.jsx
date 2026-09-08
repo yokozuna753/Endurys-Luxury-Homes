@@ -9,7 +9,7 @@ const Properties = () => {
       <section className="bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-light text-[#b28f4f] tracking-wider mb-8">
+            <h2 className="text-4xl md:text-6xl font-light text-[#c6a15b] tracking-[0.15em] mb-8">
               PROPERTIES
             </h2>
           </div>
@@ -17,15 +17,15 @@ const Properties = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {/* Property 1 */}
             <div className="group">
-              <div className="relative overflow-hidden mb-4">
-                <div className="h-70 bg-gradient-to-br from-green-800 via-green-600 to-green-700 rounded-sm">
+              <div className="card-media mb-6">
+                <div className="h-70 bg-[#131313]">
                   <Link
                     to={{ pathname: `/properties/pinecrest/pinecrest/6` }}
                     className="hover:cursor-pointer"
                   >
                     <img
                       src={main10801}
-                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                      className="w-full h-full object-cover"
                       alt=""
                     />
                   </Link>
@@ -35,7 +35,7 @@ const Properties = () => {
                 to={{ pathname: `/properties/pinecrest/pinecrest/6` }}
                 className="hover:cursor-pointer"
               >
-                <h3 className="text-xl font-light text-white text-center tracking-wide">
+                <h3 className="text-2xl font-light text-white text-center tracking-[0.15em] group-hover:text-[#c6a15b] transition-colors duration-500">
                   10801 SW 67 AVE
                 </h3>
               </Link>
@@ -43,15 +43,15 @@ const Properties = () => {
 
             {/* Property 2 */}
             <div className="group hover:cursor-pointer">
-              <div className="relative overflow-hidden mb-4">
-                <div className="h-70 bg-gradient-to-br from-amber-800 via-amber-600 to-amber-700 rounded-sm">
+              <div className="card-media mb-6">
+                <div className="h-70 bg-[#131313]">
                   <Link
                     to={{ pathname: `/properties/pinecrest/pinecrest/4` }}
                     className="hover:cursor-pointer"
                   >
                     <img
                       src={main6290}
-                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                      className="w-full h-full object-cover"
                     />
                   </Link>
                 </div>
@@ -60,7 +60,7 @@ const Properties = () => {
                 to={{ pathname: `/properties/pinecrest/pinecrest/4` }}
                 className="hover:cursor-pointer"
               >
-                <h3 className="text-xl font-light text-white text-center tracking-wide">
+                <h3 className="text-2xl font-light text-white text-center tracking-[0.15em] group-hover:text-[#c6a15b] transition-colors duration-500">
                   6290 SW 130 TER
                 </h3>
               </Link>
@@ -68,15 +68,15 @@ const Properties = () => {
 
             {/* Property 3 */}
             {/* <div className="group">
-              <div className="relative overflow-hidden mb-4">
-                <div className="h-70 bg-gradient-to-br from-blue-800 via-blue-600 to-blue-700 rounded-sm">
+              <div className="card-media mb-6">
+                <div className="h-70 bg-[#131313]">
                   <Link to={{pathname: `/properties/pinecrest/pinecrest/5`}} className="hover:cursor-pointer">
-                  <img src={main6700} className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+                  <img src={main6700} className="w-full h-full object-cover" />
                   </Link>
                 </div>
               </div>
               <Link to={{pathname: `/properties/pinecrest/pinecrest/5`}} className="hover:cursor-pointer">
-              <h3 className="text-xl font-light text-white text-center tracking-wide">
+              <h3 className="text-2xl font-light text-white text-center tracking-[0.15em] group-hover:text-[#c6a15b] transition-colors duration-500">
                 6700 SW 115 ST
               </h3>
               </Link>

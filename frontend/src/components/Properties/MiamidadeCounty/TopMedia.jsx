@@ -20,12 +20,16 @@ const TopMedia = () => {
           <source src={vid6290house} type="video/mp4" />
         </video>
 
+        {/* Overlay for depth & readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/80"></div>
+
         {/* Centered text */}
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
-          <h1 className="text-6xl md:text-8xl font-light text-white mb-4 tracking-wider">
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+          <h1 className="text-6xl md:text-8xl font-light text-white mb-4 animate-track-in drop-shadow-[0_4px_18px_rgba(0,0,0,0.85)]">
             OUR PROPERTIES
           </h1>
-          <h2 className="text-5xl md:text-6xl font-light text-white tracking-wider">
+          <div className="gold-rule animate-rule-grow mb-8"></div>
+          <h2 className="scroll-animate animate-fade-in-up delay-500 text-4xl md:text-5xl font-light text-[#dfc08a] tracking-[0.2em]">
             MIAMI-DADE COUNTY
           </h2>
         </div>
@@ -34,7 +38,7 @@ const TopMedia = () => {
       {/* Pinecrest Description */}
       <section className="bg-black section-spacing">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-lg text-gray-300 leading-relaxed mb-8">
+          <p className="text-lg text-gray-300 font-light leading-loose tracking-wide mb-10">
             Living in Miami-Dade County, FL, is ideal for its peaceful and safe
             environment, perfect for families. It offers excellent public and
             private schools, recognized statewide. The community is surrounded
@@ -45,9 +49,7 @@ const TopMedia = () => {
           </p>
           <button
             onClick={() => navigate("/contact")}
-            className="border border-white text-white px-8 py-3 text-sm font-medium tracking-wide hover:bg-white hover:text-black transition-all duration-300 ease-in-out 
-             hover:bg-gray-200 hover:shadow-[0_8px_30px_rgba(255,255,255,0.2)]
-             hover:scale-105 hover:cursor-pointer"
+            className="btn-luxury"
           >
             REQUEST INFORMATION
           </button>

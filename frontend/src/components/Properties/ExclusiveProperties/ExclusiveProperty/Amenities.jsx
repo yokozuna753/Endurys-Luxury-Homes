@@ -24,21 +24,20 @@ export default function Amenities({ property }) {
       <div className="mx-auto">
         {/* Heading */}
         <div className="flex items-center justify-center">
-          <h2 className="text-3xl md:text-5xl font-light text-[#b28f4f] tracking-wider">
+          <h2 className="text-3xl md:text-5xl font-light text-[#c6a15b] tracking-wider">
             Amenities
           </h2>
         </div>
 
         {/* Amenities Flexbox */}
-        <div className="flex flex-col items-center justify-center xxxxxxs:pl-20 xxxxxs:pl-23 xxxxs:pl-30 xxxs:pl-45 xxs:pl-55 xs:pl-65 s:pl-70 md:pl-35 md-l:pl-50 lg:pl-40 mt-8">
-          <div className="flex flex-wrap items-center justify-center w-fit gap-x-12 gap-y-6 ">
+        <div className="max-w-5xl mx-auto px-6 mt-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-6 ">
             {amenities.map((item, index) => (
               <div
                 key={index}
-                className="flex items-start gap-2 
-                           w-full md:w-1/2 lg:w-1/4"
+                className="flex items-start gap-3"
               >
-                <CheckIcon className="h-5 w-5 text-white mt-1 flex-shrink-0" />
+                <CheckIcon className="h-5 w-5 text-[#c6a15b] mt-1 flex-shrink-0" />
                 <span className="text-gray-400 text-lg">{item}</span>
               </div>
             ))}
